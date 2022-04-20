@@ -1,4 +1,5 @@
 export const Technologies = {
+  AMAZONWEBSERVICES: 'amazonwebservices',
   AZURE: 'azure',
   BOOTSTRAP: 'bootstrap',
   CSS3: 'css3',
