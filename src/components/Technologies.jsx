@@ -17,7 +17,7 @@ const Technologies = ({ preferredTechnologies }) => {
     <section id="technologies">
       <h2>Technologies</h2>
       <h3>Preferred Technologies</h3>
-      {renderPreferredTechnologies}
+      <div>{renderPreferredTechnologies}</div>
       <h3>Other Experience</h3>
     </section>
   );
