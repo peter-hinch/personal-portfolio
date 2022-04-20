@@ -1,6 +1,6 @@
 const PortfolioSection = ({ children }) => {
   return (
-    <section className="portfolio">
+    <section id="portfolio">
       <h2>Portfolio</h2>
       {children}
     </section>
