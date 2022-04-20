@@ -2,6 +2,7 @@ export const Technologies = {
   BOOTSTRAP: 'bootstrap',
   CSS3: 'css3',
   CSHARP: 'csharp',
+  DOT_NET: 'dot-net',
   HTML5: 'html5',
   FIGMA: 'figma',
   JAVA: 'java',
