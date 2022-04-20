@@ -1,24 +1,37 @@
 import PortfolioSection from './components/PortfolioSection';
 import PortfolioItem from './components/PortfolioItem';
+import { Technologies } from './enums';
 
 const portfolioItems = [
   {
-    heading: 'RemoteSpot'
+    title: 'RemoteSpot',
+    subtitle: 'Ratings application in React',
+    technologies: [Technologies.JAVASCRIPT, Technologies.REACT]
   },
   {
-    heading: 'React Todo List'
+    title: 'React Todo List',
+    subtitle: '',
+    technologies: [Technologies.JAVASCRIPT, Technologies.REACT]
   },
   {
-    heading: 'Web Audio API Piano'
+    title: 'Web Audio API Piano',
+    subtitle: '',
+    technologies: [Technologies.JAVASCRIPT]
   },
   {
-    heading: 'SD Perfumery'
+    title: 'SD Perfumery',
+    subtitle: '',
+    technologies: [
+      Technologies.CSHARP,
+      Technologies.MICROSOFTSQLSERVER,
+      Technologies.BOOTSTRAP
+    ]
   }
 ];
 
 function App() {
   const renderPortfolioItems = portfolioItems.map((item) => (
-    <PortfolioItem heading={item.heading} />
+    <PortfolioItem title={item.title} />
   ));
 
   return <PortfolioSection>{renderPortfolioItems}</PortfolioSection>;
