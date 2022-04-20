@@ -1,4 +1,4 @@
-// Technology icons are from Devicon
+// Technology and social icons are from Devicon.
 // Reference: https://devicon.dev/
 
 // Some icons are more readily identifiable with a wordmark, the 'iconSuffix'
