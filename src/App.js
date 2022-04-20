@@ -4,12 +4,7 @@ import { portfolioItems } from './portfolioData';
 
 function App() {
   const renderPortfolioItems = portfolioItems.map((item) => (
-    <PortfolioItem
-      title={item.title}
-      subtitle={item.subtitle}
-      description={item.description}
-      technologies={item.technologies}
-    />
+    <PortfolioItem item={item} />
   ));
 
   return <PortfolioSection>{renderPortfolioItems}</PortfolioSection>;

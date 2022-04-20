@@ -1,6 +1,7 @@
-const PortfolioItem = ({ title, subtitle, description, technologies }) => {
-  const iconCdnUrl = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';
-  const renderTechnologies = technologies.map((technology) => (
+const iconCdnUrl = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';
+
+const PortfolioItem = ({ item }) => {
+  const renderTechnologies = item.technologies.map((technology) => (
     <span>
       <img
         src={`${iconCdnUrl}${technology.simplename}/${technology.simplename}${technology.iconSuffix}.svg`}
@@ -12,9 +13,9 @@ const PortfolioItem = ({ title, subtitle, description, technologies }) => {
 
   return (
     <div>
-      <h2>{title}</h2>
-      <h3>{subtitle}</h3>
-      <p>{description}</p>
+      <h2>{item.title}</h2>
+      <h3>{item.subtitle}</h3>
+      <p>{item.description}</p>
       {renderTechnologies}
     </div>
   );
