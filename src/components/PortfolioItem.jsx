@@ -13,8 +13,8 @@ const PortfolioItem = ({ item }) => {
 
   return (
     <div className="portfolio-item">
-      <h2>{item.title}</h2>
-      <h3>{item.subtitle}</h3>
+      <h3>{item.title}</h3>
+      <h4>{item.subtitle}</h4>
       <p>{item.description}</p>
       {renderTechnologies}
     </div>
