@@ -16,6 +16,7 @@ export const Technologies = {
   CSS3: { simplename: 'css3', iconSuffix: '-original-wordmark' },
   DOT_NET: { simplename: 'dot-net', iconSuffix: '-original-wordmark' },
   FIGMA: { simplename: 'figma', iconSuffix: '-original' },
+  FIREBASE: { simplename: 'firebase', iconSuffix: '-plain' },
   HTML5: { simplename: 'html5', iconSuffix: '-original-wordmark' },
   JAVA: { simplename: 'java', iconSuffix: '-original-wordmark' },
   JAVASCRIPT: { simplename: 'javascript', iconSuffix: '-original' },
