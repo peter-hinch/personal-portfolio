@@ -7,6 +7,7 @@ function App() {
     <PortfolioItem
       title={item.title}
       subtitle={item.subtitle}
+      description={item.description}
       technologies={item.technologies}
     />
   ));
