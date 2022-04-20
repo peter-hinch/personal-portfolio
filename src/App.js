@@ -5,6 +5,7 @@ import AboutMe from './components/AboutMe';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Container from './components/layout/Container';
+import Technologies from './components/Technologies';
 
 function App() {
   const renderPortfolioItems = portfolioItems.map((item) => (
@@ -12,14 +13,15 @@ function App() {
   ));
 
   return (
-    <>
+    <div id="home">
       <Navbar />
       <Container>
         <AboutMe />
+        <Technologies />
         <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
       </Container>
       <Footer />
-    </>
+    </div>
   );
 }
 
