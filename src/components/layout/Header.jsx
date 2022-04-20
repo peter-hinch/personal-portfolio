@@ -1,6 +1,6 @@
-import Container from './layout/Container';
+import Container from './Container';
 
-const Navbar = () => {
+const Header = () => {
   return (
     <Container>
       <nav>
@@ -23,4 +23,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
