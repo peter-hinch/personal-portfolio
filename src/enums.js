@@ -30,3 +30,9 @@ export const Technologies = {
   TYPESCRIPT: { simplename: 'typescript', iconSuffix: '-original' },
   WEBPACK: { simplename: 'webpack', iconSuffix: '-original' }
 };
+
+export const Social = {
+  GITHUB: 'github',
+  LINKEDIN: 'linkedin',
+  TWITTER: 'twitter'
+};
