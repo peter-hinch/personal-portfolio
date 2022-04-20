@@ -1,4 +1,4 @@
-import Container from './layout/Container';
+import Container from './Container';
 
 const currentYear = new Date().getFullYear();
 
