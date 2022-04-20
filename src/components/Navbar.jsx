@@ -5,10 +5,18 @@ const Navbar = () => {
     <Container>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>About Me</li>
-          <li>Technologies</li>
-          <li>Portfolio</li>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about-me">About Me</a>
+          </li>
+          <li>
+            <a href="#technologies">Technologies</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
         </ul>
       </nav>
     </Container>
