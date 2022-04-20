@@ -1,5 +1,7 @@
+import Container from './layout/Container';
+
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return <Container>Navbar</Container>;
 };
 
 export default Navbar;
