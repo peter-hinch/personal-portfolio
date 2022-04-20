@@ -1,5 +1,13 @@
 import { Technologies } from './enums';
 
+export const preferredTechnologies = [
+  Technologies.JAVASCRIPT,
+  Technologies.REACT,
+  Technologies.NODEJS,
+  Technologies.HTML5,
+  Technologies.CSS3
+];
+
 export const portfolioItems = [
   {
     title: 'RemoteSpot',
