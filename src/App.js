@@ -6,32 +6,53 @@ const portfolioItems = [
   {
     title: 'RemoteSpot',
     subtitle: 'Ratings application in React',
-    technologies: [Technologies.JAVASCRIPT, Technologies.REACT]
+    technologies: [
+      Technologies.JAVASCRIPT,
+      Technologies.REACT,
+      Technologies.HTML5,
+      Technologies.CSS3
+    ]
   },
   {
-    title: 'React Todo List',
-    subtitle: '',
-    technologies: [Technologies.JAVASCRIPT, Technologies.REACT]
+    title: 'Todo List',
+    subtitle: 'Notetaking application in React',
+    technologies: [
+      Technologies.JAVASCRIPT,
+      Technologies.REACT,
+      Technologies.HTML5,
+      Technologies.CSS3
+    ]
   },
   {
-    title: 'Web Audio API Piano',
-    subtitle: '',
-    technologies: [Technologies.JAVASCRIPT]
+    title: 'Piano',
+    subtitle: 'An exercise in using the Web Audio API',
+    technologies: [
+      Technologies.JAVASCRIPT,
+      Technologies.HTML5,
+      Technologies.CSS3
+    ]
   },
   {
     title: 'SD Perfumery',
-    subtitle: '',
+    subtitle: 'Storefront developed using .NET MVC',
     technologies: [
       Technologies.CSHARP,
+      Technologies.DOT_NET,
       Technologies.MICROSOFTSQLSERVER,
-      Technologies.BOOTSTRAP
+      Technologies.BOOTSTRAP,
+      Technologies.HTML5,
+      Technologies.CSS3
     ]
   }
 ];
 
 function App() {
   const renderPortfolioItems = portfolioItems.map((item) => (
-    <PortfolioItem title={item.title} />
+    <PortfolioItem
+      title={item.title}
+      subtitle={item.subtitle}
+      technologies={item.technologies}
+    />
   ));
 
   return <PortfolioSection>{renderPortfolioItems}</PortfolioSection>;
