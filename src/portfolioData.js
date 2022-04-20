@@ -9,6 +9,7 @@ export const portfolioItems = [
     technologies: [
       Technologies.JAVASCRIPT,
       Technologies.REACT,
+      Technologies.NODEJS,
       Technologies.HTML5,
       Technologies.CSS3
     ]
@@ -21,6 +22,7 @@ export const portfolioItems = [
     technologies: [
       Technologies.JAVASCRIPT,
       Technologies.REACT,
+      Technologies.NODEJS,
       Technologies.HTML5,
       Technologies.CSS3
     ]
