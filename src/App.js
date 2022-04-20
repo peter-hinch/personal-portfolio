@@ -1,9 +1,9 @@
 import PortfolioSection from './components/PortfolioSection';
 import PortfolioItem from './components/PortfolioItem';
-import { portfolioItems } from './portfolioData';
+import { preferredTechnologies, portfolioItems } from './portfolioData';
 import AboutMe from './components/AboutMe';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 import Container from './components/layout/Container';
 import Technologies from './components/Technologies';
 
@@ -14,10 +14,10 @@ function App() {
 
   return (
     <div id="home">
-      <Navbar />
+      <Header />
       <Container>
         <AboutMe />
-        <Technologies />
+        <Technologies preferredTechnologies={preferredTechnologies} />
         <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
       </Container>
       <Footer />
