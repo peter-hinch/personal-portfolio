@@ -1,11 +1,12 @@
-import PortfolioSection from './components/PortfolioSection';
-import PortfolioItem from './components/PortfolioItem';
 import { preferredTechnologies, portfolioItems } from './portfolioData';
-import AboutMe from './components/AboutMe';
+import Container from './components/layout/Container';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
-import Container from './components/layout/Container';
+import AboutMe from './components/AboutMe';
 import Technologies from './components/Technologies';
+import PortfolioSection from './components/PortfolioSection';
+import PortfolioItem from './components/PortfolioItem';
+import Contact from './components/Contact';
 
 function App() {
   const renderPortfolioItems = portfolioItems.map((item) => (
@@ -20,6 +21,7 @@ function App() {
         <Technologies preferredTechnologies={preferredTechnologies} />
         <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
       </Container>
+      <Contact />
       <Footer />
     </div>
   );
