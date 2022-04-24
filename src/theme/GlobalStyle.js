@@ -81,6 +81,13 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5rem;
   }
 
+  header, footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: red;
+  }
+
   section {
     display: flex;
     flex-direction: column;
