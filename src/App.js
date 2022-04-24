@@ -14,7 +14,7 @@ function App() {
   ));
 
   return (
-    <div id="home">
+    <>
       <Header />
       <Container>
         <AboutMe />
@@ -23,7 +23,7 @@ function App() {
         <Contact />
       </Container>
       <Footer />
-    </div>
+    </>
   );
 }
 
