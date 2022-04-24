@@ -20,8 +20,8 @@ function App() {
         <AboutMe />
         <Technologies preferredTechnologies={preferredTechnologies} />
         <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
+        <Contact />
       </Container>
-      <Contact />
       <Footer />
     </div>
   );
