@@ -1,5 +1,4 @@
 import { preferredTechnologies, portfolioItems } from './portfolioData';
-import Container from './components/layout/Container';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import AboutMe from './components/AboutMe';
@@ -16,12 +15,10 @@ function App() {
   return (
     <>
       <Header />
-      <Container>
-        <AboutMe />
-        <Technologies preferredTechnologies={preferredTechnologies} />
-        <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
-        <Contact />
-      </Container>
+      <AboutMe />
+      <Technologies preferredTechnologies={preferredTechnologies} />
+      <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
+      <Contact />
       <Footer />
     </>
   );

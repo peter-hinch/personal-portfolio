@@ -1,8 +1,12 @@
+import Container from './layout/Container';
+
 const PortfolioSection = ({ children }) => {
   return (
     <section id="portfolio">
-      <h2>Portfolio</h2>
-      {children}
+      <Container>
+        <h2>Portfolio</h2>
+        {children}
+      </Container>
     </section>
   );
 };
