@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  html {
+    box-sizing: border-box;
+  }
+  
   #root {
     display: flex;
     flex-direction: column;
