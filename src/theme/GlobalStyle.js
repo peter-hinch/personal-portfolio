@@ -28,6 +28,55 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
   }
 
+  body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 2.25em;
+    line-height: 3.375rem;
+  }
+
+  h2 {
+    font-size: 2em;
+    line-height: 3rem;
+  }
+
+  h3 {
+    font-size: 1.75em;
+    line-height: 2.625rem;
+  }
+
+  h4 {
+    font-size: 1.5em;
+    line-height: 2.25rem;
+  }
+
+  h5 {
+    font-size: 1.125em;
+    line-height: 1.687rem;
+  }
+
+  h6 {
+    font-size: 0.875em;
+    line-height: 1.316rem;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.5rem;
+  }
+
   section {
     display: flex;
     flex-direction: column;
