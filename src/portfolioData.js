@@ -1,4 +1,4 @@
-import { Technologies } from './enums';
+import { Technologies, Social } from './enums';
 
 export const preferredTechnologies = [
   Technologies.JAVASCRIPT,
@@ -60,5 +60,16 @@ export const portfolioItems = [
       Technologies.HTML5,
       Technologies.CSS3
     ]
+  }
+];
+
+export const socialLinks = [
+  {
+    platform: Social.GITHUB,
+    url: 'https://github.com/peter-hinch'
+  },
+  {
+    platform: Social.LINKEDIN,
+    url: 'https://www.linkedin.com/in/peter-hinch-dev/'
   }
 ];
