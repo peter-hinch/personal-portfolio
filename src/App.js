@@ -1,4 +1,8 @@
-import { preferredTechnologies, portfolioItems } from './portfolioData';
+import {
+  preferredTechnologies,
+  portfolioItems,
+  socialLinks
+} from './portfolioData';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import AboutMe from './components/AboutMe';
@@ -19,7 +23,7 @@ function App() {
       <Technologies preferredTechnologies={preferredTechnologies} />
       <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
       <Contact />
-      <Footer />
+      <Footer socialLinks={socialLinks} />
     </>
   );
 }
