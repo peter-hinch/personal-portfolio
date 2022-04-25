@@ -1,12 +1,12 @@
 import { devIconsCdnUrl } from '../../enums';
 
-const SocialLinks = ({ socialLinks }) => {
+const SocialLinks = ({ name, socialLinks }) => {
   const renderSocialLinks = socialLinks.map((link) => (
     <li>
       <a href={link.url}>
         <img
           src={`${devIconsCdnUrl}${link.platform.simplename}/${link.platform.simplename}${link.platform.iconSuffix}.svg`}
-          alt={link.platform.fullname}
+          alt={`${name} on ${link.platform.fullname}`}
           height={30}
         />
       </a>
