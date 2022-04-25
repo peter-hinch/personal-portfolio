@@ -3,13 +3,15 @@ import SocialLinks from '../shared/SocialLinks';
 
 const currentYear = new Date().getFullYear();
 
-const Footer = ({ socialLinks }) => {
+const Footer = ({ name, socialLinks }) => {
   return (
     <footer>
       <Container>
         <nav>
-          <SocialLinks socialLinks={socialLinks} />
-          <small>&copy;{currentYear} Peter Hinch, All rights reserved.</small>
+          <SocialLinks name={name} socialLinks={socialLinks} />
+          <small>
+            &copy;{currentYear} {name}, All rights reserved.
+          </small>
         </nav>
       </Container>
     </footer>
