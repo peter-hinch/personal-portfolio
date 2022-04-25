@@ -81,6 +81,10 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5rem;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   header, footer {
     display: flex;
     justify-content: center;
@@ -88,10 +92,39 @@ const GlobalStyle = createGlobalStyle`
     background: red;
   }
 
+  header .container nav ul,
+  footer .container nav ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  header .container nav ul li,
+  footer .container nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  header .container nav ul li:last-child, 
+  footer .container nav ul li:last-child {
+    margin-right: 0;
+  }
+
   section {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
     min-height: 100vh;
+    background: turquoise;
+  }
+
+  section:nth-child(2n) {
+    background: grey;
+  }
+
+  section .container {
+    margin: 2rem 0;
+    background: white;
   }
 `;
 
