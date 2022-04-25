@@ -33,7 +33,15 @@ export const Technologies = {
 };
 
 export const Social = {
-  GITHUB: 'github',
-  LINKEDIN: 'linkedin',
-  TWITTER: 'twitter'
+  GITHUB: { simplename: 'github', fullname: 'GitHub', iconSuffix: '-original' },
+  LINKEDIN: {
+    simplename: 'linkedin',
+    fullname: 'LinkedIn',
+    iconSuffix: '-original'
+  },
+  TWITTER: {
+    simplename: 'twitter',
+    fullname: 'Twitter',
+    iconSuffix: '-original'
+  }
 };
