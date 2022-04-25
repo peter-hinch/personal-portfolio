@@ -5,9 +5,9 @@ const SocialLinks = ({ name, socialLinks }) => {
     <li>
       <a href={link.url}>
         <img
+          className="social-link"
           src={`${devIconsCdnUrl}${link.platform.simplename}/${link.platform.simplename}${link.platform.iconSuffix}.svg`}
           alt={`${name} on ${link.platform.fullname}`}
-          height={30}
         />
       </a>
     </li>

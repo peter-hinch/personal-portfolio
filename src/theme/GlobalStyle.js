@@ -106,6 +106,10 @@ const GlobalStyle = createGlobalStyle`
     margin-right: 0;
   }
 
+  img.social-link {
+    height: 1.5rem;
+  }
+
   section {
     display: flex;
     flex-direction: column;
