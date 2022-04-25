@@ -9,10 +9,10 @@ const Footer = ({ name, socialLinks }) => {
       <Container>
         <nav>
           <SocialLinks name={name} socialLinks={socialLinks} />
-          <small>
-            &copy;{currentYear} {name}, All rights reserved.
-          </small>
         </nav>
+        <small>
+          &copy;{currentYear} {name}, All rights reserved.
+        </small>
       </Container>
     </footer>
   );
