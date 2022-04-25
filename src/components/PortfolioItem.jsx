@@ -1,10 +1,10 @@
-const iconCdnUrl = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';
+import { devIconsCdnUrl } from '../enums';
 
 const PortfolioItem = ({ item }) => {
   const renderTechnologies = item.technologies.map((technology) => (
     <span>
       <img
-        src={`${iconCdnUrl}${technology.simplename}/${technology.simplename}${technology.iconSuffix}.svg`}
+        src={`${devIconsCdnUrl}${technology.simplename}/${technology.simplename}${technology.iconSuffix}.svg`}
         alt={technology.simplename}
         height={64}
       />

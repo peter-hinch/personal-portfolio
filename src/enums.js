@@ -4,6 +4,9 @@
 // Some icons are more readily identifiable with a wordmark, the 'iconSuffix'
 // key for each enum indicates which icon to use for each technology.
 
+export const devIconsCdnUrl =
+  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';
+
 export const Technologies = {
   AMAZONWEBSERVICES: {
     simplename: 'amazonwebservices',
@@ -37,7 +40,7 @@ export const Social = {
   LINKEDIN: {
     simplename: 'linkedin',
     fullname: 'LinkedIn',
-    iconSuffix: '-original'
+    iconSuffix: '-plain'
   },
   TWITTER: {
     simplename: 'twitter',
