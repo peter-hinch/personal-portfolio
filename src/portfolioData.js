@@ -1,5 +1,7 @@
 import { Technologies, Social } from './enums';
 
+export const name = 'Peter Hinch';
+
 export const preferredTechnologies = [
   Technologies.JAVASCRIPT,
   Technologies.REACT,
