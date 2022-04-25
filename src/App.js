@@ -1,4 +1,5 @@
 import {
+  name,
   preferredTechnologies,
   portfolioItems,
   socialLinks
@@ -18,12 +19,12 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header name={name} socialLinks={socialLinks} />
       <AboutMe />
       <Technologies preferredTechnologies={preferredTechnologies} />
       <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
       <Contact />
-      <Footer socialLinks={socialLinks} />
+      <Footer name={name} socialLinks={socialLinks} />
     </>
   );
 }
