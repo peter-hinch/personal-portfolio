@@ -92,6 +92,13 @@ const GlobalStyle = createGlobalStyle`
     background: red;
   }
 
+  header .container nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   nav ul {
     padding: 0;
     list-style-type: none;
