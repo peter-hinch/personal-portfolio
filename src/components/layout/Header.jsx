@@ -1,6 +1,7 @@
+import SocialLinks from '../shared/SocialLinks';
 import Container from './Container';
 
-const Header = () => {
+const Header = ({ name, socialLinks }) => {
   return (
     <header>
       <Container>
@@ -22,6 +23,7 @@ const Header = () => {
               <a href="#contact">Contact</a>
             </li>
           </ul>
+          <SocialLinks name={name} socialLinks={socialLinks} />
         </nav>
       </Container>
     </header>
