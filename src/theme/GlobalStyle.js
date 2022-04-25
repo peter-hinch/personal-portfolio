@@ -92,20 +92,17 @@ const GlobalStyle = createGlobalStyle`
     background: red;
   }
 
-  header .container nav ul,
-  footer .container nav ul {
+  nav ul {
     padding: 0;
     list-style-type: none;
   }
   
-  header .container nav ul li,
-  footer .container nav ul li {
+  nav ul li {
     display: inline-block;
     margin-right: 1rem;
   }
 
-  header .container nav ul li:last-child, 
-  footer .container nav ul li:last-child {
+  nav ul li:last-child {
     margin-right: 0;
   }
 
