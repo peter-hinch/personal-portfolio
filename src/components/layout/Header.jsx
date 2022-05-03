@@ -1,7 +1,8 @@
 import SocialLinks from '../shared/SocialLinks';
 import Container from './Container';
+import ThemeSelector from './ThemeSelector';
 
-const Header = ({ name, socialLinks }) => {
+const Header = ({ name, socialLinks, isDarkTheme, toggleDarkTheme }) => {
   return (
     <header>
       <Container>
@@ -25,6 +26,10 @@ const Header = ({ name, socialLinks }) => {
               <a href="#contact">Contact</a>
             </li>
           </ul>
+          <ThemeSelector
+            isDarkTheme={isDarkTheme}
+            toggleDarkTheme={toggleDarkTheme}
+          />
           <SocialLinks name={name} socialLinks={socialLinks} />
         </nav>
       </Container>
