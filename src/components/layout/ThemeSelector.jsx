@@ -10,7 +10,7 @@ const ThemeSelector = ({ isDarkTheme, toggleDarkTheme }) => {
           checked={isDarkTheme}
           onChange={(event) => toggleDarkTheme(event)}
         />
-        <label htmlFor="dark-theme-switch">&nbsp;</label>
+        <label htmlFor="dark-theme-switch"></label>
       </div>
     </form>
   );
