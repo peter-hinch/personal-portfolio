@@ -26,11 +26,13 @@ const Header = ({ name, socialLinks, isDarkTheme, toggleDarkTheme }) => {
               <a href="#contact">Contact</a>
             </li>
           </ul>
-          <ThemeSelector
-            isDarkTheme={isDarkTheme}
-            toggleDarkTheme={toggleDarkTheme}
-          />
-          <SocialLinks name={name} socialLinks={socialLinks} />
+          <div id="header-icons">
+            <ThemeSelector
+              isDarkTheme={isDarkTheme}
+              toggleDarkTheme={toggleDarkTheme}
+            />
+            <SocialLinks name={name} socialLinks={socialLinks} />
+          </div>
         </nav>
       </Container>
     </header>
