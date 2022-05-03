@@ -228,6 +228,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: var(--theme-tertiary);
   }
 
   a:hover {
@@ -254,7 +255,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   header a, footer a {
-    color: var(--theme-on-primary);
+    color: var(--color-black);
   }
 
   header a:hover, footer a:hover {
@@ -315,6 +316,7 @@ const GlobalStyle = createGlobalStyle`
     width: 1.5rem;
     top: 0rem;
     left: 0;
+    cursor: pointer;
   }
 
   #theme-selector input[type="checkbox"] + label::before {
@@ -360,19 +362,46 @@ const GlobalStyle = createGlobalStyle`
     margin-bottom: 0;
   }
 
-  .tech-icon {
-    display: inline-block;
-    margin-right: 1rem;
+  .carousel {
+
+  }
+
+  .carousel-image {
+
+  }
+
+  .technologies-info {
+    margin: 0 -1.5rem;
+    padding: 1rem 1.5rem;
+    background: var(--theme-secondary-container);
+  }
+
+  .technology-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .technology-icon {
+    width: 3.5rem;
+    height: auto;
   }
   
   .tags-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0 0;
     padding-left: 0;
     list-style-type: none;
   }
 
   .tag {
-    display: inline-block;
-    margin: 0 0.5rem 0.5rem 0;
+    flex-shrink: 0;
     padding: 0.25rem 0.75rem 0;
     height: 1.25rem;
     color: var(--theme-on-secondary);
@@ -382,6 +411,20 @@ const GlobalStyle = createGlobalStyle`
 
   .tag:last-child {
     margin-right: 0;
+  }
+
+  .portfolio-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .portfolio-link {
+    display: inline-block;
+    font-size: 1.125em;
+    line-height: 1.687rem;
+    color: var(--theme-on-secondary-container);
   }
 
   footer {
