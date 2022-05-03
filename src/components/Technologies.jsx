@@ -2,7 +2,7 @@ import Container from './layout/Container';
 import { devIconsCdnUrl } from '../enums';
 
 const Technologies = ({ preferredTechnologies }) => {
-  const renderPreferredTechnologies = preferredTechnologies.map(
+  const renderPreferredTechnologies = preferredTechnologies.technologies.map(
     (technology) => (
       <span>
         <img
