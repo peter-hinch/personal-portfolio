@@ -1,4 +1,5 @@
 import { devIconsCdnUrl } from '../enums';
+import TagsList from './shared/TagsList';
 
 const PortfolioItem = ({ item }) => {
   const renderTechnologies = item.technologies.map((technology) => (
@@ -17,6 +18,7 @@ const PortfolioItem = ({ item }) => {
       <h4>{item.subtitle}</h4>
       <p>{item.description}</p>
       {renderTechnologies}
+      <TagsList tags={item.tags} />
     </div>
   );
 };
