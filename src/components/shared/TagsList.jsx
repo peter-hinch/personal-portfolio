@@ -1,7 +1,7 @@
 const TagsList = ({ tags }) => {
-  const renderTags = tags.map((tag) => <li>{tag}</li>);
+  const renderTags = tags.map((tag) => <li className="tag">{tag}</li>);
 
-  return <ul>{renderTags}</ul>;
+  return <ul className="tags-list">{renderTags}</ul>;
 };
 
 export default TagsList;
