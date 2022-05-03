@@ -347,6 +347,25 @@ const GlobalStyle = createGlobalStyle`
     background: var(--theme-surface);
   }
 
+  .tags-list {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  .tag {
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.25rem 0.5rem 0;
+    height: 1.25rem;
+    color: var(--theme-on-secondary);
+    background: var(--theme-secondary);
+    border-radius: 0.625rem;
+  }
+
+  .tag:last-child {
+    margin-right: 0;
+  }
+
   footer {
     min-height: 18rem;
     background: var(--theme-surface-variant);
