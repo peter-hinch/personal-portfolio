@@ -347,6 +347,11 @@ const GlobalStyle = createGlobalStyle`
     background: var(--theme-surface);
   }
 
+  .tech-icon {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  
   .tags-list {
     padding-left: 0;
     list-style-type: none;
@@ -359,7 +364,7 @@ const GlobalStyle = createGlobalStyle`
     height: 1.25rem;
     color: var(--theme-on-secondary);
     background: var(--theme-secondary);
-    border-radius: 0.625rem;
+    border-radius: 0.75rem;
   }
 
   .tag:last-child {
