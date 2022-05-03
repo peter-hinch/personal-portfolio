@@ -1,17 +1,9 @@
 import Container from './layout/Container';
-import { devIconsCdnUrl } from '../enums';
+import TechnologyIcon from './shared/TechnologyIcon';
 
 const Technologies = ({ preferredTechnologies }) => {
   const renderPreferredTechnologies = preferredTechnologies.technologies.map(
-    (technology) => (
-      <span>
-        <img
-          src={`${devIconsCdnUrl}${technology.simplename}/${technology.simplename}${technology.iconSuffix}.svg`}
-          alt={technology.simplename}
-          height={64}
-        />
-      </span>
-    )
+    (technology) => <TechnologyIcon technology={technology} />
   );
 
   return (
