@@ -1,9 +1,5 @@
-import {
-  name,
-  preferredTechnologies,
-  portfolioItems,
-  socialLinks
-} from './portfolioData';
+import { useLocalStorage } from './hooks/useLocalStorage';
+import ThemeContainer from './components/layout/ThemeContainer';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import AboutMe from './components/AboutMe';
@@ -11,22 +7,39 @@ import Technologies from './components/Technologies';
 import PortfolioSection from './components/PortfolioSection';
 import PortfolioItem from './components/PortfolioItem';
 import Contact from './components/Contact';
+import {
+  name,
+  preferredTechnologies,
+  portfolioItems,
+  socialLinks
+} from './portfolioData';
 
-function App() {
+const App = () => {
+  const [isDarkTheme, setIsDarkTheme] = useLocalStorage('isDarkTheme', false);
+
   const renderPortfolioItems = portfolioItems.map((item) => (
     <PortfolioItem item={item} />
   ));
 
+  const toggleDarkTheme = (event) => {
+    setIsDarkTheme(event.target.checked);
+  };
+
   return (
-    <>
-      <Header name={name} socialLinks={socialLinks} />
+    <ThemeContainer isDarkTheme={isDarkTheme}>
+      <Header
+        name={name}
+        socialLinks={socialLinks}
+        isDarkTheme={isDarkTheme}
+        toggleDarkTheme={toggleDarkTheme}
+      />
       <AboutMe />
       <Technologies preferredTechnologies={preferredTechnologies} />
       <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
       <Contact />
       <Footer name={name} socialLinks={socialLinks} />
-    </>
+    </ThemeContainer>
   );
-}
+};
 
 export default App;
