@@ -6,7 +6,6 @@ const ThemeSelector = ({ isDarkTheme, toggleDarkTheme }) => {
           type="checkbox"
           id="dark-theme-switch"
           aria-label="Toggle dark theme"
-          defaultChecked={isDarkTheme}
           checked={isDarkTheme}
           onChange={(event) => toggleDarkTheme(event)}
         />
