@@ -1,16 +1,12 @@
-import TechnologyIcon from './shared/TechnologyIcon';
+import TechnologyIcons from './shared/TechnologyIcons';
 import TagsList from './shared/TagsList';
 import ImageCarousel from './shared/ImageCarousel';
 
 const PortfolioItem = ({ item }) => {
   const imagePath = './../assets/portfolio/';
 
-  const renderTechnologies = item.technologies.map((technology) => (
-    <TechnologyIcon technology={technology} />
-  ));
-
   const renderLinks = (
-    <>
+    <div className="portfolio-links">
       {item.liveUrl !== undefined && (
         <a
           className="portfolio-link"
@@ -31,7 +27,7 @@ const PortfolioItem = ({ item }) => {
           Source Code
         </a>
       )}
-    </>
+    </div>
   );
 
   return (
@@ -40,9 +36,11 @@ const PortfolioItem = ({ item }) => {
       <h4>{item.subtitle}</h4>
       <ImageCarousel path={imagePath} title={item.title} images={item.images} />
       <p>{item.description}</p>
-      {renderTechnologies}
-      <TagsList tags={item.tags} />
       {renderLinks}
+      <div className="portfolio-meta">
+        <TechnologyIcons technologies={item.technologies} />
+        <TagsList tags={item.tags} />
+      </div>
     </div>
   );
 };
