@@ -129,11 +129,22 @@ const GlobalStyle = createGlobalStyle`
     .container {
       width: 100%;
     }
+
+    section .container {
+      margin: 1.5rem 0;
+      border-radius: 0;
+    }
   }
 
   @media only screen and (min-width: 728px) {
     .container {
       width: 42.5rem;
+    }
+
+    section .container {
+      margin: 1.5rem 0 20vh 0;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 0.75rem var(--theme-outline);
     }
   }
 
@@ -244,7 +255,7 @@ const GlobalStyle = createGlobalStyle`
 
   header a:hover, footer a:hover {
     text-decoration: none;
-    color: var(--color-primary-80);
+    color: var(--theme-primary-container);
   }
 
   header {
@@ -267,9 +278,16 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
 
+  #header-icons {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+  }
+
   #theme-selector {
     width: 1.5rem;
     height: 1.5rem;
+    margin-right: 1rem;
   }
 
   #theme-selector input[type="checkbox"] {
@@ -299,7 +317,7 @@ const GlobalStyle = createGlobalStyle`
 
   footer {
     min-height: 18rem;
-    background: var(--theme-secondary-container);
+    background: var(--theme-surface-variant);
   }
 
   footer .container {
@@ -336,11 +354,8 @@ const GlobalStyle = createGlobalStyle`
 
   section .container {
     box-sizing: border-box;
-    margin: 1.5rem 0 20vh 0;
     padding: 1.5rem 1.5rem 2.25rem 1.5rem;
     background: var(--theme-surface);
-    border: 1px solid var(--theme-outline);
-    border-radius: 1.5rem;
   }
 `;
 
