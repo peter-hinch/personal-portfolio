@@ -8,7 +8,9 @@ const Header = ({ name, socialLinks }) => {
         <nav>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <h1>
+                <a href="#">{name}</a>
+              </h1>
             </li>
             <li>
               <a href="#about-me">About Me</a>
