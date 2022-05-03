@@ -1,17 +1,17 @@
 import { devIconsCdnUrl } from '../../enums';
 
 const TechnologyIcons = ({ technologies }) => (
-  <>
+  <div className="technology-icons">
     {technologies.map((technology) => (
       <img
-        className="tech-icon"
+        className="technology-icon"
         key={technology.simplename}
         src={`${devIconsCdnUrl}${technology.simplename}/${technology.simplename}${technology.iconSuffix}.svg`}
         alt={technology.simplename}
-        height={56}
+        title={technology.fullname}
       />
     ))}
-  </>
+  </div>
 );
 
 export default TechnologyIcons;
