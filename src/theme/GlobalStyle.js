@@ -216,6 +216,10 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.316rem;
   }
 
+  h2 + h3, h3 + h4 {
+    margin-top: -1.5rem;
+  }
+
   p {
     font-size: 1em;
     line-height: 1.5rem;
@@ -293,6 +297,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: row;
     flex-shrink: 0;
+    margin-top: 0.25rem;
   }
 
   #theme-selector {
@@ -347,6 +352,14 @@ const GlobalStyle = createGlobalStyle`
     background: var(--theme-surface);
   }
 
+  .portfolio-item {
+    margin-bottom: 8rem;
+  }
+
+  .portfolio-item:last-child {
+    margin-bottom: 0;
+  }
+
   .tech-icon {
     display: inline-block;
     margin-right: 1rem;
@@ -359,7 +372,7 @@ const GlobalStyle = createGlobalStyle`
 
   .tag {
     display: inline-block;
-    margin-right: 0.5rem;
+    margin: 0 0.5rem 0.5rem 0;
     padding: 0.25rem 0.5rem 0;
     height: 1.25rem;
     color: var(--theme-on-secondary);
