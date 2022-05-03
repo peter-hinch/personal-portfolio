@@ -6,7 +6,9 @@ const Technologies = ({ preferredTechnologies }) => (
     <Container>
       <h2>Technologies</h2>
       <h3>Preferred Technologies</h3>
-      <TechnologyIcons technologies={preferredTechnologies.technologies} />
+      <div className="technologies-info">
+        <TechnologyIcons technologies={preferredTechnologies.technologies} />
+      </div>
       <h3>Other Experience</h3>
     </Container>
   </section>
