@@ -2,13 +2,17 @@ import { Technologies, Social } from './enums';
 
 export const name = 'Peter Hinch';
 
-export const preferredTechnologies = [
-  Technologies.JAVASCRIPT,
-  Technologies.REACT,
-  Technologies.NODEJS,
-  Technologies.HTML5,
-  Technologies.CSS3
-];
+export const preferredTechnologies = {
+  technologies: [
+    Technologies.REACT,
+    Technologies.NODEJS,
+    Technologies.JAVASCRIPT,
+    Technologies.HTML5,
+    Technologies.CSS3
+  ],
+  preferred: '',
+  other: ''
+};
 
 export const portfolioItems = [
   {
@@ -17,12 +21,13 @@ export const portfolioItems = [
     description:
       'For the final project in my React Development course, I have chosen to create an application that allows users to rate businesses and venues aginst their suitability as a remote working venue. Basic information about each venue is retrieved from the Google Places API and users are able to add their remote work specific review information within the application.',
     technologies: [
-      Technologies.JAVASCRIPT,
       Technologies.REACT,
       Technologies.NODEJS,
+      Technologies.JAVASCRIPT,
       Technologies.HTML5,
       Technologies.CSS3
-    ]
+    ],
+    tags: ['Google Maps API', 'Google Places API', 'Styled Components']
   },
   {
     title: 'Todo List',
@@ -30,12 +35,13 @@ export const portfolioItems = [
     description:
       'In our React Development course at General Assembly we were tasked with creating a Todo list in React. I wanted to create a skeumorphic interpretation of a real notebook page, so I took photos of paper and an eraser to incorporate them into the design. The font used is Sriracha from Google Fonts, the accompanying UI elements I created SVGs from hand-drawn images to match the look and feel of the Sriracha font.',
     technologies: [
-      Technologies.JAVASCRIPT,
       Technologies.REACT,
       Technologies.NODEJS,
+      Technologies.JAVASCRIPT,
       Technologies.HTML5,
       Technologies.CSS3
-    ]
+    ],
+    tags: ['Styled Components']
   },
   {
     title: 'Piano',
@@ -46,7 +52,8 @@ export const portfolioItems = [
       Technologies.JAVASCRIPT,
       Technologies.HTML5,
       Technologies.CSS3
-    ]
+    ],
+    tags: ['Web Audio API']
   },
   {
     title: 'SD Perfumery',
@@ -61,7 +68,8 @@ export const portfolioItems = [
       Technologies.BOOTSTRAP,
       Technologies.HTML5,
       Technologies.CSS3
-    ]
+    ],
+    tags: ['Stripe API', '.NET MVC']
   }
 ];
 
