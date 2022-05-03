@@ -10,21 +10,25 @@ export const preferredTechnologies = {
     Technologies.HTML5,
     Technologies.CSS3
   ],
-  preferred: '',
-  other: ''
+  description: ''
+};
+
+export const otherTechnologies = {
+  description: ''
 };
 
 export const portfolioItems = [
   {
     title: 'RemoteSpot',
     subtitle: 'Ratings application in React',
-    images: ['', ''],
+    images: ['portfolio/remote-spot-01.png', ''],
     description:
       'For the final project in my React Development course, I have chosen to create an application that allows users to rate businesses and venues aginst their suitability as a remote working venue. Basic information about each venue is retrieved from the Google Places API and users are able to add their remote work specific review information within the application.',
     technologies: [
       Technologies.REACT,
       Technologies.NODEJS,
       Technologies.JAVASCRIPT,
+      Technologies.TYPESCRIPT,
       Technologies.HTML5,
       Technologies.CSS3
     ],
