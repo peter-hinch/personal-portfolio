@@ -73,6 +73,57 @@ const GlobalStyle = createGlobalStyle`
     --color-error-95: hsl(0, 75%, 94%);
     --color-error-99: hsl(0, 75%, 98%);
   }
+
+  #theme-container {
+    --theme-error: var(--color-error-40);
+    --theme-on-error: var(--color-white);
+    --theme-error-container: var(--color-error-90);
+    --theme-on-error-container: var(--color-error-10);
+  }
+
+  #theme-container.light-theme {
+    --theme-primary: var(--color-primary-40);
+    --theme-on-primary: var(--color-white);
+    --theme-primary-container: var(--color-primary-90);
+    --theme-on-primary-container: var(--color-primary-10);
+    --theme-secondary: var(--color-secondary-40);
+    --theme-on-secondary: var(--color-white);
+    --theme-secondary-container: var(--color-secondary-90);
+    --theme-on-secondary-container: var(--color-secondary-10);
+    --theme-tertiary: var(--color-tertiary-40);
+    --theme-on-tertiary: var(--color-white);
+    --theme-tertiary-container: var(--color-tertiary-90);
+    --theme-on-tertiary-container: var(--color-tertiary-10);
+    --theme-background: var(--color-neutral-99);
+    --theme-on-background: var(--color-neutral-10);
+    --theme-surface: var(--color-neutral-99);
+    --theme-on-surface: var(--color-neutral-10);
+    --theme-surface-variant: var(--color-neutral-variant-90);
+    --theme-on-surface-variant: var(--color-neutral-variant-30);
+    --theme-outline: var(--color-neutral-variant-50);
+  }
+  
+  #theme-container.dark-theme {
+    --theme-primary: var(--color-primary-80);
+    --theme-on-primary: var(--color-primary-20);
+    --theme-primary-container: var(--color-primary-30);
+    --theme-on-primary-container: var(--color-primary-90);
+    --theme-secondary: var(--color-secondary-80);
+    --theme-on-secondary: var(--color-secondary-20);
+    --theme-secondary-container: var(--color-secondary-30);
+    --theme-on-secondary-container: var(--color-secondary-90);
+    --theme-tertiary: var(--color-tertiary-80);
+    --theme-on-tertiary: var(--color-tertiary-20);
+    --theme-tertiary-container: var(--color-tertiary-30);
+    --theme-on-tertiary-container: var(--color-tertiary-90);
+    --theme-background: var(--color-neutral-10);
+    --theme-on-background: var(--color-neutral-90);
+    --theme-surface: var(--color-neutral-10);
+    --theme-on-surface: var(--color-neutral-90);
+    --theme-surface-variant: var(--color-neutral-variant-30);
+    --theme-on-surface-variant: var(--color-neutral-variant-80);
+    --theme-outline: var(--color-neutral-variant-60);
+  }
   
   @media only screen and (max-width: 727px) {
     .container {
@@ -107,19 +158,11 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color-neutral-10);
   }
-
+  
   #theme-container {
     width: 100%;
-  }
-
-  #theme-container.light-theme {
-
-  }
-
-  #theme-container.dark-theme {
-
+    background-color: var(--theme-background);
   }
 
   h1,
@@ -129,7 +172,7 @@ const GlobalStyle = createGlobalStyle`
   h5,
   h6 {
     font-weight: 600;
-    color: var(--color-neutral-90);
+    color: var(--theme-on-background);
   }
 
   h1 {
@@ -165,7 +208,7 @@ const GlobalStyle = createGlobalStyle`
   p {
     font-size: 1em;
     line-height: 1.5rem;
-    color: var(--color-neutral-90);
+    color: var(--theme-on-background);
   }
 
   a {
@@ -181,7 +224,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     justify-content: center;
     width: 100%;
-    background: var(--color-primary-30);
+    background: var(--theme-primary);
   }
   
   header .container, footer .container {
@@ -196,7 +239,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   header a, footer a {
-    color: var(--color-primary-90);
+    color: var(--theme-on-primary);
   }
 
   header a:hover, footer a:hover {
@@ -256,7 +299,7 @@ const GlobalStyle = createGlobalStyle`
 
   footer {
     min-height: 18rem;
-    background: var(--color-secondary-30);
+    background: var(--theme-secondary-container);
   }
 
   footer .container {
@@ -295,8 +338,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 1.5rem 0 20vh 0;
     padding: 1.5rem 1.5rem 2.25rem 1.5rem;
-    background: var(--color-neutral-10);
-    border: 1px solid var(--color-neutral-variant-60);
+    background: var(--theme-surface);
+    border: 1px solid var(--theme-outline);
     border-radius: 1.5rem;
   }
 `;
