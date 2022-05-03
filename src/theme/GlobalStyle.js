@@ -373,7 +373,7 @@ const GlobalStyle = createGlobalStyle`
   .tag {
     display: inline-block;
     margin: 0 0.5rem 0.5rem 0;
-    padding: 0.25rem 0.5rem 0;
+    padding: 0.25rem 0.75rem 0;
     height: 1.25rem;
     color: var(--theme-on-secondary);
     background: var(--theme-secondary);
