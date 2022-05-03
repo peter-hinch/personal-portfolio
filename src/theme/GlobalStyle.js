@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import imgThemeSelectLight from './../assets/sun.svg';
-import imgThemeSelectDark from './../assets/moon-fill.svg';
+import imgThemeSelectLight from './../assets/theme/sun.svg';
+import imgThemeSelectDark from './../assets/theme/moon-fill.svg';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -216,7 +216,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.316rem;
   }
 
-  h2 + h3, h3 + h4 {
+  h3 + h4 {
     margin-top: -1.5rem;
   }
 
