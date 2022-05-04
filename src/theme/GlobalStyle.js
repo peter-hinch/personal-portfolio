@@ -124,6 +124,21 @@ const GlobalStyle = createGlobalStyle`
     --theme-on-surface-variant: var(--color-neutral-variant-80);
     --theme-outline: var(--color-neutral-variant-60);
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
   @media only screen and (max-width: 727px) {
     .container {
@@ -158,17 +173,6 @@ const GlobalStyle = createGlobalStyle`
     .container {
       width: 72rem;
     }
-  }
-  
-  body {
-    font-family: 'Overpass', sans-serif;
-    font-weight: 400;
-  }
-  
-  #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   
   #theme-container {
@@ -346,6 +350,7 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     align-items: center;
     width: 100%;
+    scroll-margin-top: 3rem;
   }
 
   section .container {
@@ -363,11 +368,20 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .carousel {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    -ms-overflow-style: none; // hide scrollbars in IE, Edge
+    scrollbar-width: none; // hide scrollbars in Firefox
+  }
 
+  .carousel::-webkit-scrollbar {
+    display: none; // hide scrollbars in Chrome, Safari, Opera
   }
 
   .carousel-image {
-
+    width: auto;
+    height: 16rem;
   }
 
   .technologies-info {
@@ -388,6 +402,10 @@ const GlobalStyle = createGlobalStyle`
     width: 3.5rem;
     height: auto;
   }
+
+  #technologies .technology-icons .technology-icon {
+    width: 5rem;
+  }
   
   .tags-list {
     display: flex;
@@ -398,6 +416,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 1rem 0 0;
     padding-left: 0;
     list-style-type: none;
+  }
+
+  #technologies .technologies-info .tags-list {
+    margin-top: 0;
   }
 
   .tag {
@@ -417,17 +439,14 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.25rem;
   }
 
   .portfolio-link {
     display: inline-block;
     font-size: 1.125em;
     line-height: 1.687rem;
-    padding: 0.25rem 0.5rem 0;
-    color: var(--color-white);
-    background: var(--theme-tertiary);
-    border-radius: 0.25rem;
+    color: var(--theme-tertiary);
   }
 
   footer {
