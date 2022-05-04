@@ -6,10 +6,10 @@ const PortfolioItem = ({ item }) => {
   const imagePath = './../assets/portfolio/';
 
   const renderLinks = (
-    <div className="portfolio-links">
+    <div className="cta-links">
       {item.liveUrl !== undefined && (
         <a
-          className="portfolio-link"
+          className="cta-link"
           href={item.liveUrl}
           alt="Visit the live site"
           title="Visit the live site"
@@ -19,7 +19,7 @@ const PortfolioItem = ({ item }) => {
       )}
       {item.sourceUrl !== undefined && (
         <a
-          className="portfolio-link"
+          className="cta-link"
           href={item.sourceUrl}
           alt="View the source code on GitHub"
           title="View the source code on GitHub"
