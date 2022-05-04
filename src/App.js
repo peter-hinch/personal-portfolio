@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import {
   name,
   preferredTechnologies,
+  otherTechnologies,
   portfolioItems,
   socialLinks
 } from './portfolioData';
@@ -34,7 +35,10 @@ const App = () => {
         toggleDarkTheme={toggleDarkTheme}
       />
       <AboutMe />
-      <Technologies preferredTechnologies={preferredTechnologies} />
+      <Technologies
+        preferredTechnologies={preferredTechnologies}
+        otherTechnologies={otherTechnologies}
+      />
       <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
       <Contact />
       <Footer name={name} socialLinks={socialLinks} />
