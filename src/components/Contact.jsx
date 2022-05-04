@@ -1,11 +1,12 @@
 import Container from './layout/Container';
+import ParagraphArray from './shared/ParagraphArray';
 
-const Contact = () => {
+const Contact = ({ contact }) => {
   return (
     <section id="contact">
       <Container>
         <h2>Contact</h2>
-        <p>I'd love to hear from you. Please get in touch!</p>
+        <ParagraphArray textArray={contact} />
       </Container>
     </section>
   );
