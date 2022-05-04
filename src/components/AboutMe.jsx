@@ -1,21 +1,19 @@
 import Container from './layout/Container';
+import ParagraphArray from './shared/ParagraphArray';
 
-const AboutMe = () => {
+const AboutMe = ({ aboutMe, socialLinks }) => {
+  const renderSocialLinks = socialLinks.map((link) => (
+    <a className="cta-link" href={link.url} alt={link.platform.fullname}>
+      {link.platform.fullname} profile
+    </a>
+  ));
+
   return (
     <section id="about-me">
       <Container>
         <h2>About Me</h2>
-        <p>
-          I am a Frontend Developer with professional experience in the
-          construction and manufacturing industries, with a great capability in
-          the JavaScript scripting language, HTML and CSS.
-        </p>
-
-        <p>
-          Passionate about designing user-friendly content and with a knack for
-          taking a lateral approach - blending technical and creative aspects
-          and proven ability to produce engaging user-facing experiences.
-        </p>
+        <ParagraphArray textArray={aboutMe} />
+        <div className="cta-links">{renderSocialLinks}</div>
       </Container>
     </section>
   );
