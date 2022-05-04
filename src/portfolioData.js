@@ -14,6 +14,7 @@ export const preferredTechnologies = {
 };
 
 export const otherTechnologies = {
+  tags: ['Git', 'GitHub', 'Microsoft SQL Server', 'Adobe Creative Suite'],
   description: ''
 };
 
@@ -32,7 +33,12 @@ export const portfolioItems = [
       Technologies.HTML5,
       Technologies.CSS3
     ],
-    tags: ['Google Maps API', 'Google Places API', 'Styled Components'],
+    tags: [
+      'Google Maps API',
+      'Google Places API',
+      'Styled Components',
+      'Figma'
+    ],
     liveUrl: 'https://remotespot.herokuapp.com/',
     sourceUrl:
       'https://github.com/peter-hinch/general-assembly-react-final-project'
@@ -40,7 +46,7 @@ export const portfolioItems = [
   {
     title: 'Todo List',
     subtitle: 'Notetaking application in React',
-    images: [],
+    images: ['', ''],
     description:
       'In our React Development course at General Assembly we were tasked with creating a Todo list in React. I wanted to create a skeumorphic interpretation of a real notebook page, so I took photos of paper and an eraser to incorporate them into the design. The font used is Sriracha from Google Fonts, the accompanying UI elements I created SVGs from hand-drawn images to match the look and feel of the Sriracha font.',
     technologies: [
@@ -57,7 +63,7 @@ export const portfolioItems = [
   {
     title: 'Piano',
     subtitle: 'An exercise in using the Web Audio API',
-    images: [],
+    images: ['', ''],
     description:
       'I set myself the task of creating a piano keyboard using CSS with the requirement that it retains realistic proportions and keys overlap as they would on a real piano. I am also interested in learning about how to synthesize sounds in the browser, and this was my introduction to the Web Audio API - something I hope to continue learning more about in future.',
     technologies: [
@@ -72,7 +78,7 @@ export const portfolioItems = [
   {
     title: 'SD Perfumery',
     subtitle: 'Storefront developed using .NET MVC',
-    images: [],
+    images: ['', ''],
     description:
       'Our capstone project for Diploma of Software Development. This project was developed in .NET using the MVC design pattern and utilises the Stripe payments API. My responsibilities in this project included project management (Trello, TeamGANNT) and database design and integration (Microsoft SQL Server).',
     technologies: [
