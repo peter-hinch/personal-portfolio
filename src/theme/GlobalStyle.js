@@ -178,6 +178,7 @@ const GlobalStyle = createGlobalStyle`
   #theme-container {
     width: 100%;
     background-color: var(--theme-background);
+    transition: all 0.3s;
   }
 
   h1,
@@ -314,7 +315,7 @@ const GlobalStyle = createGlobalStyle`
   #theme-selector input[type="checkbox"] {
     display: none;
   }
-
+  
   #theme-selector label::before {
     height: 1.5rem;
     width: 1.5rem;
@@ -322,11 +323,11 @@ const GlobalStyle = createGlobalStyle`
     left: 0;
     cursor: pointer;
   }
-
+  
   #theme-selector input[type="checkbox"] + label::before {
     content: url(${imgThemeSelectLight});
   }
-
+  
   #theme-selector input[type="checkbox"]:checked + label::before {
     content: url(${imgThemeSelectDark});
   }
@@ -371,6 +372,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.125em;
     line-height: 1.687rem;
     color: var(--theme-tertiary);
+    transition: all 0.3s;
+  }
+
+  .cta-link:hover {
+    color: var(--color-tertiary-60);
   }
 
   .portfolio-item {
@@ -415,6 +421,11 @@ const GlobalStyle = createGlobalStyle`
   .technology-icon {
     width: 3.5rem;
     height: auto;
+    transition: 0.3s;
+  }
+
+  .technology-icon:hover {
+    transform: scale(1.1);
   }
 
   #technologies .technology-icons .technology-icon {
@@ -450,7 +461,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   footer {
-    min-height: 18rem;
+    min-height: 50vh;
     background: var(--theme-surface-variant);
   }
 
@@ -458,6 +469,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1.5rem 0;
   }
 `;
 
