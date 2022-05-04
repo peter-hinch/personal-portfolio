@@ -37,7 +37,7 @@ const PortfolioItem = ({ item }) => {
       <ImageCarousel path={imagePath} title={item.title} images={item.images} />
       <p>{item.description}</p>
       {renderLinks}
-      <div className="technologies-info">
+      <div className="breakout-info">
         <TechnologyIcons technologies={item.technologies} />
         <TagsList tags={item.tags} />
       </div>

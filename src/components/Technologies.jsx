@@ -9,12 +9,12 @@ const Technologies = ({ preferredTechnologies, otherTechnologies }) => (
       <h2>Technologies</h2>
       <h3>I enjoy working with</h3>
       <ParagraphArray textArray={preferredTechnologies.description} />
-      <div className="technologies-info">
+      <div className="breakout-info">
         <TechnologyIcons technologies={preferredTechnologies.technologies} />
       </div>
       <h3>As well as</h3>
       <ParagraphArray textArray={otherTechnologies.description} />
-      <div className="technologies-info">
+      <div className="breakout-info">
         <TagsList tags={otherTechnologies.tags} />
       </div>
     </Container>

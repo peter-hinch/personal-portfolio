@@ -404,7 +404,7 @@ const GlobalStyle = createGlobalStyle`
     height: 16rem;
   }
 
-  .technologies-info {
+  .breakout-info {
     margin: 0 -1.5rem;
     padding: 1rem 1.5rem;
     background: var(--theme-secondary-container);
@@ -443,7 +443,7 @@ const GlobalStyle = createGlobalStyle`
     list-style-type: none;
   }
 
-  #technologies .technologies-info .tags-list {
+  #technologies .breakout-info .tags-list {
     margin-top: 0;
   }
 
