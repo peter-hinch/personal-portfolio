@@ -2,6 +2,25 @@ import { Technologies, Social } from './enums';
 
 export const name = 'Peter Hinch';
 
+export const socialLinks = [
+  {
+    platform: Social.GITHUB,
+    url: 'https://github.com/peter-hinch'
+  },
+  {
+    platform: Social.LINKEDIN,
+    url: 'https://www.linkedin.com/in/peter-hinch-dev/'
+  }
+];
+
+export const aboutMe = [
+  'I am a Frontend Developer with professional experience in the construction and manufacturing industries, with a great capability in the JavaScript scripting language, HTML and CSS.',
+  'Passionate about designing user-friendly content and with a knack for taking a lateral approach - blending technical and creative aspects and proven ability to produce engaging user-facing experiences.'
+];
+
+export const contact =
+  'Please feel free to get in touch if you think I can be a good fit for your team.';
+
 export const preferredTechnologies = {
   technologies: [
     Technologies.REACT,
@@ -10,12 +29,37 @@ export const preferredTechnologies = {
     Technologies.HTML5,
     Technologies.CSS3
   ],
-  description: ''
+  description: [
+    'As a Frontend Developer I am very familiar with HTML, CSS and JavaScript. My framework of choice is React.'
+  ]
 };
 
 export const otherTechnologies = {
-  tags: ['Git', 'GitHub', 'Microsoft SQL Server', 'Adobe Creative Suite'],
-  description: ''
+  tags: [
+    'Adobe Creative Suite',
+    'Agile',
+    'Android OS',
+    'Amazon Web Services',
+    'API Integration',
+    'Arduino',
+    'Bootstrap',
+    'C',
+    'C#',
+    'Figma',
+    'Git',
+    'GitHub',
+    'Java',
+    'JQuery',
+    'Microsoft Azure',
+    'Microsoft SQL Server',
+    'MongoDB',
+    'MySQL',
+    '.NET MVC',
+    'TypeScript'
+  ],
+  description: [
+    'I am always ready to learn new technologies to expand my skillset. The following are technologies that I have experience with and would like to work more with in the future.'
+  ]
 };
 
 export const portfolioItems = [
@@ -45,7 +89,7 @@ export const portfolioItems = [
   },
   {
     title: 'Todo List',
-    subtitle: 'Notetaking application in React',
+    subtitle: 'Note taking application in React',
     images: ['', ''],
     description:
       'In our React Development course at General Assembly we were tasked with creating a Todo list in React. I wanted to create a skeumorphic interpretation of a real notebook page, so I took photos of paper and an eraser to incorporate them into the design. The font used is Sriracha from Google Fonts, the accompanying UI elements I created SVGs from hand-drawn images to match the look and feel of the Sriracha font.',
@@ -92,16 +136,5 @@ export const portfolioItems = [
     ],
     tags: ['Stripe API', '.NET MVC'],
     sourceUrl: 'https://github.com/SD-Perfumery-DevTeam/SDP_MVC'
-  }
-];
-
-export const socialLinks = [
-  {
-    platform: Social.GITHUB,
-    url: 'https://github.com/peter-hinch'
-  },
-  {
-    platform: Social.LINKEDIN,
-    url: 'https://www.linkedin.com/in/peter-hinch-dev/'
   }
 ];
