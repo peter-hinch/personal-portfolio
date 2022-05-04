@@ -359,6 +359,20 @@ const GlobalStyle = createGlobalStyle`
     background: var(--theme-surface);
   }
 
+  .cta-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .cta-link {
+    display: inline-block;
+    font-size: 1.125em;
+    line-height: 1.687rem;
+    color: var(--theme-tertiary);
+  }
+
   .portfolio-item {
     margin-bottom: 8rem;
   }
@@ -433,20 +447,6 @@ const GlobalStyle = createGlobalStyle`
 
   .tag:last-child {
     margin-right: 0;
-  }
-
-  .portfolio-links {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .portfolio-link {
-    display: inline-block;
-    font-size: 1.125em;
-    line-height: 1.687rem;
-    color: var(--theme-tertiary);
   }
 
   footer {
