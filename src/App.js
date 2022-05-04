@@ -9,6 +9,8 @@ import PortfolioItem from './components/PortfolioItem';
 import Contact from './components/Contact';
 import {
   name,
+  aboutMe,
+  contact,
   preferredTechnologies,
   otherTechnologies,
   portfolioItems,
@@ -34,13 +36,13 @@ const App = () => {
         isDarkTheme={isDarkTheme}
         toggleDarkTheme={toggleDarkTheme}
       />
-      <AboutMe />
+      <AboutMe aboutMe={aboutMe} socialLinks={socialLinks} />
       <Technologies
         preferredTechnologies={preferredTechnologies}
         otherTechnologies={otherTechnologies}
       />
       <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
-      <Contact />
+      <Contact contact={contact} socialLinks={socialLinks} />
       <Footer name={name} socialLinks={socialLinks} />
     </ThemeContainer>
   );
