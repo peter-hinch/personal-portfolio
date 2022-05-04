@@ -14,7 +14,7 @@ const PortfolioItem = ({ item }) => {
           alt="Visit the live site"
           title="Visit the live site"
         >
-          Live Site
+          Visit Live Site
         </a>
       )}
       {item.sourceUrl !== undefined && (
@@ -24,7 +24,7 @@ const PortfolioItem = ({ item }) => {
           alt="View the source code on GitHub"
           title="View the source code on GitHub"
         >
-          Source Code
+          View Source Code
         </a>
       )}
     </div>

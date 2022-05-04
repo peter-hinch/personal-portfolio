@@ -424,7 +424,10 @@ const GlobalStyle = createGlobalStyle`
     display: inline-block;
     font-size: 1.125em;
     line-height: 1.687rem;
-    color: var(--theme-on-secondary-container);
+    padding: 0.25rem 0.5rem 0;
+    color: var(--color-white);
+    background: var(--theme-tertiary);
+    border-radius: 0.25rem;
   }
 
   footer {
