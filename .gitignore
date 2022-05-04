@@ -24,3 +24,6 @@ yarn-error.log*
 
 # working folder
 /working
+
+# environment variables
+.env
