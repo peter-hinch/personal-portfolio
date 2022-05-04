@@ -18,8 +18,9 @@ export const aboutMe = [
   'Passionate about designing user-friendly content and with a knack for taking a lateral approach - blending technical and creative aspects and proven ability to produce engaging user-facing experiences.'
 ];
 
-export const contact =
-  'Please feel free to get in touch if you think I can be a good fit for your team.';
+export const contact = [
+  'Please feel free to get in touch if you think I can be a good fit for your team.'
+];
 
 export const preferredTechnologies = {
   technologies: [
