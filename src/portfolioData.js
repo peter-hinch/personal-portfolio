@@ -19,7 +19,7 @@ export const aboutMe = [
 ];
 
 export const contact = [
-  'Please feel free to get in touch if you think I can be a good fit for your team.'
+  'If you have any enquiries regarding my portfolio I would love to hear from you.'
 ];
 
 export const preferredTechnologies = {
@@ -31,14 +31,14 @@ export const preferredTechnologies = {
     Technologies.CSS3
   ],
   description: [
-    'My main technologies of choice are JavaScript, React and Node.js . My HTML and CSS skills are also sharp. My motivation is to contribute code that is not only performant but also looks great in all browsers.'
+    'JavaScript, React and Node.js . My HTML and CSS skills are also sharp. I am passionate about writing code for the frontend that is not only performant but also looks great in all browsers. As a matter of fact this portfolio site was built with exactly these technologies.'
   ]
 };
 
 export const otherTechnologies = {
   tags: [
     'Adobe Creative Suite',
-    'Agile',
+    'Agile Methodology',
     'Android OS',
     'Amazon Web Services',
     'API Integration',
@@ -49,17 +49,20 @@ export const otherTechnologies = {
     'Figma',
     'Git',
     'GitHub',
+    'Heroku',
     'Java',
     'JQuery',
+    'Lucid Charts',
     'Microsoft Azure',
     'Microsoft SQL Server',
     'MongoDB',
     'MySQL',
     '.NET MVC',
+    'Trello',
     'TypeScript'
   ],
   description: [
-    'I also have experience using other technologies and welcome the opportunity to add to some or all of the following skills as I progress in my career.'
+    'a host of other technologies such as those listed below. There are still many programming languages, libraries, frameworks and services that I have yet to encounter and I always relish the opportunity to grow my skillset or learn something new altogether.'
   ]
 };
 
@@ -79,10 +82,11 @@ export const portfolioItems = [
       Technologies.CSS3
     ],
     tags: [
+      'Figma',
       'Google Maps API',
       'Google Places API',
-      'Styled Components',
-      'Figma'
+      'Heroku',
+      'Styled Components'
     ],
     liveUrl: 'https://remotespot.herokuapp.com/',
     sourceUrl:
@@ -123,9 +127,9 @@ export const portfolioItems = [
   {
     title: 'SD Perfumery',
     subtitle: 'Storefront developed using .NET MVC',
-    images: ['', ''],
+    images: [],
     description:
-      'Our capstone project for Diploma of Software Development. This project was developed in .NET using the MVC design pattern and utilises the Stripe payments API. My responsibilities in this project included project management (Trello, TeamGANNT) and database design and integration (Microsoft SQL Server).',
+      'Our capstone project for Diploma of Software Development. This project was developed in .NET using the MVC design pattern and utilises the Stripe payments API. My responsibilities in this project included project management (Trello, TeamGANTT) and database design and integration (Microsoft SQL Server).',
     technologies: [
       Technologies.CSHARP,
       Technologies.DOT_NET,
@@ -135,7 +139,7 @@ export const portfolioItems = [
       Technologies.HTML5,
       Technologies.CSS3
     ],
-    tags: ['Stripe API', '.NET MVC'],
+    tags: ['Lucid Charts', '.NET MVC', 'Stripe API', 'TeamGANTT', 'Trello'],
     sourceUrl: 'https://github.com/SD-Perfumery-DevTeam/SDP_MVC'
   }
 ];
