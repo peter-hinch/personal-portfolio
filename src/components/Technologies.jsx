@@ -6,11 +6,11 @@ const Technologies = ({ preferredTechnologies, otherTechnologies }) => (
   <section id="technologies">
     <Container>
       <h2>Technologies</h2>
-      <h3>I can work with these</h3>
+      <h3>I enjoy working with</h3>
       <div className="technologies-info">
         <TechnologyIcons technologies={preferredTechnologies.technologies} />
       </div>
-      <h3>As well as these</h3>
+      <h3>As well as</h3>
       <div className="technologies-info">
         <TagsList tags={otherTechnologies.tags} />
       </div>
