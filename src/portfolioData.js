@@ -24,14 +24,14 @@ export const contact = [
 
 export const preferredTechnologies = {
   technologies: [
+    Technologies.JAVASCRIPT,
     Technologies.REACT,
     Technologies.NODEJS,
-    Technologies.JAVASCRIPT,
     Technologies.HTML5,
     Technologies.CSS3
   ],
   description: [
-    'As a Frontend Developer I am very familiar with HTML, CSS and JavaScript. My framework of choice is React.'
+    'My main technologies of choice are JavaScript, React and Node.js . My HTML and CSS skills are also sharp. My motivation is to contribute code that is not only performant but also looks great in all browsers.'
   ]
 };
 
@@ -59,7 +59,7 @@ export const otherTechnologies = {
     'TypeScript'
   ],
   description: [
-    'I am always ready to learn new technologies to expand my skillset. The following are technologies that I have experience with and would like to work more with in the future.'
+    'I also have experience using other technologies and welcome the opportunity to add to some or all of the following skills as I progress in my career.'
   ]
 };
 
