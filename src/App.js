@@ -21,7 +21,7 @@ const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useLocalStorage('isDarkTheme', false);
 
   const renderPortfolioItems = portfolioItems.map((item) => (
-    <PortfolioItem item={item} />
+    <PortfolioItem key={`portfolio-item-${item.title}`} item={item} />
   ));
 
   const toggleDarkTheme = (event) => {

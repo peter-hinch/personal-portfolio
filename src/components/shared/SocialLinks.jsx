@@ -2,7 +2,7 @@ import { devIconsCdnUrl } from '../../enums';
 
 const SocialLinks = ({ name, socialLinks }) => {
   const renderSocialLinks = socialLinks.map((link) => (
-    <li>
+    <li key={`social-link-${link.platform.simplename}`}>
       <a href={link.url}>
         <img
           className="social-link"

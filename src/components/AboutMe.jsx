@@ -2,8 +2,13 @@ import Container from './layout/Container';
 import ParagraphArray from './shared/ParagraphArray';
 
 const AboutMe = ({ aboutMe, socialLinks }) => {
-  const renderSocialLinks = socialLinks.map((link) => (
-    <a className="cta-link" href={link.url} alt={link.platform.fullname}>
+  const renderProfileLinks = socialLinks.map((link) => (
+    <a
+      key={`profile-link-${link.platform.simplename}`}
+      className="cta-link"
+      href={link.url}
+      alt={link.platform.fullname}
+    >
       {link.platform.fullname} profile
     </a>
   ));
@@ -13,7 +18,7 @@ const AboutMe = ({ aboutMe, socialLinks }) => {
       <Container>
         <h2>About Me</h2>
         <ParagraphArray textArray={aboutMe} />
-        <div className="cta-links">{renderSocialLinks}</div>
+        <div className="cta-links">{renderProfileLinks}</div>
       </Container>
     </section>
   );
