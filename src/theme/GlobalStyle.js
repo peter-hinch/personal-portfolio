@@ -461,6 +461,45 @@ const GlobalStyle = createGlobalStyle`
     margin-right: 0;
   }
 
+  form.contact-form {
+    width: 32rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contact .breakout-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .contact-form .form-fieldset label {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-form .form-fieldset input,
+  .contact-form .form-fieldset textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 1.5rem;
+    padding: 0.25rem;
+    margin-bottom: 1.5rem;
+    border: 1px var(--theme-outline) solid;
+    border-radius: 0.25rem;
+  }
+  
+  .contact-form button[type="submit"] {
+    align-self: flex-end;
+    max-width: 100%;
+    min-height: 1.5rem;
+    padding: 0.5rem 0.75rem 0.25rem;
+    color: var(--theme-on-tertiary);
+    background: var(--theme-tertiary);
+    border: 1px var(--theme-outline) solid;
+    border-radius: 0.25rem;
+  }
+
   footer {
     min-height: 50vh;
     background: var(--theme-surface-variant);
