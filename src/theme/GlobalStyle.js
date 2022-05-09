@@ -391,9 +391,12 @@ const GlobalStyle = createGlobalStyle`
   .carousel {
     display: flex;
     flex-direction: row;
+    margin: 0 -1.5rem;
+    padding: 1.5rem;
     overflow: scroll;
     -ms-overflow-style: none; // hide scrollbars in IE, Edge
     scrollbar-width: none; // hide scrollbars in Firefox
+    background: var(--theme-surface-variant);
   }
 
   .carousel::-webkit-scrollbar {
@@ -402,7 +405,8 @@ const GlobalStyle = createGlobalStyle`
 
   .carousel-image {
     width: auto;
-    height: 16rem;
+    height: 24rem;
+    border-radius: 0.25rem;
   }
 
   .breakout-info {
