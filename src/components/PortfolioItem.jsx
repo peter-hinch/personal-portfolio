@@ -3,8 +3,6 @@ import TagsList from './shared/TagsList';
 import ImageCarousel from './shared/ImageCarousel';
 
 const PortfolioItem = ({ item }) => {
-  const imagePath = './../assets/portfolio/';
-
   const renderLinks = (
     <div className="cta-links">
       {item.liveUrl !== undefined && (
@@ -34,7 +32,7 @@ const PortfolioItem = ({ item }) => {
     <div className="portfolio-item">
       <h3>{item.title}</h3>
       <h4>{item.subtitle}</h4>
-      <ImageCarousel path={imagePath} title={item.title} images={item.images} />
+      <ImageCarousel title={item.title} images={item.images} />
       <p>{item.description}</p>
       {renderLinks}
       <div className="breakout-info">
