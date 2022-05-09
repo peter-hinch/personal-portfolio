@@ -1,15 +1,15 @@
-import { useEffect } from 'react';
-import { useImage } from './../../hooks/useImage';
+import Image from './Image';
 
-const ImageCarousel = ({ path, title, images }) => {
-  useEffect(() => {}, [images]);
+const ImageCarousel = ({ title, images }) => {
+  const renderImages = images?.map((image, index) => (
+    <Image key={`${title}-${index}`} path={image} alt={title} />
+  ));
 
-  const renderImages = images.map((image) => {
-    const imageUrl = `${path}${image}`;
-    return <img className="carousel-image" src={imageUrl} alt={title} />;
-  });
-
-  return <div className="carousel">{renderImages}</div>;
+  return images !== undefined && images.length > 0 ? (
+    <div className="carousel">{renderImages}</div>
+  ) : (
+    <></>
+  );
 };
 
 export default ImageCarousel;
