@@ -62,7 +62,7 @@ export const otherTechnologies = {
     'TypeScript'
   ],
   description: [
-    'a host of other technologies such as those listed below. There are still many programming languages, libraries, frameworks and services that I have yet to encounter and I always relish the opportunity to grow my skillset or learn something new altogether.'
+    'a host of other technologies listed below. Beyond these, there are many programming languages, libraries, frameworks and services that I have not yet used - I always relish the opportunity try something new.'
   ]
 };
 
@@ -70,7 +70,7 @@ export const portfolioItems = [
   {
     title: 'RemoteSpot',
     subtitle: 'Ratings application in React',
-    images: ['portfolio/remote-spot-01.png', ''],
+    images: ['portfolio/remote-spot-01.png'],
     description:
       'For the final project in my React Development course, I have chosen to create an application that allows users to rate businesses and venues aginst their suitability as a remote working venue. Basic information about each venue is retrieved from the Google Places API and users are able to add their remote work specific review information within the application.',
     technologies: [
@@ -95,7 +95,7 @@ export const portfolioItems = [
   {
     title: 'Todo List',
     subtitle: 'Note taking application in React',
-    images: ['', ''],
+    images: ['portfolio/todo-list-01.png'],
     description:
       'In our React Development course at General Assembly we were tasked with creating a Todo list in React. I wanted to create a skeumorphic interpretation of a real notebook page, so I took photos of paper and an eraser to incorporate them into the design. The font used is Sriracha from Google Fonts, the accompanying UI elements I created SVGs from hand-drawn images to match the look and feel of the Sriracha font.',
     technologies: [
@@ -112,7 +112,7 @@ export const portfolioItems = [
   {
     title: 'Piano',
     subtitle: 'An exercise in using the Web Audio API',
-    images: ['', ''],
+    images: ['portfolio/piano-01.png'],
     description:
       'I set myself the task of creating a piano keyboard using CSS with the requirement that it retains realistic proportions and keys overlap as they would on a real piano. I am also interested in learning about how to synthesize sounds in the browser, and this was my introduction to the Web Audio API - something I hope to continue learning more about in future.',
     technologies: [
@@ -127,7 +127,6 @@ export const portfolioItems = [
   {
     title: 'SD Perfumery',
     subtitle: 'Storefront developed using .NET MVC',
-    images: [],
     description:
       'Our capstone project for Diploma of Software Development. This project was developed in .NET using the MVC design pattern and utilises the Stripe payments API. My responsibilities in this project included project management (Trello, TeamGANTT) and database design and integration (Microsoft SQL Server).',
     technologies: [
