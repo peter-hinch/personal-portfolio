@@ -529,7 +529,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   footer {
-    min-height: 50vh;
+    min-height: 18rem;
     background: var(--theme-surface-variant);
   }
 
