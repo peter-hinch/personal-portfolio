@@ -149,6 +149,10 @@ const GlobalStyle = createGlobalStyle`
       margin: 1.5rem 0;
       border-radius: 0;
     }
+
+    #header-text-links {
+      display: none;
+    }
   }
 
   @media only screen and (min-width: 728px) {
@@ -160,6 +164,10 @@ const GlobalStyle = createGlobalStyle`
       margin: 1.5rem 0 20vh 0;
       border-radius: 1.5rem;
       box-shadow: 0 0 0.75rem var(--theme-outline);
+    }
+
+    #header-text-links {
+      display: flex;
     }
   }
 
@@ -300,6 +308,13 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
 
+  #header-text-items {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-shrink: 0;
+  }
+
   #header-icons {
     display: flex;
     flex-direction: row;
@@ -406,6 +421,7 @@ const GlobalStyle = createGlobalStyle`
   .carousel-image {
     width: auto;
     height: 24rem;
+    border: 1px var(--theme-outline) solid;
     border-radius: 0.25rem;
   }
 
