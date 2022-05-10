@@ -70,7 +70,7 @@ export const portfolioItems = [
   {
     title: 'RemoteSpot',
     subtitle: 'Ratings application in React',
-    images: ['portfolio/remote-spot-01.png'],
+    images: ['portfolio/remote-spot-01.png', 'portfolio/remote-spot-02.png'],
     description:
       'For the final project in my React Development course, I have chosen to create an application that allows users to rate businesses and venues aginst their suitability as a remote working venue. Basic information about each venue is retrieved from the Google Places API and users are able to add their remote work specific review information within the application.',
     technologies: [
@@ -84,6 +84,7 @@ export const portfolioItems = [
     tags: [
       'Custom Hooks',
       'Figma',
+      'Framer Motion',
       'Google Maps API',
       'Google Places API',
       'Heroku',
@@ -99,7 +100,7 @@ export const portfolioItems = [
     subtitle: 'Note taking application in React',
     images: ['portfolio/todo-list-01.png'],
     description:
-      'In our React Development course at General Assembly we were tasked with creating a Todo list in React. I wanted to create a skeumorphic interpretation of a real notebook page, so I took photos of paper and an eraser to incorporate them into the design. The font used is Sriracha from Google Fonts, the accompanying UI elements I created SVGs from hand-drawn images to match the look and feel of the Sriracha font.',
+      'In our React Development course at General Assembly we were tasked with creating a Todo list in React. I wanted to create a skeumorphic interpretation of a physical notebook page, so I took photos of paper and an eraser to incorporate them into the design. The font used is Sriracha from Google Fonts, the accompanying UI elements I created SVGs from hand-drawn images to match the look and feel of the Sriracha font.',
     technologies: [
       Technologies.REACT,
       Technologies.NODEJS,
