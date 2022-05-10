@@ -425,8 +425,13 @@ const GlobalStyle = createGlobalStyle`
   .carousel-image {
     width: auto;
     height: 24rem;
+    margin-right: 1.5rem;
     border: 1px var(--theme-outline) solid;
     border-radius: 0.25rem;
+  }
+
+  .carousel-image:last-child {
+    margin-right: 0;
   }
 
   .breakout-info {
