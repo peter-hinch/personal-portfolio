@@ -100,7 +100,9 @@ const GlobalStyle = createGlobalStyle`
     --theme-on-surface: var(--color-neutral-10);
     --theme-surface-variant: var(--color-neutral-variant-90);
     --theme-on-surface-variant: var(--color-neutral-variant-30);
-    --theme-outline: var(--color-neutral-variant-50);
+    --theme-outline: rgba(119, 128, 131, 0.5); // neutral variant 50
+    --theme-shadow-a: rgba(119, 128, 131, 0.25); // neutral variant 50
+    --theme-shadow-b: rgba(119, 128, 131, 0.30); // neutral variant 50
   }
   
   #theme-container.dark-theme {
@@ -122,7 +124,9 @@ const GlobalStyle = createGlobalStyle`
     --theme-on-surface: var(--color-neutral-90);
     --theme-surface-variant: var(--color-neutral-variant-30);
     --theme-on-surface-variant: var(--color-neutral-variant-80);
-    --theme-outline: var(--color-neutral-variant-60);
+    --theme-outline: rgba(145, 153, 156, 0.5); // neutral variant 60
+    --theme-shadow-a: rgba(145, 153, 156, 0.25); // neutral variant 60
+    --theme-shadow-b: rgba(145, 153, 156, 0.30); // neutral variant 60
   }
 
   html {
@@ -163,7 +167,7 @@ const GlobalStyle = createGlobalStyle`
     section .container {
       margin: 1.5rem 0 20vh 0;
       border-radius: 1.5rem;
-      box-shadow: 0 0 0.75rem var(--theme-outline);
+      box-shadow: 0 0.5rem 0.75rem var(--theme-shadow-a), 0 0.5rem 2rem var(--theme-shadow-b);
     }
 
     #header-text-links {
