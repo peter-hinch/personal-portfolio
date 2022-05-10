@@ -7,25 +7,25 @@ const Header = ({ name, socialLinks, isDarkTheme, toggleDarkTheme }) => {
     <header>
       <Container>
         <nav>
-          <ul>
-            <li>
-              <h1>
-                <a href="#">{name}</a>
-              </h1>
-            </li>
-            <li>
-              <a href="#about-me">About Me</a>
-            </li>
-            <li>
-              <a href="#technologies">Technologies</a>
-            </li>
-            <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
+          <div id="header-text-items">
+            <h1>
+              <a href="#top">{name}</a>
+            </h1>
+            <ul id="header-text-links">
+              <li>
+                <a href="#about-me">About Me</a>
+              </li>
+              <li>
+                <a href="#technologies">Technologies</a>
+              </li>
+              <li>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
           <div id="header-icons">
             <ThemeSelector
               isDarkTheme={isDarkTheme}
