@@ -508,6 +508,10 @@ const GlobalStyle = createGlobalStyle`
     border: 1px var(--theme-outline) solid;
     border-radius: 0.25rem;
   }
+
+  .contact-form .form-fieldset textarea {
+    resize: none;
+  }
   
   .contact-form button[type="submit"] {
     align-self: flex-end;
