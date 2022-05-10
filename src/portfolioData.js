@@ -82,10 +82,12 @@ export const portfolioItems = [
       Technologies.CSS3
     ],
     tags: [
+      'Custom Hooks',
       'Figma',
       'Google Maps API',
       'Google Places API',
       'Heroku',
+      'Local Storage API',
       'Styled Components'
     ],
     liveUrl: 'https://remotespot.herokuapp.com/',
@@ -105,7 +107,7 @@ export const portfolioItems = [
       Technologies.HTML5,
       Technologies.CSS3
     ],
-    tags: ['Styled Components'],
+    tags: ['Custom Hooks', 'Local Storage API', 'Styled Components'],
     liveUrl: 'https://peter-hinch.github.io/general-assembly-react-todo-list/',
     sourceUrl: 'https://github.com/peter-hinch/general-assembly-react-todo-list'
   },
