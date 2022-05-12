@@ -76,6 +76,7 @@ export const Technologies = {
     iconSuffix: '-original-wordmark'
   },
   REACT: { simplename: 'react', fullname: 'React.js', iconSuffix: '-original' },
+  REDUX: { simplename: 'redux', fullname: 'Redux', iconSuffix: '-original' },
   SASS: { simplename: 'sass', fullname: 'Sass', iconSuffix: '-original' },
   TYPESCRIPT: {
     simplename: 'typescript',
