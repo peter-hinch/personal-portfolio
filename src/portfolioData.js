@@ -70,7 +70,11 @@ export const portfolioItems = [
   {
     title: 'RemoteSpot',
     subtitle: 'Ratings application in React',
-    images: ['portfolio/remote-spot-01.png', 'portfolio/remote-spot-02.png'],
+    images: [
+      'portfolio/remote-spot-01.png',
+      'portfolio/remote-spot-02.png',
+      'portfolio/remote-spot-03.png'
+    ],
     description:
       'For the final project in my React Development course, I have chosen to create an application that allows users to rate businesses and venues aginst their suitability as a remote working venue. Basic information about each venue is retrieved from the Google Places API and users are able to add their remote work specific review information within the application.',
     technologies: [
