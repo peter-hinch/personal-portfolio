@@ -39,6 +39,11 @@ export const Technologies = {
     fullname: 'Microsoft .NET',
     iconSuffix: '-original-wordmark'
   },
+  EXPRESS: {
+    simplename: 'express',
+    fullname: 'Express',
+    iconSuffix: '-original'
+  },
   FIGMA: { simplename: 'figma', fullname: 'Figma', iconSuffix: '-original' },
   FIREBASE: {
     simplename: 'firebase',
@@ -64,6 +69,11 @@ export const Technologies = {
     simplename: 'microsoftsqlserver',
     fullname: 'Microsoft SQL Server',
     iconSuffix: '-plain-wordmark'
+  },
+  MONGODB: {
+    simplename: 'mongodb',
+    fullname: 'MongoDB',
+    iconSuffix: '-original-wordmark'
   },
   MYSQL: {
     simplename: 'mysql',
