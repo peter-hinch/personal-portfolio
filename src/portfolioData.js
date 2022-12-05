@@ -24,9 +24,11 @@ export const contact = [
 
 export const preferredTechnologies = {
   technologies: [
-    Technologies.JAVASCRIPT,
     Technologies.REACT,
     Technologies.NODEJS,
+    Technologies.JAVASCRIPT,
+    Technologies.TYPESCRIPT,
+    Technologies.SASS,
     Technologies.HTML5,
     Technologies.CSS3
   ],
@@ -58,8 +60,7 @@ export const otherTechnologies = {
     'MongoDB',
     'MySQL',
     '.NET MVC',
-    'Trello',
-    'TypeScript'
+    'Trello'
   ],
   description: [
     'a host of other technologies listed below. Beyond these, there are many programming languages, libraries, frameworks and services that I have not yet used - I always relish the opportunity try something new.'
