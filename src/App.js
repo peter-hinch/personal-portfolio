@@ -8,7 +8,8 @@ import PortfolioSection from './components/PortfolioSection';
 import PortfolioItem from './components/PortfolioItem';
 import Contact from './components/Contact';
 import {
-  name,
+  myName,
+  location,
   aboutMe,
   contact,
   preferredTechnologies,
@@ -31,19 +32,25 @@ const App = () => {
   return (
     <ThemeContainer isDarkTheme={isDarkTheme}>
       <Header
-        name={name}
+        myName={myName}
+        location={location}
         socialLinks={socialLinks}
         isDarkTheme={isDarkTheme}
         toggleDarkTheme={toggleDarkTheme}
       />
-      <AboutMe aboutMe={aboutMe} socialLinks={socialLinks} />
+      <AboutMe
+        myName={myName}
+        location={location}
+        aboutMe={aboutMe}
+        socialLinks={socialLinks}
+      />
       <Technologies
         preferredTechnologies={preferredTechnologies}
         otherTechnologies={otherTechnologies}
       />
       <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
       <Contact contact={contact} socialLinks={socialLinks} />
-      <Footer name={name} socialLinks={socialLinks} />
+      <Footer myName={myName} socialLinks={socialLinks} />
     </ThemeContainer>
   );
 };

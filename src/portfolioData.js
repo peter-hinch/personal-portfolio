@@ -1,6 +1,11 @@
 import { Technologies, Social } from './enums';
 
-export const name = 'Peter Hinch';
+export const myName = 'Peter Hinch';
+
+export const location = {
+  city: 'Melbourne',
+  country: 'Australia'
+};
 
 export const socialLinks = [
   {
