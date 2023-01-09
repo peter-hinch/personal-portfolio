@@ -74,6 +74,30 @@ export const otherTechnologies = {
 
 export const portfolioItems = [
   {
+    title: 'Advent of CSS 2022',
+    subtitle: 'Participation in CSS challenges',
+    images: [
+      'portfolio/advent-of-css-2022-01.png',
+      'portfolio/advent-of-css-2022-02.png',
+      'portfolio/advent-of-css-2022-03.png',
+      'portfolio/advent-of-css-2022-04.png',
+      'portfolio/advent-of-css-2022-05.png',
+      'portfolio/advent-of-css-2022-06.png',
+      'portfolio/advent-of-css-2022-07.png',
+      'portfolio/advent-of-css-2022-08.png',
+      'portfolio/advent-of-css-2022-09.png',
+      'portfolio/advent-of-css-2022-10.png'
+    ],
+    description:
+      'The Advent of CSS is an event put together by Amy Dutton in collaboration with James Q Quick (Advent of JS) where participants are challenged to create 24 layouts over 24 days leading up to Christmas. My submissions were created in HTML5 and CSS3 to match the supplied Figma designs as accurately as possible.',
+    technologies: [Technologies.HTML5, Technologies.CSS3],
+    tags: ['Figma', 'Semantic HTML', 'BEM Methodology'],
+    liveUrl:
+      'https://peter-hinch.github.io/advent-of-css-2022-01-pomodoro-timer/',
+    sourceUrl:
+      'https://github.com/peter-hinch/advent-of-css-2022-01-pomodoro-timer'
+  },
+  {
     title: 'RemoteSpot',
     subtitle: 'Ratings application in React',
     images: [
