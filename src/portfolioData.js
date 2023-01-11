@@ -86,7 +86,8 @@ export const portfolioItems = [
       'portfolio/advent-of-css-2022-07.png',
       'portfolio/advent-of-css-2022-08.png',
       'portfolio/advent-of-css-2022-09.png',
-      'portfolio/advent-of-css-2022-10.png'
+      'portfolio/advent-of-css-2022-10.png',
+      'portfolio/advent-of-css-2022-11.png'
     ],
     description:
       'The Advent of CSS is an event put together by Amy Dutton in collaboration with James Q Quick (Advent of JS) where participants are challenged to create 24 layouts over 24 days leading up to Christmas. My submissions were created in HTML5 and CSS3 to match the supplied Figma designs as accurately as possible.',
