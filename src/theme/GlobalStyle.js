@@ -295,7 +295,7 @@ const GlobalStyle = createGlobalStyle`
     position: sticky;
     top: 0;
     min-height: 3rem;
-    z-index: 1;
+    z-index: 200;
   }
 
   header .container {

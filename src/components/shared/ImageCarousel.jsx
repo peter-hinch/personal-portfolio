@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import styled from 'styled-components';
 
 import imgCaret from './../../assets/images/caret.svg';
@@ -26,7 +28,7 @@ const StyledCarousel = styled.div`
     flex-direction: row;
     gap: 1.5rem;
     padding: 1.5rem;
-    overflow: scroll;
+    overflow: hidden;
     -ms-overflow-style: none; // hide scrollbars in IE, Edge
     scrollbar-width: none; // hide scrollbars in Firefox
     background: var(--theme-surface-variant);
@@ -46,6 +48,7 @@ const StyledCarousel = styled.div`
     background: no-repeat center/32px url(${imgCaret});
     border: none;
     cursor: pointer;
+    z-index: 100;
   }
 
   .carousel__btn-prev {
@@ -66,17 +69,48 @@ const StyledCarousel = styled.div`
 `;
 
 const ImageCarousel = ({ title, images }) => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const imageStyleObject = {
+    translate: `calc(${currentImage * -100}% + ${currentImage * -1.5}rem) 0`
+  };
+
+  const navigatePrev = () => {
+    if (currentImage > 0) {
+      setCurrentImage(currentImage - 1);
+    }
+  };
+
+  const navigateNext = () => {
+    if (currentImage < images.length - 1) {
+      setCurrentImage(currentImage + 1);
+    }
+  };
+
   const renderImages = images?.map((image, index) => (
-    <Image key={`${title}-${index}`} path={image} alt={title} />
+    <Image
+      key={`${title}-${index}`}
+      path={image}
+      alt={title}
+      style={imageStyleObject}
+    />
   ));
 
   return images !== undefined && images.length > 0 ? (
     <StyledCarousel
       className={images.length === 1 ? 'carousel__img-single' : ''}
     >
-      <button className="carousel__btn carousel__btn-prev"></button>
+      <button
+        className="carousel__btn carousel__btn-prev"
+        aria-label="Previous image"
+        onClick={navigatePrev}
+      ></button>
       <div className="carousel">{renderImages}</div>
-      <button className="carousel__btn carousel__btn-next"></button>
+      <button
+        className="carousel__btn carousel__btn-next"
+        aria-label="Next image"
+        onClick={navigateNext}
+      ></button>
     </StyledCarousel>
   ) : (
     <></>
