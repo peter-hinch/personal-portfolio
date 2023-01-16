@@ -295,7 +295,7 @@ const GlobalStyle = createGlobalStyle`
     position: sticky;
     top: 0;
     min-height: 3rem;
-    z-index: 1;
+    z-index: 200;
   }
 
   header .container {
@@ -405,33 +405,6 @@ const GlobalStyle = createGlobalStyle`
 
   .portfolio-item:last-child {
     margin-bottom: 0;
-  }
-
-  .carousel {
-    display: flex;
-    flex-direction: row;
-    margin: 0 -1.5rem;
-    padding: 1.5rem;
-    overflow: scroll;
-    -ms-overflow-style: none; // hide scrollbars in IE, Edge
-    scrollbar-width: none; // hide scrollbars in Firefox
-    background: var(--theme-surface-variant);
-  }
-
-  .carousel::-webkit-scrollbar {
-    display: none; // hide scrollbars in Chrome, Safari, Opera
-  }
-
-  .carousel-image {
-    width: auto;
-    height: 24rem;
-    margin-right: 1.5rem;
-    border: 1px var(--theme-outline) solid;
-    border-radius: 0.25rem;
-  }
-
-  .carousel-image:last-child {
-    margin-right: 0;
   }
 
   .breakout-info {
