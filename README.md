@@ -10,7 +10,8 @@
 - Contact form utilising [getform.io](https://getform.io/) which obscures developer email address
 - Colour palette derived from the [Material Design 3 specification](https://m3.material.io/styles/color/the-color-system/key-colors-tones)
 - Light and dark themes
+- Image carousel to showcase images for each project
 
 ### Future Additions
 
-- Interactive image carousel
+- Styling refinement
