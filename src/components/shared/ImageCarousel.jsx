@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
 
@@ -48,7 +48,14 @@ const StyledCarousel = styled.div`
     background: no-repeat center/32px url(${imgCaret});
     border: none;
     cursor: pointer;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
     z-index: 100;
+  }
+
+  .carousel__btn:disabled {
+    opacity: 0;
+    pointer-events: none;
   }
 
   .carousel__btn-prev {
@@ -70,6 +77,15 @@ const StyledCarousel = styled.div`
 
 const ImageCarousel = ({ title, images }) => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [nextDisabled, setNextDisabled] = useState(false);
+  const [prevDisabled, setPrevDisabled] = useState(false);
+
+  useEffect(() => {
+    currentImage === 0 ? setPrevDisabled(true) : setPrevDisabled(false);
+    currentImage === images?.length - 1
+      ? setNextDisabled(true)
+      : setNextDisabled(false);
+  }, [currentImage, images]);
 
   const imageStyleObject = {
     translate: `calc(${currentImage * -100}% + ${currentImage * -1.5}rem) 0`
@@ -104,12 +120,14 @@ const ImageCarousel = ({ title, images }) => {
         className="carousel__btn carousel__btn-prev"
         aria-label="Previous image"
         onClick={navigatePrev}
+        disabled={prevDisabled}
       ></button>
       <div className="carousel">{renderImages}</div>
       <button
         className="carousel__btn carousel__btn-next"
         aria-label="Next image"
         onClick={navigateNext}
+        disabled={nextDisabled}
       ></button>
     </StyledCarousel>
   ) : (
