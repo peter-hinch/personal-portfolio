@@ -418,6 +418,12 @@ const GlobalStyle = createGlobalStyle`
     background: var(--theme-surface-variant);
   }
 
+  .carousel.carousel__single-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .carousel::-webkit-scrollbar {
     display: none; // hide scrollbars in Chrome, Safari, Opera
   }

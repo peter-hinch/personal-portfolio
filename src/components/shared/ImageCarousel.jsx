@@ -6,7 +6,13 @@ const ImageCarousel = ({ title, images }) => {
   ));
 
   return images !== undefined && images.length > 0 ? (
-    <div className="carousel">{renderImages}</div>
+    <div
+      className={`carousel ${
+        images.length === 1 ? 'carousel__single-image' : ''
+      }`}
+    >
+      {renderImages}
+    </div>
   ) : (
     <></>
   );
