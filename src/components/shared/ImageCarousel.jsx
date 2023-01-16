@@ -1,13 +1,30 @@
 import styled from 'styled-components';
+
+import imgCaret from './../../assets/images/caret.svg';
+
 import Image from './Image';
 
 const StyledCarousel = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 0 -1.5rem;
+
+  &.carousel__img-single {
+    .carousel__btn {
+      display: none;
+    }
+
+    .carousel {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
   .carousel {
-    position: relative;
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
-    margin: 0 -1.5rem;
     padding: 1.5rem;
     overflow: scroll;
     -ms-overflow-style: none; // hide scrollbars in IE, Edge
@@ -15,28 +32,29 @@ const StyledCarousel = styled.div`
     background: var(--theme-surface-variant);
   }
 
-  .carousel.carousel__img-single {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
   .carousel::-webkit-scrollbar {
     display: none; // hide scrollbars in Chrome, Safari, Opera
   }
 
-  .carousel .carousel__btn-prev {
+  .carousel__btn {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+    top: calc(50% - 16px);
+    display: block;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    background: no-repeat center/32px url(${imgCaret});
+    border: none;
+    cursor: pointer;
   }
 
-  .carousel .carousel__btn-next {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
+  .carousel__btn-prev {
+    left: 1rem;
+    transform: rotate(180deg);
+  }
+
+  .carousel__btn-next {
+    right: 1rem;
   }
 
   .carousel-image {
@@ -53,16 +71,12 @@ const ImageCarousel = ({ title, images }) => {
   ));
 
   return images !== undefined && images.length > 0 ? (
-    <StyledCarousel>
-      <button className="carousel__btn-prev">Prev</button>
-      <div
-        className={`carousel ${
-          images.length === 1 ? 'carousel__img-single' : ''
-        }`}
-      >
-        {renderImages}
-      </div>
-      <button className="carousel__btn-next">Next</button>
+    <StyledCarousel
+      className={images.length === 1 ? 'carousel__img-single' : ''}
+    >
+      <button className="carousel__btn carousel__btn-prev"></button>
+      <div className="carousel">{renderImages}</div>
+      <button className="carousel__btn carousel__btn-next"></button>
     </StyledCarousel>
   ) : (
     <></>
