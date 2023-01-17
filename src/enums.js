@@ -65,6 +65,11 @@ export const Technologies = {
     fullname: 'JavaScript',
     iconSuffix: '-original'
   },
+  MATERIALUI: {
+    simplename: 'materialui',
+    fullname: 'Material UI',
+    iconSuffix: '-original'
+  },
   MICROSOFTSQLSERVER: {
     simplename: 'microsoftsqlserver',
     fullname: 'Microsoft SQL Server',
