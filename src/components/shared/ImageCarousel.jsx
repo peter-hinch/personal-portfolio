@@ -26,8 +26,7 @@ const StyledCarousel = styled.div`
   .carousel {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     overflow: hidden;
     -ms-overflow-style: none; // hide scrollbars in IE, Edge
     scrollbar-width: none; // hide scrollbars in Firefox
@@ -68,8 +67,10 @@ const StyledCarousel = styled.div`
   }
 
   .carousel-image {
+    margin: 0;
     width: auto;
-    height: 24rem;
+    max-width: calc(100% - 3rem);
+    max-height: 24rem;
     border: 1px var(--theme-outline) solid;
     border-radius: 0.25rem;
   }
@@ -88,7 +89,7 @@ const ImageCarousel = ({ title, images }) => {
   }, [currentImage, images]);
 
   const imageStyleObject = {
-    translate: `calc(${currentImage * -100}% + ${currentImage * -1.5}rem) 0`
+    translate: `${currentImage * -100}% 0`
   };
 
   const navigatePrev = () => {
