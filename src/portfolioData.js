@@ -2,6 +2,8 @@ import { Technologies, Social } from './enums';
 
 export const myName = 'Peter Hinch';
 
+export const myRole = 'Frontend Developer';
+
 export const location = {
   city: 'Melbourne',
   country: 'Australia'
@@ -60,11 +62,13 @@ export const otherTechnologies = {
     'Java',
     'JQuery',
     'Lucid Charts',
+    'Material UI',
     'Microsoft Azure',
     'Microsoft SQL Server',
     'MongoDB',
     'MySQL',
     '.NET MVC',
+    'Styled-Components',
     'Trello'
   ],
   description: [
@@ -74,8 +78,8 @@ export const otherTechnologies = {
 
 export const portfolioItems = [
   {
-    title: 'Advent of CSS 2022',
-    subtitle: 'Participation in CSS challenges',
+    title: 'Advent of CSS 2022 / Advent of JS 2022',
+    subtitle: 'Participation in CSS and JS challenges',
     images: [
       'portfolio/advent-of-css-2022-01.png',
       'portfolio/advent-of-css-2022-02.png',
@@ -90,9 +94,16 @@ export const portfolioItems = [
       'portfolio/advent-of-css-2022-11.png'
     ],
     description:
-      'The Advent of CSS is an event put together by Amy Dutton in collaboration with James Q Quick (Advent of JS) where participants are challenged to create 24 layouts over 24 days leading up to Christmas. My submissions were created in HTML5 and CSS3 to match the supplied Figma designs as accurately as possible.',
-    technologies: [Technologies.HTML5, Technologies.CSS3],
-    tags: ['Figma', 'Semantic HTML', 'BEM Methodology'],
+      'The Advent of CSS and Advent of JS are events put together by Amy Dutton and James Q Quick. Participants are challenged to create 24 applications, where the Advent of CSS is concerned with the accurate production of a layout from a Figma design, and in Advent of JS challenges you are required to produce functionality to a brief.',
+    technologies: [
+      Technologies.REACT,
+      Technologies.NODEJS,
+      Technologies.JAVASCRIPT,
+      Technologies.TYPESCRIPT,
+      Technologies.HTML5,
+      Technologies.CSS3
+    ],
+    tags: ['Figma', 'Semantic HTML', 'BEM Methodology', 'Styled Components'],
     liveUrl:
       'https://peter-hinch.github.io/advent-of-css-2022-01-pomodoro-timer/',
     sourceUrl:
@@ -114,11 +125,11 @@ export const portfolioItems = [
       Technologies.JAVASCRIPT,
       Technologies.TYPESCRIPT,
       Technologies.HTML5,
-      Technologies.CSS3
+      Technologies.CSS3,
+      Technologies.FIGMA
     ],
     tags: [
       'Custom Hooks',
-      'Figma',
       'Framer Motion',
       'Google Maps API',
       'Google Places API',

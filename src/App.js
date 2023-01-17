@@ -9,6 +9,7 @@ import PortfolioItem from './components/PortfolioItem';
 import Contact from './components/Contact';
 import {
   myName,
+  myRole,
   location,
   aboutMe,
   contact,
@@ -40,6 +41,7 @@ const App = () => {
       />
       <AboutMe
         myName={myName}
+        myRole={myRole}
         location={location}
         aboutMe={aboutMe}
         socialLinks={socialLinks}

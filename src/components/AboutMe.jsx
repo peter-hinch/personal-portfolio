@@ -1,7 +1,7 @@
 import Container from './layout/Container';
 import ParagraphArray from './shared/ParagraphArray';
 
-const AboutMe = ({ myName, location, aboutMe, socialLinks }) => {
+const AboutMe = ({ myName, myRole, location, aboutMe, socialLinks }) => {
   const renderProfileLinks = socialLinks.map((link) => (
     <a
       key={`profile-link-${link.platform.simplename}`}
@@ -16,7 +16,14 @@ const AboutMe = ({ myName, location, aboutMe, socialLinks }) => {
   return (
     <section id="about-me">
       <Container>
-        <h2>{`Hello! I'm ${myName}, a Frontend Developer from ${location.city}, ${location.country}.`}</h2>
+        <h1>
+          Hello!
+          <br />
+          I'm {myName},
+          <br />a {myRole}
+          <br />
+          based in {location.city}, {location.country}.
+        </h1>
         <ParagraphArray textArray={aboutMe} />
         <div className="cta-links">{renderProfileLinks}</div>
       </Container>
