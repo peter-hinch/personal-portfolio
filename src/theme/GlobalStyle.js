@@ -165,7 +165,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     section .container {
-      margin: 1.5rem 0 20vh 0;
+      margin: 1.5rem;
       border-radius: 1.5rem;
       box-shadow: 0 0.5rem 0.75rem var(--theme-shadow-a), 0 0.5rem 2rem var(--theme-shadow-b);
     }
@@ -369,8 +369,10 @@ const GlobalStyle = createGlobalStyle`
   section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: calc(100vh - 3rem);
     scroll-margin-top: 3rem;
   }
 
