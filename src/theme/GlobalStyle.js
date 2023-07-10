@@ -246,23 +246,31 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: var(--theme-tertiary);
-  }
 
-  a:hover {
+    &:hover {
     text-decoration: underline;
   }
+  }
 
-  
   header, footer {
     display: flex;
     justify-content: center;
     width: 100%;
     background: var(--theme-primary);
-  }
-  
-  header .container, footer .container {
-    box-sizing: border-box;
-    padding: 0 1.5rem;
+
+    a {
+      color: var(--color-black);
+
+      &:hover {
+        text-decoration: none;
+        color: var(--theme-primary-container);
+      }
+    }
+
+    .container {
+      box-sizing: border-box;
+      padding: 0 1.5rem;
+    }
   }
 
   header h1 {
@@ -270,25 +278,16 @@ const GlobalStyle = createGlobalStyle`
     line-height: 2.25rem;
     margin: 0.25rem 1.5rem 0 0;
   }
-  
-  header a, footer a {
-    color: var(--color-black);
-  }
-
-  header a:hover, footer a:hover {
-    text-decoration: none;
-    color: var(--theme-primary-container);
-  }
 
   nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-right: 1rem;
+
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+    }
   }
 
   header {
@@ -296,20 +295,20 @@ const GlobalStyle = createGlobalStyle`
     top: 0;
     min-height: 3rem;
     z-index: 200;
-  }
 
-  header .container {
-    display: flex;
-    flex-direction: row;
-  }
+    .container {
+      display: flex;
+      flex-direction: row;
 
-  header .container nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-    width: 100%;
+      nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        width: 100%;
+      }
+    }
   }
 
   #header-text-items {
@@ -403,10 +402,10 @@ const GlobalStyle = createGlobalStyle`
 
   .portfolio-item {
     margin-bottom: 8rem;
-  }
 
-  .portfolio-item:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .breakout-info {
@@ -427,10 +426,10 @@ const GlobalStyle = createGlobalStyle`
     width: 3.5rem;
     height: auto;
     transition: 0.3s;
-  }
 
-  .technology-icon:hover {
-    transform: scale(1.1);
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   #technologies .technology-icons .technology-icon {
@@ -459,10 +458,10 @@ const GlobalStyle = createGlobalStyle`
     color: var(--theme-on-secondary);
     background: var(--theme-secondary);
     border-radius: 0.75rem;
-  }
 
-  .tag:last-child {
-    margin-right: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   form.contact-form {
@@ -511,13 +510,13 @@ const GlobalStyle = createGlobalStyle`
   footer {
     min-height: 18rem;
     background: var(--theme-surface-variant);
-  }
 
-  footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1.5rem 0;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1.5rem 0;
+    }
   }
 `;
 
