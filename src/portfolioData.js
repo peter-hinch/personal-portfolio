@@ -38,6 +38,7 @@ export const preferredTechnologies = {
     Technologies.HTML5,
     Technologies.CSS3
   ],
+  heading: 'I enjoy working with..',
   description: [
     'JavaScript, React and Node.js . My HTML and CSS skills are also sharp. I am passionate about writing code for the frontend that is not only performant but also looks great in all browsers. As a matter of fact this portfolio site was built with exactly these technologies.'
   ]
@@ -72,8 +73,9 @@ export const otherTechnologies = {
     'Taliwind CSS',
     'Trello'
   ],
+  heading: 'As well as..',
   description: [
-    'a host of other technologies listed below. Beyond these, there are many programming languages, libraries, frameworks and services that I have not yet used - I always relish the opportunity try something new.'
+    "the technologies listed below. I always relish the opportunity try something new, so if you use something in your stack that is not listed here I'll be glad to pick it up quickly!"
   ]
 };
 
