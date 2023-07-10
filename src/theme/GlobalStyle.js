@@ -386,7 +386,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    margin-bottom: 1.25rem;
+    margin: 1.25rem 0;
   }
 
   .cta-link {
