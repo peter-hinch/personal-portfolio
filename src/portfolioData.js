@@ -69,6 +69,7 @@ export const otherTechnologies = {
     'MongoDB',
     'MySQL',
     '.NET MVC',
+    'React-three-fiber',
     'Styled-Components',
     'Taliwind CSS',
     'Trello'
