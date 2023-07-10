@@ -25,7 +25,7 @@ export const aboutMe = [
 ];
 
 export const contact = [
-  'If you have any enquiries regarding my portfolio I would love to hear from you.'
+  'If you have any enquiries regarding my portfolio or availabilty I would love to hear from you. Feel free to send me a message using the contact form below, or alternatively via my LinkedIn profile.'
 ];
 
 export const preferredTechnologies = {
