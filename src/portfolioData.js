@@ -21,8 +21,7 @@ export const socialLinks = [
 ];
 
 export const aboutMe = [
-  'I am a Frontend Developer with professional experience in the construction and manufacturing industries, with a great capability in the JavaScript scripting language, HTML and CSS.',
-  'Passionate about designing user-friendly content and with a knack for taking a lateral approach - blending technical and creative aspects and proven ability to produce engaging user-facing experiences.'
+  'I am a Frontend Developer with a focus on JavaScript and React.'
 ];
 
 export const contact = [
@@ -55,6 +54,7 @@ export const otherTechnologies = {
     'Bootstrap',
     'C',
     'C#',
+    'EJS',
     'Figma',
     'Git',
     'GitHub',
@@ -69,6 +69,7 @@ export const otherTechnologies = {
     'MySQL',
     '.NET MVC',
     'Styled-Components',
+    'Taliwind CSS',
     'Trello'
   ],
   description: [
