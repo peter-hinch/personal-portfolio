@@ -21,7 +21,7 @@ export const socialLinks = [
 ];
 
 export const aboutMe = [
-  'I am a Frontend Developer with a focus on JavaScript and React.'
+  'My primary focus is on JavaScript / TypeScript and React. Please check out my GitHub profile and portfolio below to see examples of my work and personal projects.'
 ];
 
 export const contact = [
@@ -40,7 +40,7 @@ export const preferredTechnologies = {
   ],
   heading: 'I enjoy working with..',
   description: [
-    'JavaScript, React and Node.js . My HTML and CSS skills are also sharp. I am passionate about writing code for the frontend that is not only performant but also looks great in all browsers. As a matter of fact this portfolio site was built with exactly these technologies.'
+    'Node.js, React and JavaScript / TypeScript. I am passionate about writing code for the frontend that performs well, while looking great across all devices and browsers.'
   ]
 };
 
@@ -76,7 +76,7 @@ export const otherTechnologies = {
   ],
   heading: 'As well as..',
   description: [
-    "the technologies listed below. I always relish the opportunity try something new, so if you use something in your stack that is not listed here I'll be glad to pick it up quickly!"
+    "the technologies listed below. I always relish the opportunity try something new, so if you use something in your stack that is not listed here I'd be glad to jump into the documentation and pick it up quickly!"
   ]
 };
 
