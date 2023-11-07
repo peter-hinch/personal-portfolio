@@ -1,18 +1,9 @@
-import { anchors, portfolioItems } from '../../portfolioData';
-
 import styled from 'styled-components';
 
-import imgCaret from './../../assets/images/caret.svg';
+import { portfolioItems } from '../../portfolioData';
+import { getSortedAnchorsArray } from '../../utils/utils';
 
-const getSortedAnchorsArray = () => {
-  // Convert anchors object into an array
-  const anchorsAsArray = [];
-  for (var key in anchors) {
-    anchorsAsArray.push(anchors[key]);
-  }
-  // Sort by sequence
-  return anchorsAsArray.sort((a, b) => a.sequence > b.sequence);
-};
+import imgCaret from './../../assets/images/caret.svg';
 
 const getNextItemIndex = (referenceItem, array) => {
   // Find the index of the current item
@@ -23,7 +14,7 @@ const getNextItemIndex = (referenceItem, array) => {
 
 const getNextLinkItem = (anchor, portfolioItem) => {
   if (anchor !== null) {
-    const anchorsArray = getSortedAnchorsArray(anchor);
+    const anchorsArray = getSortedAnchorsArray();
     const nexItemIndex = getNextItemIndex(anchor, anchorsArray);
     return anchorsArray[nexItemIndex];
   } else if (portfolioItem !== null) {
