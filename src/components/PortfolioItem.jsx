@@ -35,13 +35,13 @@ const PortfolioItem = ({ item }) => {
       <h4>{item.subtitle}</h4>
       <ImageCarousel title={item.title} images={item.images} />
       <p>{item.description}</p>
-      <div className="cta-links">
-        <div className="cta-links--group">{renderLinks}</div>
-        <NextLink portfolioItem={item} />
-      </div>
       <div className="breakout-info">
         <TechnologyIcons technologies={item.technologies} />
         <TagsList tags={item.tags} />
+      </div>
+      <div className="cta-links">
+        <div className="cta-links--group">{renderLinks}</div>
+        <NextLink portfolioItem={item} />
       </div>
     </div>
   );
