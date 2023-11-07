@@ -1,5 +1,7 @@
 const ParagraphArray = ({ textArray }) => {
-  return textArray.map((paragraph) => <p>{paragraph}</p>);
+  return textArray.map((paragraph, index) => (
+    <p key={`paragraph-${index}`}>{paragraph}</p>
+  ));
 };
 
 export default ParagraphArray;
