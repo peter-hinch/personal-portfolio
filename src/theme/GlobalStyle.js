@@ -409,6 +409,7 @@ const GlobalStyle = createGlobalStyle`
 
   .portfolio-item {
     margin-bottom: 8rem;
+    scroll-margin-top: 4rem;
 
     &:last-child {
       margin-bottom: 0;
