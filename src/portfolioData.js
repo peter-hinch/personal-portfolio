@@ -90,6 +90,7 @@ export const otherTechnologies = {
 
 export const portfolioItems = [
   {
+    id: 'advent-of-css-js',
     title: 'Advent of CSS / Advent of JS',
     subtitle: 'Participation in CSS and JS challenges',
     images: [
@@ -161,6 +162,7 @@ export const portfolioItems = [
     tags: ['Figma', 'Semantic HTML', 'BEM Methodology', 'Styled Components']
   },
   {
+    id: 'remotespot',
     title: 'RemoteSpot',
     subtitle: 'Ratings application in React',
     images: [
@@ -193,6 +195,7 @@ export const portfolioItems = [
       'https://github.com/peter-hinch/general-assembly-react-final-project'
   },
   {
+    id: 'todo-list',
     title: 'Todo List',
     subtitle: 'Note taking application in React',
     images: [{ file: 'portfolio/todo-list-01.png', linkUrl: '' }],
@@ -210,6 +213,7 @@ export const portfolioItems = [
     sourceUrl: 'https://github.com/peter-hinch/general-assembly-react-todo-list'
   },
   {
+    id: 'piano',
     title: 'Piano',
     subtitle: 'An exercise in using the Web Audio API',
     images: [{ file: 'portfolio/piano-01.png', linkUrl: '' }],
@@ -225,6 +229,7 @@ export const portfolioItems = [
     sourceUrl: 'https://github.com/peter-hinch/personal-web-audio-api-piano'
   },
   {
+    id: 'sd-perfumery',
     title: 'SD Perfumery',
     subtitle: 'Storefront developed using .NET MVC',
     description:
