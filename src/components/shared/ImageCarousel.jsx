@@ -12,8 +12,8 @@ const StyledCarousel = styled.div`
   flex-direction: row;
   margin: 0 -1.5rem;
 
-  &.carousel__img-single {
-    .carousel__btn {
+  &.carousel--img-single {
+    .carousel--btn {
       display: none;
     }
 
@@ -37,7 +37,7 @@ const StyledCarousel = styled.div`
     display: none; // hide scrollbars in Chrome, Safari, Opera
   }
 
-  .carousel__btn {
+  .carousel--btn {
     position: absolute;
     top: calc(50% - 16px);
     display: block;
@@ -50,20 +50,18 @@ const StyledCarousel = styled.div`
     opacity: 1;
     transition: all 0.5s ease-in-out;
     z-index: 100;
-  }
 
-  .carousel__btn:disabled {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .carousel__btn-prev {
-    left: 1rem;
-    transform: rotate(180deg);
-  }
-
-  .carousel__btn-next {
-    right: 1rem;
+    &-prev {
+      left: 1rem;
+      transform: rotate(180deg);
+    }
+    &-next {
+      right: 1rem;
+    }
+    &:disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 
   .carousel-image {
@@ -116,17 +114,17 @@ const ImageCarousel = ({ title, images }) => {
 
   return images !== undefined && images.length > 0 ? (
     <StyledCarousel
-      className={images.length === 1 ? 'carousel__img-single' : ''}
+      className={images.length === 1 ? 'carousel--img-single' : ''}
     >
       <button
-        className="carousel__btn carousel__btn-prev"
+        className="carousel--btn carousel--btn-prev"
         aria-label="Previous image"
         onClick={navigatePrev}
         disabled={prevDisabled}
       ></button>
       <div className="carousel">{renderImages}</div>
       <button
-        className="carousel__btn carousel__btn-next"
+        className="carousel--btn carousel--btn-next"
         aria-label="Next image"
         onClick={navigateNext}
         disabled={nextDisabled}
