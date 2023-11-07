@@ -21,11 +21,26 @@ export const socialLinks = [
 ];
 
 export const anchors = {
-  header: { sequence: 0, id: 'top', title: 'Home' },
-  aboutMe: { sequence: 1, id: 'about-me', title: 'About Me' },
-  technologies: { sequence: 2, id: 'technologies', title: 'Technologies' },
-  portfolio: { sequence: 3, id: 'portfolio', title: 'Portfolio' },
-  contact: { sequence: 4, id: 'contact', title: 'Contact' }
+  header: { sequence: 0, id: 'top', title: 'Home', showInHeader: false },
+  aboutMe: {
+    sequence: 1,
+    id: 'about-me',
+    title: 'About Me',
+    showInHeader: true
+  },
+  technologies: {
+    sequence: 2,
+    id: 'technologies',
+    title: 'Technologies',
+    showInHeader: true
+  },
+  portfolio: {
+    sequence: 3,
+    id: 'portfolio',
+    title: 'Portfolio',
+    showInHeader: true
+  },
+  contact: { sequence: 4, id: 'contact', title: 'Contact', showInHeader: true }
 };
 
 export const aboutMe = [
