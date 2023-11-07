@@ -6,6 +6,67 @@ import imgCaret from './../../assets/images/caret.svg';
 
 import Image from './Image';
 
+const ImageCarousel = ({ title, images }) => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [nextDisabled, setNextDisabled] = useState(false);
+  const [prevDisabled, setPrevDisabled] = useState(false);
+
+  useEffect(() => {
+    currentImage === 0 ? setPrevDisabled(true) : setPrevDisabled(false);
+    currentImage === images?.length - 1
+      ? setNextDisabled(true)
+      : setNextDisabled(false);
+  }, [currentImage, images]);
+
+  const imageStyleObject = {
+    translate: `${currentImage * -100}% 0`
+  };
+
+  const navigatePrev = () => {
+    if (currentImage > 0) {
+      setCurrentImage(currentImage - 1);
+    }
+  };
+
+  const navigateNext = () => {
+    if (currentImage < images.length - 1) {
+      setCurrentImage(currentImage + 1);
+    }
+  };
+
+  const renderImages = images?.map((image, index) => (
+    <Image
+      key={`${title}-${index}`}
+      path={image.file}
+      alt={title}
+      linkUrl={image.linkUrl}
+      style={imageStyleObject}
+    />
+  ));
+
+  return images !== undefined && images.length > 0 ? (
+    <StyledCarousel
+      className={images.length === 1 ? 'carousel--img-single' : ''}
+    >
+      <button
+        className="carousel--btn carousel--btn-prev"
+        aria-label="Previous image"
+        onClick={navigatePrev}
+        disabled={prevDisabled}
+      ></button>
+      <div className="carousel">{renderImages}</div>
+      <button
+        className="carousel--btn carousel--btn-next"
+        aria-label="Next image"
+        onClick={navigateNext}
+        disabled={nextDisabled}
+      ></button>
+    </StyledCarousel>
+  ) : (
+    <></>
+  );
+};
+
 const StyledCarousel = styled.div`
   position: relative;
   display: flex;
@@ -73,66 +134,5 @@ const StyledCarousel = styled.div`
     border-radius: 0.25rem;
   }
 `;
-
-const ImageCarousel = ({ title, images }) => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [nextDisabled, setNextDisabled] = useState(false);
-  const [prevDisabled, setPrevDisabled] = useState(false);
-
-  useEffect(() => {
-    currentImage === 0 ? setPrevDisabled(true) : setPrevDisabled(false);
-    currentImage === images?.length - 1
-      ? setNextDisabled(true)
-      : setNextDisabled(false);
-  }, [currentImage, images]);
-
-  const imageStyleObject = {
-    translate: `${currentImage * -100}% 0`
-  };
-
-  const navigatePrev = () => {
-    if (currentImage > 0) {
-      setCurrentImage(currentImage - 1);
-    }
-  };
-
-  const navigateNext = () => {
-    if (currentImage < images.length - 1) {
-      setCurrentImage(currentImage + 1);
-    }
-  };
-
-  const renderImages = images?.map((image, index) => (
-    <Image
-      key={`${title}-${index}`}
-      path={image.file}
-      alt={title}
-      linkUrl={image.linkUrl}
-      style={imageStyleObject}
-    />
-  ));
-
-  return images !== undefined && images.length > 0 ? (
-    <StyledCarousel
-      className={images.length === 1 ? 'carousel--img-single' : ''}
-    >
-      <button
-        className="carousel--btn carousel--btn-prev"
-        aria-label="Previous image"
-        onClick={navigatePrev}
-        disabled={prevDisabled}
-      ></button>
-      <div className="carousel">{renderImages}</div>
-      <button
-        className="carousel--btn carousel--btn-next"
-        aria-label="Next image"
-        onClick={navigateNext}
-        disabled={nextDisabled}
-      ></button>
-    </StyledCarousel>
-  ) : (
-    <></>
-  );
-};
 
 export default ImageCarousel;
