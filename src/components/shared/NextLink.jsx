@@ -67,7 +67,6 @@ const StyledNextLink = styled.div`
       width: 18px;
       margin-left: 0.5rem;
       content: url(${imgCaret});
-      transform: rotate(90deg);
     }
 
     &.cta-link--home::after {
