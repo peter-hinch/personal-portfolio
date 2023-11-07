@@ -18,7 +18,10 @@ const Technologies = ({ anchor, preferredTechnologies, otherTechnologies }) => (
       <div className="breakout-info">
         <TagsList tags={otherTechnologies.tags} />
       </div>
-      <NextLink anchor={anchor} />
+      <div className="cta-links">
+        <div className="cta-links--group"></div>
+        <NextLink anchor={anchor} />
+      </div>
     </Container>
   </section>
 );

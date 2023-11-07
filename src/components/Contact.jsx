@@ -23,8 +23,10 @@ const Contact = ({ anchor, contact, socialLinks }) => {
         <div className="breakout-info">
           <ContactForm />
         </div>
-        <div className="cta-links">{renderProfileLinks}</div>
-        <NextLink anchor={anchor} />
+        <div className="cta-links">
+          <div className="cta-links--group">{renderProfileLinks}</div>
+          <NextLink anchor={anchor} />
+        </div>
       </Container>
     </section>
   );

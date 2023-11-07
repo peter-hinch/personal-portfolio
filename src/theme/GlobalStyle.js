@@ -380,12 +380,19 @@ const GlobalStyle = createGlobalStyle`
     padding: 1.5rem 1.5rem 2.25rem 1.5rem;
     background: var(--theme-surface);
   }
-
+  
   .cta-links {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 2rem;
     margin: 1.25rem 0;
+    
+    &--group {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
   }
 
   .cta-link {

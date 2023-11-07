@@ -7,7 +7,10 @@ const PortfolioSection = ({ anchor, children }) => {
       <Container>
         <h2>Portfolio</h2>
         {children}
-        <NextLink anchor={anchor} />
+        <div className="cta-links">
+          <div className="cta-links--group"></div>
+          <NextLink anchor={anchor} />
+        </div>
       </Container>
     </section>
   );

@@ -33,8 +33,10 @@ const AboutMe = ({
           based in {location.city}, {location.country}.
         </h1>
         <ParagraphArray textArray={aboutMe} />
-        <div className="cta-links">{renderProfileLinks}</div>
-        <NextLink anchor={anchor} />
+        <div className="cta-links">
+          <div className="cta-links--group">{renderProfileLinks}</div>
+          <NextLink anchor={anchor} />
+        </div>
       </Container>
     </section>
   );

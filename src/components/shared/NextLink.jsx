@@ -26,7 +26,11 @@ const getNextAnchor = (anchor) => {
 
 const NextLink = ({ anchor }) => {
   const nextAnchor = getNextAnchor(anchor);
-  return <a href={`#${nextAnchor.id}`}>{`${nextAnchor.title} >>`}</a>;
+  return (
+    <a className="cta-link" href={`#${nextAnchor.id}`}>{`${nextAnchor.title} ${
+      nextAnchor.sequence !== 0 ? '>>' : '^^'
+    }`}</a>
+  );
 };
 
 export default NextLink;

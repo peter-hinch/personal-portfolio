@@ -5,26 +5,28 @@ import ImageCarousel from './shared/ImageCarousel';
 const PortfolioItem = ({ item }) => {
   const renderLinks = (
     <div className="cta-links">
-      {item.liveUrl !== undefined && (
-        <a
-          className="cta-link"
-          href={item.liveUrl}
-          alt="Visit the live site"
-          title="Visit the live site"
-        >
-          Visit live site
-        </a>
-      )}
-      {item.sourceUrl !== undefined && (
-        <a
-          className="cta-link"
-          href={item.sourceUrl}
-          alt="View the source code on GitHub"
-          title="View the source code on GitHub"
-        >
-          View source code
-        </a>
-      )}
+      <div className="cta-links--group">
+        {item.liveUrl !== undefined && (
+          <a
+            className="cta-link"
+            href={item.liveUrl}
+            alt="Visit the live site"
+            title="Visit the live site"
+          >
+            Visit live site
+          </a>
+        )}
+        {item.sourceUrl !== undefined && (
+          <a
+            className="cta-link"
+            href={item.sourceUrl}
+            alt="View the source code on GitHub"
+            title="View the source code on GitHub"
+          >
+            View source code
+          </a>
+        )}
+      </div>
     </div>
   );
 
