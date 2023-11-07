@@ -6,16 +6,25 @@ const StyledImgContainer = styled.div`
   justify-content: center;
   min-width: 100%;
   transition: all 0.5s ease-in-out;
-  pointer-events: none;
 `;
 
-const Image = ({ path, alt, style }) => (
+const Image = ({ path, alt, linkUrl, style }) => (
   <StyledImgContainer style={style}>
-    <img
-      className="carousel-image"
-      src={`${process.env.PUBLIC_URL}/images/${path}`}
-      alt={alt}
-    />
+    {linkUrl ? (
+      <a href={linkUrl} target="_blank" rel="noreferrer">
+        <img
+          className="carousel-image"
+          src={`${process.env.PUBLIC_URL}/images/${path}`}
+          alt={alt}
+        />
+      </a>
+    ) : (
+      <img
+        className="carousel-image"
+        src={`${process.env.PUBLIC_URL}/images/${path}`}
+        alt={alt}
+      />
+    )}
   </StyledImgContainer>
 );
 

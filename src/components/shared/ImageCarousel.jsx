@@ -107,8 +107,9 @@ const ImageCarousel = ({ title, images }) => {
   const renderImages = images?.map((image, index) => (
     <Image
       key={`${title}-${index}`}
-      path={image}
+      path={image.file}
       alt={title}
+      linkUrl={image.linkUrl}
       style={imageStyleObject}
     />
   ));

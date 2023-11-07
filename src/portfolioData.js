@@ -20,6 +20,14 @@ export const socialLinks = [
   }
 ];
 
+export const anchors = {
+  header: { sequence: 0, id: 'top', title: 'Home' },
+  aboutMe: { sequence: 1, id: 'about-me', title: 'About Me' },
+  technologies: { sequence: 2, id: 'technologies', title: 'Technologies' },
+  portfolio: { sequence: 3, id: 'portfolio', title: 'Portfolio' },
+  contact: { sequence: 4, id: 'contact', title: 'Contact' }
+};
+
 export const aboutMe = [
   'My primary focus is on JavaScript / TypeScript and React. Please check out my GitHub profile and portfolio below to see examples of my work and personal projects.'
 ];
@@ -82,23 +90,66 @@ export const otherTechnologies = {
 
 export const portfolioItems = [
   {
-    title: 'Advent of CSS 2022 / Advent of JS 2022',
+    title: 'Advent of CSS / Advent of JS',
     subtitle: 'Participation in CSS and JS challenges',
     images: [
-      'portfolio/advent-of-css-2022-01.png',
-      'portfolio/advent-of-css-2022-02.png',
-      'portfolio/advent-of-css-2022-03.png',
-      'portfolio/advent-of-css-2022-04.png',
-      'portfolio/advent-of-css-2022-05.png',
-      'portfolio/advent-of-css-2022-06.png',
-      'portfolio/advent-of-css-2022-07.png',
-      'portfolio/advent-of-css-2022-08.png',
-      'portfolio/advent-of-css-2022-09.png',
-      'portfolio/advent-of-css-2022-10.png',
-      'portfolio/advent-of-css-2022-11.png'
+      {
+        file: 'portfolio/advent-of-css-2022-01.png',
+        linkUrl:
+          'https://github.com/peter-hinch/advent-of-js-2022-day-01-pomodoro-timer'
+      },
+      {
+        file: 'portfolio/advent-of-css-2022-02.png',
+        linkUrl:
+          'https://github.com/peter-hinch/advent-of-js-2022-day-02-ecommerce-component'
+      },
+      {
+        file: 'portfolio/advent-of-css-2022-03.png',
+        linkUrl: 'https://github.com/peter-hinch/advent-of-js-2022-day-03-piano'
+      },
+      {
+        file: 'portfolio/advent-of-css-2022-04.png',
+        linkUrl:
+          'https://github.com/peter-hinch/advent-of-js-2022-day-04-computer-keyboard'
+      },
+      {
+        file: 'portfolio/advent-of-css-2022-05.png',
+        linkUrl:
+          'https://github.com/peter-hinch/advent-of-css-2022-day-05-multiselect'
+      },
+      {
+        file: 'portfolio/advent-of-css-2022-06.png',
+        linkUrl:
+          'https://github.com/peter-hinch/advent-of-css-2022-day-06-range-slider'
+      },
+      {
+        file: 'portfolio/advent-of-css-2022-07.png',
+        linkUrl:
+          'https://github.com/peter-hinch/advent-of-css-2022-day-07-tip-calculator'
+      },
+      {
+        file: 'portfolio/advent-of-css-2022-08.png',
+        linkUrl:
+          'https://github.com/peter-hinch/advent-of-css-2022-day-08-weather-api'
+      },
+      {
+        file: 'portfolio/advent-of-css-2022-09.png',
+        linkUrl:
+          'https://github.com/peter-hinch/advent-of-css-2022-day-09-image-carousel'
+      },
+      {
+        file: 'portfolio/advent-of-css-2022-10.png',
+        linkUrl:
+          'https://github.com/peter-hinch/advent-of-css-2022-day-10-verification-code'
+      },
+      {
+        file: 'portfolio/advent-of-css-2022-11.png',
+        linkUrl:
+          'https://github.com/peter-hinch/advent-of-css-2022-day-11-expander-collapser'
+      }
     ],
     description:
-      'The Advent of CSS and Advent of JS are events put together by Amy Dutton and James Q Quick. Participants are challenged to create 24 applications, where the Advent of CSS is concerned with the accurate production of a layout from a Figma design, and in Advent of JS challenges you are required to produce functionality to a brief.',
+      'The Advent of CSS and Advent of JS are coding challenges put together by Amy Dutton and James Q Quick. Participants are challenged to create 24 applications, where the Advent of CSS is concerned with the accurate production of a layout from a Figma design, and in Advent of JS challenges you are required to produce functionality to a brief.',
     technologies: [
       Technologies.REACT,
       Technologies.NODEJS,
@@ -107,19 +158,15 @@ export const portfolioItems = [
       Technologies.HTML5,
       Technologies.CSS3
     ],
-    tags: ['Figma', 'Semantic HTML', 'BEM Methodology', 'Styled Components'],
-    liveUrl:
-      'https://peter-hinch.github.io/advent-of-css-2022-01-pomodoro-timer/',
-    sourceUrl:
-      'https://github.com/peter-hinch/advent-of-css-2022-01-pomodoro-timer'
+    tags: ['Figma', 'Semantic HTML', 'BEM Methodology', 'Styled Components']
   },
   {
     title: 'RemoteSpot',
     subtitle: 'Ratings application in React',
     images: [
-      'portfolio/remote-spot-01.png',
-      'portfolio/remote-spot-02.png',
-      'portfolio/remote-spot-03.png'
+      { file: 'portfolio/remote-spot-01.png', linkUrl: '' },
+      { file: 'portfolio/remote-spot-02.png', linkUrl: '' },
+      { file: 'portfolio/remote-spot-03.png', linkUrl: '' }
     ],
     description:
       'For the final project in my React Development course, I have chosen to create an application that allows users to rate businesses and venues aginst their suitability as a remote working venue. Basic information about each venue is retrieved from the Google Places API and users are able to add their remote work specific review information within the application.',
@@ -148,7 +195,7 @@ export const portfolioItems = [
   {
     title: 'Todo List',
     subtitle: 'Note taking application in React',
-    images: ['portfolio/todo-list-01.png'],
+    images: [{ file: 'portfolio/todo-list-01.png', linkUrl: '' }],
     description:
       'In our React Development course at General Assembly we were tasked with creating a Todo list in React. I wanted to create a skeumorphic interpretation of a physical notebook page, so I took photos of paper and an eraser to incorporate them into the design. The font used is Sriracha from Google Fonts, the accompanying UI elements I created SVGs from hand-drawn images to match the look and feel of the Sriracha font.',
     technologies: [
@@ -165,7 +212,7 @@ export const portfolioItems = [
   {
     title: 'Piano',
     subtitle: 'An exercise in using the Web Audio API',
-    images: ['portfolio/piano-01.png'],
+    images: [{ file: 'portfolio/piano-01.png', linkUrl: '' }],
     description:
       'I set myself the task of creating a piano keyboard using CSS with the requirement that it retains realistic proportions and keys overlap as they would on a real piano. I am also interested in learning about how to synthesize sounds in the browser, and this was my introduction to the Web Audio API - something I hope to continue learning more about in future.',
     technologies: [

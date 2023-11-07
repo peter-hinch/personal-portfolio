@@ -11,6 +11,7 @@ import {
   myName,
   myRole,
   location,
+  anchors,
   aboutMe,
   contact,
   preferredTechnologies,
@@ -33,6 +34,7 @@ const App = () => {
   return (
     <ThemeContainer isDarkTheme={isDarkTheme}>
       <Header
+        anchor={anchors.header}
         myName={myName}
         location={location}
         socialLinks={socialLinks}
@@ -40,6 +42,7 @@ const App = () => {
         toggleDarkTheme={toggleDarkTheme}
       />
       <AboutMe
+        anchor={anchors.aboutMe}
         myName={myName}
         myRole={myRole}
         location={location}
@@ -47,11 +50,18 @@ const App = () => {
         socialLinks={socialLinks}
       />
       <Technologies
+        anchor={anchors.technologies}
         preferredTechnologies={preferredTechnologies}
         otherTechnologies={otherTechnologies}
       />
-      <PortfolioSection>{renderPortfolioItems}</PortfolioSection>
-      <Contact contact={contact} socialLinks={socialLinks} />
+      <PortfolioSection anchor={anchors.portfolio}>
+        {renderPortfolioItems}
+      </PortfolioSection>
+      <Contact
+        anchor={anchors.contact}
+        contact={contact}
+        socialLinks={socialLinks}
+      />
       <Footer myName={myName} socialLinks={socialLinks} />
     </ThemeContainer>
   );

@@ -2,8 +2,9 @@ import Container from './layout/Container';
 import ParagraphArray from './shared/ParagraphArray';
 import TagsList from './shared/TagsList';
 import TechnologyIcons from './shared/TechnologyIcons';
+import NextLink from './shared/NextLink';
 
-const Technologies = ({ preferredTechnologies, otherTechnologies }) => (
+const Technologies = ({ anchor, preferredTechnologies, otherTechnologies }) => (
   <section id="technologies">
     <Container>
       <h2>Technologies</h2>
@@ -17,6 +18,7 @@ const Technologies = ({ preferredTechnologies, otherTechnologies }) => (
       <div className="breakout-info">
         <TagsList tags={otherTechnologies.tags} />
       </div>
+      <NextLink anchor={anchor} />
     </Container>
   </section>
 );

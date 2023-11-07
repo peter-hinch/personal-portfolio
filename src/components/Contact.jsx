@@ -1,8 +1,9 @@
 import Container from './layout/Container';
 import ContactForm from './layout/ContactForm';
 import ParagraphArray from './shared/ParagraphArray';
+import NextLink from './shared/NextLink';
 
-const Contact = ({ contact, socialLinks }) => {
+const Contact = ({ anchor, contact, socialLinks }) => {
   const renderProfileLinks = socialLinks.map((link) => (
     <a
       key={`profile-link-${link.platform.simplename}`}
@@ -23,6 +24,7 @@ const Contact = ({ contact, socialLinks }) => {
           <ContactForm />
         </div>
         <div className="cta-links">{renderProfileLinks}</div>
+        <NextLink anchor={anchor} />
       </Container>
     </section>
   );

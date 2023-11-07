@@ -1,7 +1,15 @@
 import Container from './layout/Container';
+import NextLink from './shared/NextLink';
 import ParagraphArray from './shared/ParagraphArray';
 
-const AboutMe = ({ myName, myRole, location, aboutMe, socialLinks }) => {
+const AboutMe = ({
+  anchor,
+  myName,
+  myRole,
+  location,
+  aboutMe,
+  socialLinks
+}) => {
   const renderProfileLinks = socialLinks.map((link) => (
     <a
       key={`profile-link-${link.platform.simplename}`}
@@ -14,7 +22,7 @@ const AboutMe = ({ myName, myRole, location, aboutMe, socialLinks }) => {
   ));
 
   return (
-    <section id="about-me">
+    <section id={anchor.id}>
       <Container>
         <h1>
           Hello!
@@ -26,6 +34,7 @@ const AboutMe = ({ myName, myRole, location, aboutMe, socialLinks }) => {
         </h1>
         <ParagraphArray textArray={aboutMe} />
         <div className="cta-links">{renderProfileLinks}</div>
+        <NextLink anchor={anchor} />
       </Container>
     </section>
   );
