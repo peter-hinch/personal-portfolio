@@ -30,7 +30,7 @@ const PortfolioItem = ({ item }) => {
   );
 
   return (
-    <div id={item.id ?? item.id} className="portfolio-item">
+    <div id={item.id ?? 'portfolio-item'} className="portfolio-item">
       <h3>{item.title}</h3>
       <h4>{item.subtitle}</h4>
       <ImageCarousel title={item.title} images={item.images} />
