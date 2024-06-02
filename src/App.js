@@ -1,12 +1,12 @@
-import { useLocalStorage } from './hooks/useLocalStorage';
-import ThemeContainer from './components/layout/ThemeContainer';
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
-import AboutMe from './components/AboutMe';
-import Technologies from './components/Technologies';
-import PortfolioSection from './components/PortfolioSection';
-import PortfolioItem from './components/PortfolioItem';
-import Contact from './components/Contact';
+import { useLocalStorage } from './hooks/useLocalStorage.ts';
+import ThemeContainer from './components/layout/ThemeContainer.tsx';
+import Header from './components/layout/Header.tsx';
+import Footer from './components/layout/Footer.tsx';
+import AboutMe from './components/AboutMe.tsx';
+import Technologies from './components/Technologies.tsx';
+import PortfolioSection from './components/PortfolioSection.tsx';
+import PortfolioItem from './components/PortfolioItem.tsx';
+import Contact from './components/Contact.tsx';
 import {
   myName,
   myRole,
@@ -18,7 +18,7 @@ import {
   otherTechnologies,
   portfolioItems,
   socialLinks
-} from './portfolioData';
+} from './portfolioData.ts';
 
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useLocalStorage('isDarkTheme', false);

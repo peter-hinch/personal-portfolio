@@ -1,5 +1,5 @@
-import Container from './Container';
-import SocialLinks from '../shared/SocialLinks';
+import Container from './Container.tsx';
+import SocialLinks from '../shared/SocialLinks.tsx';
 
 const currentYear = new Date().getFullYear();
 
