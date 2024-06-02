@@ -36,7 +36,7 @@ const PortfolioItem = ({ item }) => {
       <ImageCarousel title={item.title} images={item.images} />
       <p>{item.description}</p>
       <div className="breakout-info">
-        <TechnologyIcons technologies={item.technologies} />
+        <TechnologyIcons technologies={item.technologies} size={3.5} />
         <TagsList tags={item.tags} />
       </div>
       <div className="cta-links">

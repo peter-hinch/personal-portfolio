@@ -422,54 +422,8 @@ const GlobalStyle = createGlobalStyle`
     background: var(--theme-secondary-container);
   }
 
-  .technology-icons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .technology-icon {
-    width: 3.5rem;
-    height: auto;
-    transition: 0.3s;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  #technologies .technology-icons .technology-icon {
-    width: 5rem;
-  }
-  
-  .tags-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 1rem 0 0;
-    padding-left: 0;
-    list-style-type: none;
-  }
-
   #technologies .breakout-info .tags-list {
     margin-top: 0;
-  }
-
-  .tag {
-    flex-shrink: 0;
-    padding: 0.25rem 0.75rem 0;
-    height: 1.25rem;
-    color: var(--theme-on-secondary);
-    background: var(--theme-secondary);
-    border-radius: 0.75rem;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 
   #contact .breakout-info {

@@ -1,4 +1,4 @@
-import Container from './layout/Container';
+import Container from './layout/Container2';
 import ParagraphArray from './shared/ParagraphArray';
 import TagsList from './shared/TagsList';
 import TechnologyIcons from './shared/TechnologyIcons';
@@ -11,7 +11,10 @@ const Technologies = ({ anchor, preferredTechnologies, otherTechnologies }) => (
       <h3>{preferredTechnologies.heading}</h3>
       <ParagraphArray textArray={preferredTechnologies.description} />
       <div className="breakout-info">
-        <TechnologyIcons technologies={preferredTechnologies.technologies} />
+        <TechnologyIcons
+          technologies={preferredTechnologies.technologies}
+          size={5}
+        />
       </div>
       <h3>{otherTechnologies.heading}</h3>
       <ParagraphArray textArray={otherTechnologies.description} />

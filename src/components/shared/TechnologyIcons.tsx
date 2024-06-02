@@ -1,17 +1,45 @@
+import styled from 'styled-components';
+
 import { devIconsCdnUrl } from '../../enums';
 
-const TechnologyIcons = ({ technologies }) => (
-  <div className="technology-icons">
+const TechnologyIcons = ({ technologies, size }) => (
+  <StyledTechnologyIcons className="technology-icons" size={size}>
     {technologies.map((technology) => (
-      <img
-        className="technology-icon"
-        key={technology.simplename}
-        src={`${devIconsCdnUrl}${technology.simplename}/${technology.simplename}${technology.iconSuffix}.svg`}
-        alt={technology.simplename}
-        title={technology.fullname}
-      />
+      <li>
+        <img
+          className="technology-icon"
+          key={technology.simplename}
+          src={`${devIconsCdnUrl}${technology.simplename}/${technology.simplename}${technology.iconSuffix}.svg`}
+          alt={technology.simplename}
+          title={technology.fullname}
+        />
+      </li>
     ))}
-  </div>
+  </StyledTechnologyIcons>
 );
+
+const StyledTechnologyIcons = styled.ul`
+  &.technology-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    li {
+      list-style-type: none;
+
+      img.technology-icon {
+        width: ${(props) => `${props?.size || 3.5}rem`};
+        height: auto;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+`;
 
 export default TechnologyIcons;
