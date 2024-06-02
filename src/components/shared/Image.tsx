@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-const StyledImgContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  min-width: 100%;
-  transition: all 0.5s ease-in-out;
-`;
-
 const Image = ({ path, alt, linkUrl, style }) => (
   <StyledImgContainer style={style}>
     {linkUrl ? (
@@ -27,5 +19,17 @@ const Image = ({ path, alt, linkUrl, style }) => (
     )}
   </StyledImgContainer>
 );
+
+const StyledImgContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 100%;
+  transition: all 0.5s ease-in-out;
+
+  a {
+    display: contents; // Preven anchor from rendering larger than image
+  }
+`;
 
 export default Image;
