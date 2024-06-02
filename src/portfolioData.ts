@@ -1,15 +1,59 @@
 import { Technologies, Social } from './enums';
 
-export const myName = 'Peter Hinch';
+declare global {
+  namespace PortfolioData {
+    interface Location {
+      city: string;
+      country: string;
+    }
+    interface SocialLink {
+      platform: EnumTypes.SocialPlatform;
+      url: string;
+    }
+    interface Anchor {
+      sequence: number;
+      id: string;
+      title: string;
+      showInHeader: boolean;
+    }
+    interface PreferredTechnologies {
+      heading: string;
+      description: string[];
+      technologies: EnumTypes.Technology[];
+    }
+    interface OtherTechnologies {
+      heading: string;
+      description: string[];
+      tags: string[];
+    }
+    namespace PortfolioItem {
+      interface Image {
+        file: string;
+        linkUrl: string;
+      }
+      interface Item {
+        id: string;
+        title: string;
+        subtitle: string;
+        images: Image[];
+        description: string;
+        technologies: EnumTypes.Technology[];
+        tags: string[];
+      }
+    }
+  }
+}
 
-export const myRole = 'Frontend Developer';
+export const myName: string = 'Peter Hinch';
 
-export const location = {
+export const myRole: string = 'Frontend Developer';
+
+export const location: PortfolioData.Location = {
   city: 'Melbourne',
   country: 'Australia'
 };
 
-export const socialLinks = [
+export const socialLinks: PortfolioData.SocialLink[] = [
   {
     platform: Social.GITHUB,
     url: 'https://github.com/peter-hinch'
@@ -43,15 +87,19 @@ export const anchors = {
   contact: { sequence: 4, id: 'contact', title: 'Contact', showInHeader: true }
 };
 
-export const aboutMe = [
+export const aboutMe: string[] = [
   'My primary focus is on JavaScript / TypeScript and React. Please check out my GitHub profile and portfolio below to see examples of my work and personal projects.'
 ];
 
-export const contact = [
+export const contact: string[] = [
   'If you have any enquiries regarding my portfolio or availabilty I would love to hear from you. Feel free to send me a message using the contact form below, or alternatively via my LinkedIn profile.'
 ];
 
-export const preferredTechnologies = {
+export const preferredTechnologies: PortfolioData.PreferredTechnologies = {
+  heading: 'I enjoy working with..',
+  description: [
+    'Node.js, React and JavaScript / TypeScript. I am passionate about writing code for the frontend that performs well, while looking great across all devices and browsers.'
+  ],
   technologies: [
     Technologies.REACT,
     Technologies.NODEJS,
@@ -60,14 +108,14 @@ export const preferredTechnologies = {
     Technologies.SASS,
     Technologies.HTML5,
     Technologies.CSS3
-  ],
-  heading: 'I enjoy working with..',
-  description: [
-    'Node.js, React and JavaScript / TypeScript. I am passionate about writing code for the frontend that performs well, while looking great across all devices and browsers.'
   ]
 };
 
-export const otherTechnologies = {
+export const otherTechnologies: PortfolioData.OtherTechnologies = {
+  heading: 'As well as..',
+  description: [
+    "the technologies listed below. I always relish the opportunity try something new, so if you use something in your stack that is not listed here I'd be glad to jump into the documentation and pick it up quickly!"
+  ],
   tags: [
     'Adobe Creative Suite',
     'Agile Methodology',
@@ -96,14 +144,10 @@ export const otherTechnologies = {
     'Styled-Components',
     'Taliwind CSS',
     'Trello'
-  ],
-  heading: 'As well as..',
-  description: [
-    "the technologies listed below. I always relish the opportunity try something new, so if you use something in your stack that is not listed here I'd be glad to jump into the documentation and pick it up quickly!"
   ]
 };
 
-export const portfolioItems = [
+export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
   {
     id: 'advent-of-css-js',
     title: 'Advent of CSS / Advent of JS',

@@ -4,7 +4,22 @@
 // Some icons are more readily identifiable with a wordmark, the 'iconSuffix'
 // key for each enum indicates which icon to use for each technology.
 
-export const devIconsCdnUrl =
+declare global {
+  namespace EnumTypes {
+    interface Technology {
+      simpleName?: string;
+      fullname: string;
+      iconSuffix: string;
+    }
+    interface SocialPlatform {
+      simpleName?: string;
+      fullname: string;
+      iconSuffix: string;
+    }
+  }
+}
+
+export const devIconsCdnUrl: string =
   'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';
 
 export const Technologies = {
