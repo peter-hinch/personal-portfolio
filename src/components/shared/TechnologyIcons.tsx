@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 import { devIconsCdnUrl } from '../../enums';
 
-const TechnologyIcons = ({ technologies, size }) => (
+const TechnologyIcons: React.FC<{ technologies: Object[]; size: number }> = ({
+  technologies,
+  size
+}) => (
   <StyledTechnologyIcons className="technology-icons" size={size}>
     {technologies.map((technology) => (
       <li>

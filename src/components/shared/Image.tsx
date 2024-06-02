@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
-const Image = ({ path, alt, linkUrl, style }) => (
-  <StyledImgContainer style={style}>
+const Image: React.FC<{ path: string; alt: string; linkUrl: string }> = ({
+  path,
+  alt,
+  linkUrl
+}) => (
+  <StyledImgContainer>
     {linkUrl ? (
       <a href={linkUrl} target="_blank" rel="noreferrer">
         <img

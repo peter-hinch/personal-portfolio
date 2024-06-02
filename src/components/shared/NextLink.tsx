@@ -5,14 +5,14 @@ import { getSortedAnchorsArray } from '../../utils/utils';
 
 import imgCaret from './../../assets/images/caret.svg';
 
-const getNextItemIndex = (referenceItem, array) => {
+const getNextItemIndex: Function = (referenceItem, array) => {
   // Find the index of the current item
   const itemIndex = array.findIndex((item) => item.id === referenceItem.id);
   // Return the next item, or first item if the end has been reached
   return itemIndex < array.length - 1 ? itemIndex + 1 : 0;
 };
 
-const getNextLinkItem = (anchor, portfolioItem) => {
+const getNextLinkItem: Function = (anchor, portfolioItem) => {
   if (anchor !== null) {
     const anchorsArray = getSortedAnchorsArray();
     const nexItemIndex = getNextItemIndex(anchor, anchorsArray);
@@ -23,7 +23,7 @@ const getNextLinkItem = (anchor, portfolioItem) => {
   }
 };
 
-const determineLastItem = (anchor, portfolioItem) => {
+const determineLastItem: Function = (anchor, portfolioItem) => {
   if (anchor !== null) {
     const anchorsArray = getSortedAnchorsArray(anchor);
     return getNextItemIndex(anchor, anchorsArray) === 0 ? true : false;
@@ -32,7 +32,10 @@ const determineLastItem = (anchor, portfolioItem) => {
   }
 };
 
-const NextLink = ({ anchor = null, portfolioItem = null }) => {
+const NextLink: React.FC<{ anchor: Object; portfolioItem: Object }> = ({
+  anchor = null,
+  portfolioItem = null
+}) => {
   const nextLinkItem = getNextLinkItem(anchor, portfolioItem);
   const isLastastItem = determineLastItem(anchor, portfolioItem);
 

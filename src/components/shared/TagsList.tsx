@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const TagsList = ({ tags }) => {
+const TagsList: React.FC<{ tags: string[] }> = ({ tags }) => {
   const renderTags = tags.map((tag) => (
     <li key={`tags-${tag}`} className="tag">
       {tag}

@@ -2,6 +2,7 @@ import { Technologies, Social } from './enums';
 
 declare global {
   namespace PortfolioData {
+    interface Name {}
     interface Location {
       city: string;
       country: string;

@@ -2,11 +2,15 @@ import { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
 
+// @ts-ignore
 import imgCaret from './../../assets/images/caret.svg';
 
 import Image from './Image';
 
-const ImageCarousel = ({ title, images }) => {
+const ImageCarousel: React.FC<{ title: string; images: Object[] }> = ({
+  title,
+  images
+}) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [nextDisabled, setNextDisabled] = useState(false);
   const [prevDisabled, setPrevDisabled] = useState(false);

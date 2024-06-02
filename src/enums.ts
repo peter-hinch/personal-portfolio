@@ -12,7 +12,7 @@ declare global {
       iconSuffix: string;
     }
     interface SocialPlatform {
-      simpleName?: string;
+      simplename?: string;
       fullname: string;
       iconSuffix: string;
     }

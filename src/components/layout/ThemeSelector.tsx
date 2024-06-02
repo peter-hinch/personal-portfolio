@@ -1,4 +1,7 @@
-const ThemeSelector = ({ isDarkTheme, toggleDarkTheme }) => {
+const ThemeSelector: React.FC<{
+  isDarkTheme: boolean;
+  toggleDarkTheme: Function;
+}> = ({ isDarkTheme, toggleDarkTheme }) => {
   return (
     <form>
       <div id="theme-selector">

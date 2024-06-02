@@ -186,12 +186,6 @@ const GlobalStyle = createGlobalStyle`
       width: 72rem;
     }
   }
-  
-  #theme-container {
-    width: 100%;
-    background-color: var(--theme-background);
-    transition: all 0.3s;
-  }
 
   h1,
   h2,

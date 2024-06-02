@@ -1,5 +1,4 @@
 import SocialLinks from '../shared/SocialLinks';
-import Container from './Container';
 import ThemeSelector from './ThemeSelector';
 
 import { getSortedAnchorsArray } from '../../utils/utils';
@@ -14,32 +13,30 @@ const renderHeaderLinks = anchors
     </li>
   ));
 
-const Header = ({
-  anchor,
-  myName,
-  socialLinks,
-  isDarkTheme,
-  toggleDarkTheme
-}) => {
+const Header: React.FC<{
+  anchor: string;
+  myName: string;
+  socialLinks: Object[];
+  isDarkTheme: boolean;
+  toggleDarkTheme: Function;
+}> = ({ anchor, myName, socialLinks, isDarkTheme, toggleDarkTheme }) => {
   return (
     <header>
-      <Container>
-        <nav>
-          <div id="header-text-items">
-            <h1>
-              <a href={`#${anchor.id}`}>{myName}</a>
-            </h1>
-            <ul id="header-text-links">{renderHeaderLinks}</ul>
-          </div>
-          <div id="header-icons">
-            <ThemeSelector
-              isDarkTheme={isDarkTheme}
-              toggleDarkTheme={toggleDarkTheme}
-            />
-            <SocialLinks name={myName} socialLinks={socialLinks} />
-          </div>
-        </nav>
-      </Container>
+      <nav>
+        <div id="header-text-items">
+          <h1>
+            <a href={`#${anchor.id}`}>{myName}</a>
+          </h1>
+          <ul id="header-text-links">{renderHeaderLinks}</ul>
+        </div>
+        <div id="header-icons">
+          <ThemeSelector
+            isDarkTheme={isDarkTheme}
+            toggleDarkTheme={toggleDarkTheme}
+          />
+          <SocialLinks name={myName} socialLinks={socialLinks} />
+        </div>
+      </nav>
     </header>
   );
 };

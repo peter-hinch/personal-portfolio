@@ -2,14 +2,14 @@ import Container from './layout/Container';
 import NextLink from './shared/NextLink';
 import ParagraphArray from './shared/ParagraphArray';
 
-const AboutMe = ({
-  anchor,
-  myName,
-  myRole,
-  location,
-  aboutMe,
-  socialLinks
-}) => {
+const AboutMe: React.FC<{
+  anchor: PortfolioData.Anchor;
+  myName: string;
+  myRole: string;
+  location: PortfolioData.Location;
+  aboutMe: string[];
+  socialLinks: PortfolioData.SocialLink[];
+}> = ({ anchor, myName, myRole, location, aboutMe, socialLinks }) => {
   const renderProfileLinks = socialLinks.map((link) => (
     <a
       key={`profile-link-${link.platform.simplename}`}
@@ -22,23 +22,21 @@ const AboutMe = ({
   ));
 
   return (
-    <section id={anchor.id}>
-      <Container>
-        <h1>
-          Hello!
-          <br />
-          I'm {myName},
-          <br />a {myRole}
-          <br />
-          based in {location.city}, {location.country}.
-        </h1>
-        <ParagraphArray textArray={aboutMe} />
-        <div className="cta-links">
-          <div className="cta-links--group">{renderProfileLinks}</div>
-          <NextLink anchor={anchor} />
-        </div>
-      </Container>
-    </section>
+    <Container id={anchor.id}>
+      <h1>
+        Hello!
+        <br />
+        I'm {myName},
+        <br />a {myRole}
+        <br />
+        based in {location.city}, {location.country}.
+      </h1>
+      <ParagraphArray textArray={aboutMe} />
+      <div className="cta-links">
+        <div className="cta-links--group">{renderProfileLinks}</div>
+        <NextLink anchor={anchor} />
+      </div>
+    </Container>
   );
 };
 

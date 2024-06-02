@@ -1,6 +1,6 @@
 const getformToken = process.env.REACT_APP_GETFORM_TOKEN;
 
-const ContactForm = () => {
+const ContactForm: React.FC<{}> = ({}) => {
   return (
     <form
       className="contact-form"
