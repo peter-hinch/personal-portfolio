@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
 
@@ -46,7 +46,8 @@ const ImageCarousel: React.FC<{
   ));
 
   return (
-    (images && images.length > 0) ?? (
+    images &&
+    images.length > 0 && (
       <StyledCarousel
         className={images && images.length === 1 ? 'carousel--img-single' : ''}
       >
