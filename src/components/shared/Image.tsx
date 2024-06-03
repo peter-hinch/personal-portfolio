@@ -29,7 +29,6 @@ const StyledImgContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   min-width: 100%;
-  transition: all 0.5s ease-in-out;
 
   a {
     display: contents; // Prevent anchor from rendering larger than image

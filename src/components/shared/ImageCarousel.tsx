@@ -142,7 +142,9 @@ interface ImageProps {
 }
 
 const StyledImage = styled.div<ImageProps>`
-  ${(props) => `translate: ${props?.imageIndex * -100}% 0`}
+  min-width: 100%;
+  ${(props) => `translate: ${props?.imageIndex * -100}% 0;`}
+  transition: all 0.5s ease-in-out;
 `;
 
 export default ImageCarousel;
