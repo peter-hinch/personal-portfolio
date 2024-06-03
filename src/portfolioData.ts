@@ -36,10 +36,12 @@ declare global {
         id: string;
         title: string;
         subtitle: string;
-        images: Image[];
+        images?: Image[];
         description: string;
         technologies: EnumTypes.Technology[];
         tags: string[];
+        liveUrl?: string;
+        sourceUrl?: string;
       }
     }
   }
