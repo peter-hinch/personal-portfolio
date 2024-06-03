@@ -32,7 +32,7 @@ const StyledImgContainer = styled.div`
   transition: all 0.5s ease-in-out;
 
   a {
-    display: contents; // Preven anchor from rendering larger than image
+    display: contents; // Prevent anchor from rendering larger than image
   }
 `;
 

@@ -1,9 +1,9 @@
 import { devIconsCdnUrl } from '../../enums';
 
-const SocialLinks: React.FC<{ myName: string; socialLinks: Object[] }> = ({
-  myName,
-  socialLinks
-}) => {
+const SocialLinks: React.FC<{
+  myName: string;
+  socialLinks: PortfolioData.SocialLink[];
+}> = ({ myName, socialLinks }) => {
   const renderSocialLinks = socialLinks.map((link) => (
     <li key={`social-link-${link.platform.simplename}`}>
       <a href={link.url}>

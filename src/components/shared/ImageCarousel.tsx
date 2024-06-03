@@ -7,67 +7,64 @@ import imgCaret from './../../assets/images/caret.svg';
 
 import Image from './Image';
 
-const ImageCarousel: React.FC<{ title: string; images: Object[] }> = ({
-  title,
-  images
-}) => {
-  const [currentImage, setCurrentImage] = useState(0);
+const ImageCarousel: React.FC<{
+  title: string;
+  images: PortfolioData.PortfolioItem.Image[] | undefined;
+}> = ({ title, images }) => {
+  const [imageIndex, setImageIndex] = useState(0);
   const [nextDisabled, setNextDisabled] = useState(false);
   const [prevDisabled, setPrevDisabled] = useState(false);
 
   useEffect(() => {
-    currentImage === 0 ? setPrevDisabled(true) : setPrevDisabled(false);
-    currentImage === images?.length - 1
+    imageIndex === 0 ? setPrevDisabled(true) : setPrevDisabled(false);
+    images && imageIndex === images?.length - 1
       ? setNextDisabled(true)
       : setNextDisabled(false);
-  }, [currentImage, images]);
-
-  const imageStyleObject = {
-    translate: `${currentImage * -100}% 0`
-  };
+  }, [imageIndex, images]);
 
   const navigatePrev = () => {
-    if (currentImage > 0) {
-      setCurrentImage(currentImage - 1);
+    if (imageIndex > 0) {
+      setImageIndex(imageIndex - 1);
     }
   };
 
   const navigateNext = () => {
-    if (currentImage < images.length - 1) {
-      setCurrentImage(currentImage + 1);
+    if (images && imageIndex < images.length - 1) {
+      setImageIndex(imageIndex + 1);
     }
   };
 
   const renderImages = images?.map((image, index) => (
-    <Image
-      key={`${title}-${index}`}
-      path={image.file}
-      alt={title}
-      linkUrl={image.linkUrl}
-      style={imageStyleObject}
-    />
+    <StyledImage imageIndex={imageIndex}>
+      <Image
+        key={`${title}-${index}`}
+        path={image.file}
+        alt={title}
+        linkUrl={image.linkUrl}
+      />
+    </StyledImage>
   ));
 
-  return images !== undefined && images.length > 0 ? (
-    <StyledCarousel
-      className={images.length === 1 ? 'carousel--img-single' : ''}
-    >
-      <button
-        className="carousel--btn carousel--btn-prev"
-        aria-label="Previous image"
-        onClick={navigatePrev}
-        disabled={prevDisabled}
-      ></button>
-      <div className="carousel">{renderImages}</div>
-      <button
-        className="carousel--btn carousel--btn-next"
-        aria-label="Next image"
-        onClick={navigateNext}
-        disabled={nextDisabled}
-      ></button>
-    </StyledCarousel>
-  ) : (
-    <></>
+  return (
+    (images && images.length > 0) ?? (
+      <StyledCarousel
+        className={images && images.length === 1 ? 'carousel--img-single' : ''}
+      >
+        <button
+          className="carousel--btn carousel--btn-prev"
+          aria-label="Previous image"
+          onClick={navigatePrev}
+          disabled={prevDisabled}
+        ></button>
+        <div className="carousel">{renderImages}</div>
+        <button
+          className="carousel--btn carousel--btn-next"
+          aria-label="Next image"
+          onClick={navigateNext}
+          disabled={nextDisabled}
+        ></button>
+      </StyledCarousel>
+    )
   );
 };
 
@@ -137,6 +134,14 @@ const StyledCarousel = styled.div`
     border: 1px var(--theme-outline) solid;
     border-radius: 0.25rem;
   }
+`;
+
+interface ImageProps {
+  imageIndex: number;
+}
+
+const StyledImage = styled.div<ImageProps>`
+  ${(props) => `translate: ${props?.imageIndex * -100}% 0`}
 `;
 
 export default ImageCarousel;

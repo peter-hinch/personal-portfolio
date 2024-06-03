@@ -3,16 +3,13 @@ import TagsList from './shared/TagsList';
 import ImageCarousel from './shared/ImageCarousel';
 import NextLink from './shared/NextLink';
 
-const PortfolioItem = ({ item }) => {
+const PortfolioItem: React.FC<{ item: PortfolioData.PortfolioItem.Item }> = ({
+  item
+}) => {
   const renderLinks = (
     <>
       {item.liveUrl !== undefined && (
-        <a
-          className="cta-link"
-          href={item.liveUrl}
-          alt="Visit the live site"
-          title="Visit the live site"
-        >
+        <a className="cta-link" href={item.liveUrl} title="Visit the live site">
           Visit live site
         </a>
       )}
@@ -20,7 +17,6 @@ const PortfolioItem = ({ item }) => {
         <a
           className="cta-link"
           href={item.sourceUrl}
-          alt="View the source code on GitHub"
           title="View the source code on GitHub"
         >
           View source code

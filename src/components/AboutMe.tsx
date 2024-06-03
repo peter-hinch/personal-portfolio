@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Container from './layout/Container';
 import NextLink from './shared/NextLink';
 import ParagraphArray from './shared/ParagraphArray';
@@ -15,7 +17,6 @@ const AboutMe: React.FC<{
       key={`profile-link-${link.platform.simplename}`}
       className="cta-link"
       href={link.url}
-      alt={link.platform.fullname}
     >
       {link.platform.fullname} profile
     </a>

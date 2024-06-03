@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 import { devIconsCdnUrl } from '../../enums';
 
-const TechnologyIcons: React.FC<{ technologies: Object[]; size: number }> = ({
-  technologies,
-  size
-}) => (
+const TechnologyIcons: React.FC<{
+  technologies: EnumTypes.Technology[];
+  size: number;
+}> = ({ technologies, size }) => (
   <StyledTechnologyIcons className="technology-icons" size={size}>
     {technologies.map((technology) => (
       <li>
@@ -21,7 +21,11 @@ const TechnologyIcons: React.FC<{ technologies: Object[]; size: number }> = ({
   </StyledTechnologyIcons>
 );
 
-const StyledTechnologyIcons = styled.ul`
+interface TechnologuIconProps {
+  size?: number;
+}
+
+const StyledTechnologyIcons = styled.ul<TechnologuIconProps>`
   &.technology-icons {
     display: flex;
     flex-direction: row;

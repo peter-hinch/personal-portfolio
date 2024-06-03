@@ -5,9 +5,9 @@ import TechnologyIcons from './shared/TechnologyIcons';
 import NextLink from './shared/NextLink';
 
 const Technologies: React.FC<{
-  anchor: Object;
-  preferredTechnologies: Object;
-  otherTechnologies: Object;
+  anchor: PortfolioData.Anchor;
+  preferredTechnologies: PortfolioData.PreferredTechnologies;
+  otherTechnologies: PortfolioData.OtherTechnologies;
 }> = ({ anchor, preferredTechnologies, otherTechnologies }) => (
   <Container id="technologies">
     <h2>Technologies</h2>

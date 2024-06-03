@@ -4,16 +4,15 @@ import ParagraphArray from './shared/ParagraphArray';
 import NextLink from './shared/NextLink';
 
 const Contact: React.FC<{
-  anchor: Object;
+  anchor: PortfolioData.Anchor;
   contact: string[];
-  socialLinks: Object[];
+  socialLinks: PortfolioData.SocialLink[];
 }> = ({ anchor, contact, socialLinks }) => {
   const renderProfileLinks = socialLinks.map((link) => (
     <a
       key={`profile-link-${link.platform.simplename}`}
       className="cta-link"
       href={link.url}
-      alt={link.platform.fullname}
     >
       {link.platform.fullname} profile
     </a>

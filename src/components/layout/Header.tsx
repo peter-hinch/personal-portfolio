@@ -14,9 +14,9 @@ const renderHeaderLinks = anchors
   ));
 
 const Header: React.FC<{
-  anchor: string;
+  anchor: PortfolioData.Anchor;
   myName: string;
-  socialLinks: Object[];
+  socialLinks: PortfolioData.SocialLink[];
   isDarkTheme: boolean;
   toggleDarkTheme: Function;
 }> = ({ anchor, myName, socialLinks, isDarkTheme, toggleDarkTheme }) => {
@@ -34,7 +34,7 @@ const Header: React.FC<{
             isDarkTheme={isDarkTheme}
             toggleDarkTheme={toggleDarkTheme}
           />
-          <SocialLinks name={myName} socialLinks={socialLinks} />
+          <SocialLinks myName={myName} socialLinks={socialLinks} />
         </div>
       </nav>
     </header>

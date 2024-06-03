@@ -1,10 +1,10 @@
 import Container from './layout/Container';
 import NextLink from './shared/NextLink';
 
-const PortfolioSection: React.FC<{ anchor: Object; children: any }> = ({
-  anchor,
-  children
-}) => {
+const PortfolioSection: React.FC<{
+  anchor: PortfolioData.Anchor;
+  children: any;
+}> = ({ anchor, children }) => {
   return (
     <Container id="portfolio">
       <h2>Portfolio</h2>

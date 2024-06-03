@@ -3,16 +3,20 @@ import styled from 'styled-components';
 import { portfolioItems } from '../../portfolioData';
 import { getSortedAnchorsArray } from '../../utils/utils';
 
+// @ts-ignore
 import imgCaret from './../../assets/images/caret.svg';
 
-const getNextItemIndex: Function = (referenceItem, array) => {
+const getNextItemIndex: Function = (
+  currentItem: PortfolioData.Anchor,
+  array: PortfolioData.Anchor[]
+) => {
   // Find the index of the current item
-  const itemIndex = array.findIndex((item) => item.id === referenceItem.id);
+  const itemIndex = array.findIndex((item) => item.id === currentItem.id);
   // Return the next item, or first item if the end has been reached
   return itemIndex < array.length - 1 ? itemIndex + 1 : 0;
 };
 
-const getNextLinkItem: Function = (anchor, portfolioItem) => {
+const getNextLinkItem: Function = (anchor = null, portfolioItem = null) => {
   if (anchor !== null) {
     const anchorsArray = getSortedAnchorsArray();
     const nexItemIndex = getNextItemIndex(anchor, anchorsArray);
@@ -23,19 +27,22 @@ const getNextLinkItem: Function = (anchor, portfolioItem) => {
   }
 };
 
-const determineLastItem: Function = (anchor, portfolioItem) => {
+const determineLastItem: Function = (
+  anchor?: PortfolioData.Anchor,
+  portfolioItem?: PortfolioData.PortfolioItem.Item
+) => {
   if (anchor !== null) {
-    const anchorsArray = getSortedAnchorsArray(anchor);
+    const anchorsArray = getSortedAnchorsArray();
     return getNextItemIndex(anchor, anchorsArray) === 0 ? true : false;
   } else if (portfolioItem !== null) {
     return getNextItemIndex(portfolioItem, portfolioItems) === 0 ? true : false;
   }
 };
 
-const NextLink: React.FC<{ anchor: Object; portfolioItem: Object }> = ({
-  anchor = null,
-  portfolioItem = null
-}) => {
+const NextLink: React.FC<{
+  anchor?: PortfolioData.Anchor;
+  portfolioItem?: PortfolioData.PortfolioItem.Item;
+}> = ({ anchor = null, portfolioItem = null }) => {
   const nextLinkItem = getNextLinkItem(anchor, portfolioItem);
   const isLastastItem = determineLastItem(anchor, portfolioItem);
 

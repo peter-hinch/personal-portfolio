@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
+// @ts-ignore
 import imgThemeSelectLight from './../assets/theme/sun.svg';
+// @ts-ignore
 import imgThemeSelectDark from './../assets/theme/moon-fill.svg';
 
 const GlobalStyle = createGlobalStyle`

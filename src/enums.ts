@@ -7,15 +7,18 @@
 declare global {
   namespace EnumTypes {
     interface Technology {
-      simpleName?: string;
+      simplename: string;
       fullname: string;
       iconSuffix: string;
     }
+    var Technologies: { [key: string]: Technology };
+
     interface SocialPlatform {
-      simplename?: string;
+      simplename: string;
       fullname: string;
       iconSuffix: string;
     }
+    var SocialPlatforms: { [key: string]: SocialPlatform };
   }
 }
 

@@ -2,10 +2,10 @@ import SocialLinks from '../shared/SocialLinks.tsx';
 
 const currentYear = new Date().getFullYear();
 
-const Footer: React.FC<{ myName: string; socialLinks: Object[] }> = ({
-  myName,
-  socialLinks
-}) => {
+const Footer: React.FC<{
+  myName: string;
+  socialLinks: PortfolioData.SocialLink[];
+}> = ({ myName, socialLinks }) => {
   return (
     <footer>
       <nav>
