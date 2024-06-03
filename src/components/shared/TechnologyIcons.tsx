@@ -7,8 +7,8 @@ const TechnologyIcons: React.FC<{
   size: number;
 }> = ({ technologies, size }) => (
   <StyledTechnologyIcons className="technology-icons" size={size}>
-    {technologies.map((technology) => (
-      <li>
+    {technologies.map((technology, index) => (
+      <li key={`technology-icon-${index}-${technology.simplename}`}>
         <img
           className="technology-icon"
           key={technology.simplename}
