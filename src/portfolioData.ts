@@ -145,7 +145,7 @@ export const otherTechnologies: PortfolioData.OtherTechnologies = {
     '.NET MVC',
     'React-three-fiber',
     'Styled-Components',
-    'Taliwind CSS',
+    'Tailwind CSS',
     'Trello'
   ]
 };
