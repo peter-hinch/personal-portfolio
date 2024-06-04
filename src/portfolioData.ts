@@ -209,6 +209,11 @@ export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
         file: 'portfolio/advent-of-css-2022-11.png',
         linkUrl:
           'https://github.com/peter-hinch/advent-of-css-2022-day-11-expander-collapser'
+      },
+      {
+        file: 'portfolio/advent-of-css-2022-12.png',
+        linkUrl:
+          'https://github.com/peter-hinch/advent-of-css-2022-day-12-rock-paper-scissors'
       }
     ],
     description:
