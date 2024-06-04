@@ -1,8 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-// @ts-ignore
-import imgThemeSelectLight from './../assets/theme/sun.svg';
-// @ts-ignore
-import imgThemeSelectDark from './../assets/theme/moon-fill.svg';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -249,10 +245,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   header, footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-
     a {
       color: var(--color-black);
 
@@ -277,80 +269,6 @@ const GlobalStyle = createGlobalStyle`
       display: inline-block;
       margin-right: 1rem;
     }
-  }
-
-  header {
-    position: sticky;
-    top: 0;
-    min-height: 3rem;
-    z-index: 200;
-    background: var(--theme-primary);
-
-    h1 {
-      font-size: 1.5em;
-      line-height: 2.25rem;
-      margin: 0.25rem 1.5rem 0 0;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: row;
-
-      nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0;
-        width: 100%;
-      }
-    }
-  }
-
-  #header-text-items {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    flex-shrink: 0;
-  }
-
-  #header-icons {
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    margin-top: 0.25rem;
-  }
-
-  #theme-selector {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 1rem;
-  }
-
-  #theme-selector input[type="checkbox"] {
-    display: none;
-  }
-  
-  #theme-selector label::before {
-    height: 1.5rem;
-    width: 1.5rem;
-    top: 0rem;
-    left: 0;
-    cursor: pointer;
-  }
-  
-  #theme-selector input[type="checkbox"] + label::before {
-    content: url(${imgThemeSelectLight});
-  }
-  
-  #theme-selector input[type="checkbox"]:checked + label::before {
-    content: url(${imgThemeSelectDark});
-  }
-
-  #theme-selector label::before, #dark-theme-selection label::before {
-    position: relative;
-    content: "";
-    display: inline-block;
   }
 
   nav ul li:last-child {
