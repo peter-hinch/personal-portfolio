@@ -1,16 +1,17 @@
 # Personal Portfolio Site
 
-## A portfolio built in React JS
+## A customisable portfolio site built with React JS
+
+This is my personal portfolio site, built with future updates in mind.
 
 ### Features
 
-- Name, Social Links and Portfolio information fetched from one easily updateable [portfolioData.js](https://github.com/peter-hinch/personal-portfolio/blob/main/src/portfolioData.js) file
-- Technology and social badges fetched from [Devicon](https://devicon.dev/) which can be easily updated in an [enums.js](https://github.com/peter-hinch/personal-portfolio/blob/main/src/enums.js) file
-- Tags to show additional features of each project
-- Contact form utilising [getform.io](https://getform.io/) which obscures developer email address
-- Colour palette derived from the [Material Design 3 specification](https://m3.material.io/styles/color/the-color-system/key-colors-tones)
-- Light and dark themes
-- Image carousel to showcase images for each project
+- Customisable: Name, social links, tags, and other portfolio information fetched from one easily updateable [file](https://github.com/peter-hinch/personal-portfolio/blob/main/src/portfolioData.js).
+- Updateable: Icons for social links and various technologies are fetched from [Devicon](https://devicon.dev/) and can be easily updated in an [enums](https://github.com/peter-hinch/personal-portfolio/blob/main/src/enums.js) file.
+- Image carousel component to showcase projects.
+- Contact form utilising [getform.io](https://getform.io/) which obscures developer email address.
+- Colour palette derived from the [Material Design 3 specification](https://m3.material.io/styles/color/the-color-system/key-colors-tones).
+- Light and dark themes.
 
 ### Future Additions
 
