@@ -152,6 +152,30 @@ export const otherTechnologies: PortfolioData.OtherTechnologies = {
 
 export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
   {
+    id: 'type3-configurator',
+    title: 'Type 3 Configurator',
+    subtitle: 'Product configuator using React Three Fiber',
+    images: [
+      {
+        file: 'portfolio/type3-configurator.png',
+        linkUrl: 'https://type3-configurator.netlify.app'
+      }
+    ],
+    description:
+      'The Volkswagen Type 3 is a vehicle that is near to my heart. As a personal project and a fun way to learn some more about Three JS, I have been building this product configurator. I hope to add some more options as I have time. Thanks for taking a look!',
+    technologies: [
+      Technologies.REACT,
+      Technologies.NODEJS,
+      Technologies.JAVASCRIPT,
+      Technologies.TYPESCRIPT,
+      Technologies.HTML5,
+      Technologies.CSS3
+    ],
+    tags: ['React Three Fiber', 'Drei'],
+    liveUrl: 'https://type3-configurator.netlify.app',
+    sourceUrl: 'https://github.com/peter-hinch/personal-type3-configurator'
+  },
+  {
     id: 'advent-of-css-js',
     title: 'Advent of CSS / Advent of JS',
     subtitle: 'Participation in CSS and JS challenges',
@@ -238,9 +262,18 @@ export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
     title: 'RemoteSpot',
     subtitle: 'Ratings application in React',
     images: [
-      { file: 'portfolio/remote-spot-01.png', linkUrl: '' },
-      { file: 'portfolio/remote-spot-02.png', linkUrl: '' },
-      { file: 'portfolio/remote-spot-03.png', linkUrl: '' }
+      {
+        file: 'portfolio/remote-spot-01.png',
+        linkUrl: 'https://remotespot.herokuapp.com/'
+      },
+      {
+        file: 'portfolio/remote-spot-02.png',
+        linkUrl: 'https://remotespot.herokuapp.com/'
+      },
+      {
+        file: 'portfolio/remote-spot-03.png',
+        linkUrl: 'https://remotespot.herokuapp.com/'
+      }
     ],
     description:
       'For the final project in my React Development course, I have chosen to create an application that allows users to rate businesses and venues aginst their suitability as a remote working venue. Basic information about each venue is retrieved from the Google Places API and users are able to add their remote work specific review information within the application.',
