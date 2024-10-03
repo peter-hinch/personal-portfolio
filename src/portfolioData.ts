@@ -34,6 +34,7 @@ declare global {
       }
       interface Item {
         id: string;
+        isActive: boolean;
         title: string;
         subtitle: string;
         images?: Image[];
@@ -99,9 +100,9 @@ export const contact: string[] = [
 ];
 
 export const preferredTechnologies: PortfolioData.PreferredTechnologies = {
-  heading: 'I enjoy working with..',
+  heading: 'My primary technology stack is..',
   description: [
-    'Node.js, React and JavaScript / TypeScript. I am passionate about writing code for the frontend that performs well, while looking great across all devices and browsers.'
+    'Node.js, React, JavaScript, TypeScript. I am passionate about creating performant frontend applications that match your business requirements while looking great across all browsers and devices.'
   ],
   technologies: [
     Technologies.REACT,
@@ -115,9 +116,9 @@ export const preferredTechnologies: PortfolioData.PreferredTechnologies = {
 };
 
 export const otherTechnologies: PortfolioData.OtherTechnologies = {
-  heading: 'As well as..',
+  heading: 'I also work with..',
   description: [
-    "the technologies listed below. I always relish the opportunity try something new, so if you use something in your stack that is not listed here I'd be glad to jump into the documentation and pick it up quickly!"
+    "the technologies listed below. I am always interested in furthering my skillset - if you use technologies that I haven't listed, I'm keen to jump into some documentation and work within your preferred technology stack."
   ],
   tags: [
     'Adobe Creative Suite',
@@ -152,7 +153,34 @@ export const otherTechnologies: PortfolioData.OtherTechnologies = {
 
 export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
   {
+    id: 'type3-configurator',
+    isActive: true,
+    title: 'Type 3 Configurator',
+    subtitle: 'Product configurator using React Three Fiber',
+    images: [
+      {
+        file: 'portfolio/type3-configurator.png',
+        linkUrl: 'https://type3-configurator.netlify.app'
+      }
+    ],
+    description:
+      'The Volkswagen Type 3 is a vehicle that is near to my heart. As a personal project and a fun way to learn some more about Three JS, I have been building this product configurator.',
+    technologies: [
+      Technologies.REACT,
+      Technologies.NODEJS,
+      Technologies.THREEJS,
+      Technologies.JAVASCRIPT,
+      Technologies.TYPESCRIPT,
+      Technologies.HTML5,
+      Technologies.CSS3
+    ],
+    tags: ['React-three-fiber', 'Drei', 'Netlify', 'Blender'],
+    liveUrl: 'https://type3-configurator.netlify.app',
+    sourceUrl: 'https://github.com/peter-hinch/personal-type3-configurator'
+  },
+  {
     id: 'advent-of-css-js',
+    isActive: true,
     title: 'Advent of CSS / Advent of JS',
     subtitle: 'Participation in CSS and JS challenges',
     images: [
@@ -235,12 +263,22 @@ export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
   },
   {
     id: 'remotespot',
+    isActive: true,
     title: 'RemoteSpot',
     subtitle: 'Ratings application in React',
     images: [
-      { file: 'portfolio/remote-spot-01.png', linkUrl: '' },
-      { file: 'portfolio/remote-spot-02.png', linkUrl: '' },
-      { file: 'portfolio/remote-spot-03.png', linkUrl: '' }
+      {
+        file: 'portfolio/remote-spot-01.png',
+        linkUrl: 'https://remotespot.herokuapp.com/'
+      },
+      {
+        file: 'portfolio/remote-spot-02.png',
+        linkUrl: 'https://remotespot.herokuapp.com/'
+      },
+      {
+        file: 'portfolio/remote-spot-03.png',
+        linkUrl: 'https://remotespot.herokuapp.com/'
+      }
     ],
     description:
       'For the final project in my React Development course, I have chosen to create an application that allows users to rate businesses and venues aginst their suitability as a remote working venue. Basic information about each venue is retrieved from the Google Places API and users are able to add their remote work specific review information within the application.',
@@ -268,6 +306,7 @@ export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
   },
   {
     id: 'todo-list',
+    isActive: false,
     title: 'Todo List',
     subtitle: 'Note taking application in React',
     images: [{ file: 'portfolio/todo-list-01.png', linkUrl: '' }],
@@ -286,6 +325,7 @@ export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
   },
   {
     id: 'piano',
+    isActive: false,
     title: 'Piano',
     subtitle: 'An exercise in using the Web Audio API',
     images: [{ file: 'portfolio/piano-01.png', linkUrl: '' }],
@@ -302,6 +342,7 @@ export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
   },
   {
     id: 'sd-perfumery',
+    isActive: false,
     title: 'SD Perfumery',
     subtitle: 'Storefront developed using .NET MVC',
     description:
