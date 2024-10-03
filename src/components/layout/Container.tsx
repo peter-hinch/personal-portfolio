@@ -20,7 +20,6 @@ const StyledContainer = styled.section`
     content: '';
     width: 100%;
     height: 100%;
-    /* background: red; */
     z-index: 1;
   }
 
