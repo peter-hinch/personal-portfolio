@@ -306,7 +306,7 @@ export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
   },
   {
     id: 'todo-list',
-    isActive: true,
+    isActive: false,
     title: 'Todo List',
     subtitle: 'Note taking application in React',
     images: [{ file: 'portfolio/todo-list-01.png', linkUrl: '' }],
@@ -325,7 +325,7 @@ export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
   },
   {
     id: 'piano',
-    isActive: true,
+    isActive: false,
     title: 'Piano',
     subtitle: 'An exercise in using the Web Audio API',
     images: [{ file: 'portfolio/piano-01.png', linkUrl: '' }],
@@ -342,7 +342,7 @@ export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
   },
   {
     id: 'sd-perfumery',
-    isActive: true,
+    isActive: false,
     title: 'SD Perfumery',
     subtitle: 'Storefront developed using .NET MVC',
     description:
