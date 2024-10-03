@@ -41,6 +41,11 @@ export const Technologies = {
     fullname: 'Microsoft Azure',
     iconSuffix: '-original-wordmark'
   },
+  BLENDER: {
+    simplename: 'blender',
+    fullname: 'Blender',
+    iconSuffix: '-original'
+  },
   BOOTSTRAP: {
     simplename: 'bootstrap',
     fullname: 'Bootstrap',
@@ -67,6 +72,11 @@ export const Technologies = {
     simplename: 'firebase',
     fullname: 'Firebase',
     iconSuffix: '-plain'
+  },
+  HEROKU: {
+    simplename: 'heroku',
+    fullname: 'Heroku',
+    iconSuffix: '-original'
   },
   HTML5: {
     simplename: 'html5',
@@ -103,6 +113,11 @@ export const Technologies = {
     fullname: 'MySQL',
     iconSuffix: '-original-wordmark'
   },
+  NETLIFY: {
+    simplename: 'netlify',
+    fullname: 'Netlify',
+    iconSuffix: '-original'
+  },
   NODEJS: {
     simplename: 'nodejs',
     fullname: 'Node.js',
@@ -111,6 +126,12 @@ export const Technologies = {
   REACT: { simplename: 'react', fullname: 'React.js', iconSuffix: '-original' },
   REDUX: { simplename: 'redux', fullname: 'Redux', iconSuffix: '-original' },
   SASS: { simplename: 'sass', fullname: 'Sass', iconSuffix: '-original' },
+  SVELTE: { simplename: 'svelte', fullname: 'Svelte', iconSuffix: '-original' },
+  THREEJS: {
+    simplename: 'threejs',
+    fullname: 'Three JS',
+    iconSuffix: '-original-wordmark'
+  },
   TYPESCRIPT: {
     simplename: 'typescript',
     fullname: 'TypeScript',
