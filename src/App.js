@@ -23,9 +23,11 @@ import {
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useLocalStorage('isDarkTheme', false);
 
-  const renderPortfolioItems = portfolioItems.map((item) => (
-    <PortfolioItem key={`portfolio-item-${item.title}`} item={item} />
-  ));
+  const renderPortfolioItems = portfolioItems
+    ?.filter((item) => item.isActive === true)
+    ?.map((item) => (
+      <PortfolioItem key={`portfolio-item-${item.title}`} item={item} />
+    ));
 
   const toggleDarkTheme = (event) => {
     setIsDarkTheme(event.target.checked);
