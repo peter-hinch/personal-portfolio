@@ -261,22 +261,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   nav ul {
+    display: flex;
+    flex-direction: row;
     margin: 0;
     padding: 0;
     list-style-type: none;
+    gap: 1rem;
 
-    li {
-      display: inline-block;
-      margin-right: 1rem;
+    a:has(img.social-link) {
+      display: flex;
+      img {
+        height: 1.5rem;
+      }
     }
-  }
-
-  nav ul li:last-child {
-    margin-right: 0;
-  }
-
-  img.social-link {
-    height: 1.5rem;
   }
 
   section {
@@ -317,8 +314,8 @@ const GlobalStyle = createGlobalStyle`
     transition: all 0.3s;
 
     &:hover {
-    color: var(--color-tertiary-60);
-  }
+      color: var(--color-tertiary-60);
+    }
   }
 
   .portfolio-item {

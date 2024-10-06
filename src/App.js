@@ -29,8 +29,13 @@ const App = () => {
       <PortfolioItem key={`portfolio-item-${item.title}`} item={item} />
     ));
 
-  const toggleDarkTheme = (event) => {
-    setIsDarkTheme(event.target.checked);
+  const toggleDarkTheme = (value) => {
+    if (value !== undefined) {
+      setIsDarkTheme(value);
+    } else {
+      // Allow to function as a toggle
+      setIsDarkTheme(!isDarkTheme);
+    }
   };
 
   return (

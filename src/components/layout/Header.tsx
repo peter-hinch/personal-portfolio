@@ -83,8 +83,12 @@ const StyledHeader = styled.header`
         &icons {
           display: flex;
           flex-direction: row;
+          gap: 1rem;
           flex-shrink: 0;
-          margin-top: 0.25rem;
+
+          ul {
+            align-items: center;
+          }
         }
       }
     }

@@ -12,44 +12,34 @@ const ThemeSelector: React.FC<{
   return (
     <StyledThemeSelector>
       <div id="theme-selector">
-        <input
-          type="checkbox"
-          id="dark-theme-switch"
-          aria-label="Toggle dark theme"
-          checked={isDarkTheme}
-          onChange={(event) => toggleDarkTheme(event)}
+        <button
+          className={`theme-selected--${!isDarkTheme ? 'light' : 'dark'}`}
+          onClick={() => toggleDarkTheme(!isDarkTheme)}
         />
-        <label htmlFor="dark-theme-switch" />
       </div>
     </StyledThemeSelector>
   );
 };
 
-const StyledThemeSelector = styled.form`
-  #theme-selector {
-    width: 1.5rem;
+const StyledThemeSelector = styled.div`
+  #theme-selector button {
+    box-sizing: border-box;
+    padding: 0.125rem;
+    width: 2.5rem;
     height: 1.5rem;
-    margin-right: 1rem;
+    background: transparent;
+    border: 0.125rem solid black;
+    border-radius: 0.75rem;
+    cursor: pointer;
 
-    input[type='checkbox'] {
-      display: none;
-
-      & + label::before {
-        content: url(${imgThemeSelectLight});
+    &.theme-selected-- {
+      &light {
+        background: 0.125rem 50% / 1rem no-repeat url(${imgThemeSelectLight});
       }
-      &:checked + label::before {
-        content: url(${imgThemeSelectDark});
+      &dark {
+        background: right 0.125rem top 50% / 1rem no-repeat
+          url(${imgThemeSelectDark});
       }
-    }
-    label::before {
-      position: relative;
-      top: 0rem;
-      left: 0;
-      display: inline-block;
-      height: 1.5rem;
-      width: 1.5rem;
-      content: '';
-      cursor: pointer;
     }
   }
 `;
