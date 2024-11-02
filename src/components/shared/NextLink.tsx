@@ -6,6 +6,8 @@ import { getSortedAnchorsArray } from '../../utils/utils';
 // @ts-ignore
 import imgCaret from './../../assets/images/caret.svg';
 
+const activePortfolioItems = portfolioItems?.filter((item) => item.isActive);
+
 const getNextItemIndex: Function = (
   currentItem: PortfolioData.Anchor,
   array: PortfolioData.Anchor[]
@@ -22,8 +24,8 @@ const getNextLinkItem: Function = (anchor = null, portfolioItem = null) => {
     const nexItemIndex = getNextItemIndex(anchor, anchorsArray);
     return anchorsArray[nexItemIndex];
   } else if (portfolioItem !== null) {
-    const nexItemIndex = getNextItemIndex(portfolioItem, portfolioItems);
-    return portfolioItems[nexItemIndex];
+    const nexItemIndex = getNextItemIndex(portfolioItem, activePortfolioItems);
+    return activePortfolioItems[nexItemIndex];
   }
 };
 
@@ -35,7 +37,9 @@ const determineLastItem: Function = (
     const anchorsArray = getSortedAnchorsArray();
     return getNextItemIndex(anchor, anchorsArray) === 0 ? true : false;
   } else if (portfolioItem !== null) {
-    return getNextItemIndex(portfolioItem, portfolioItems) === 0 ? true : false;
+    return getNextItemIndex(portfolioItem, activePortfolioItems) === 0
+      ? true
+      : false;
   }
 };
 
