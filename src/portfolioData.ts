@@ -247,6 +247,11 @@ export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
         file: 'portfolio/advent-of-css-2022-13.png',
         linkUrl:
           'https://github.com/peter-hinch/advent-of-css-2022-day-13-custom-modal'
+      },
+      {
+        file: 'portfolio/advent-of-css-2022-14.png',
+        linkUrl:
+          'https://github.com/peter-hinch/advent-of-css-day-14-calendar-picker'
       }
     ],
     description:
