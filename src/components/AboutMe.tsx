@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styled from 'styled-components';
+
 import Container from './layout/Container';
 import NextLink from './shared/NextLink';
 import ParagraphArray from './shared/ParagraphArray';
@@ -24,14 +26,14 @@ const AboutMe: React.FC<{
 
   return (
     <Container id={anchor.id}>
-      <h1>
-        Hello!
-        <br />
-        I'm {myName},
-        <br />a {myRole}
-        <br />
-        based in {location.city}, {location.country}.
-      </h1>
+      <StyledHeading>
+        <span>Hello!</span>
+        <span>I'm {myName},</span>
+        <span>a {myRole}</span>
+        <span>
+          based in {location.city}, {location.country}.
+        </span>
+      </StyledHeading>
       <ParagraphArray textArray={aboutMe} />
       <div className="cta-links">
         <div className="cta-links--group">{renderProfileLinks}</div>
@@ -40,5 +42,10 @@ const AboutMe: React.FC<{
     </Container>
   );
 };
+
+const StyledHeading = styled.h1`
+  display: flex;
+  flex-direction: column;
+`;
 
 export default AboutMe;
