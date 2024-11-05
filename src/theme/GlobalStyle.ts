@@ -259,8 +259,8 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: calc(100vh - 3rem);
-    scroll-margin-top: 3rem;
+    min-height: calc(100vh - 5.75rem);
+    scroll-margin-top: 5.75rem;
 
     .container {
       padding: 1.5rem 1.5rem 2.25rem 1.5rem;

@@ -51,7 +51,7 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 3rem;
+  min-height: 5.75;
   z-index: 200;
 
   @media only screen and (max-width: 727px) {
