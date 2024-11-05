@@ -27,9 +27,9 @@ const AboutMe: React.FC<{
   return (
     <Container id={anchor.id}>
       <StyledHeading>
-        <span>Hello!</span>
-        <span>I'm {myName},</span>
-        <span>a {myRole}</span>
+        <span>Welcome.</span>
+        <span>My name is {myName},</span>
+        <span>I am a {myRole}</span>
         <span>
           based in {location.city}, {location.country}.
         </span>
