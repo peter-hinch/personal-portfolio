@@ -308,11 +308,6 @@ const GlobalStyle = createGlobalStyle`
   .breakout-info {
     margin: 0 -1.5rem;
     padding: 1rem 1.5rem;
-    background: var(--theme-secondary-container);
-  }
-
-  #technologies .breakout-info .tags-list {
-    margin-top: 0;
   }
 
   #contact .breakout-info {
