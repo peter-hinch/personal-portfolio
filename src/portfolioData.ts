@@ -274,15 +274,15 @@ export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
     images: [
       {
         file: 'portfolio/remote-spot-01.png',
-        linkUrl: 'https://remotespot.herokuapp.com/'
+        linkUrl: 'https://remotespot.netlify.app/'
       },
       {
         file: 'portfolio/remote-spot-02.png',
-        linkUrl: 'https://remotespot.herokuapp.com/'
+        linkUrl: 'https://remotespot.netlify.app/'
       },
       {
         file: 'portfolio/remote-spot-03.png',
-        linkUrl: 'https://remotespot.herokuapp.com/'
+        linkUrl: 'https://remotespot.netlify.app/'
       }
     ],
     description:
