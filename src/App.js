@@ -1,4 +1,7 @@
+import 'normalize.css';
+
 import { useLocalStorage } from './hooks/useLocalStorage';
+
 import ThemeContainer from './components/layout/ThemeContainer.tsx';
 import Header from './components/layout/Header.tsx';
 import Footer from './components/layout/Footer.tsx';
