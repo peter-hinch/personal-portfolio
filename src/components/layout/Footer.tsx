@@ -26,6 +26,10 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   width: 100%;
+
+  .container {
+    box-shadow: none;
+  }
 `;
 
 export default Footer;

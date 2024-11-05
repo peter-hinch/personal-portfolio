@@ -147,48 +147,20 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     align-items: center;
   }
-  
-  @media only screen and (max-width: 727px) {
-    .container {
-      width: 100%;
-    }
 
-    section .container {
-      margin: 1.5rem 0;
-      border-radius: 0;
-    }
-
-    #header-text-links {
-      display: none;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    width: calc(100% - 6rem);
+    max-width: 72rem;
+    margin: 1.5rem;
+    border-radius: 0.125rem;
+    box-shadow: 0 0.5rem 0.75rem var(--theme-shadow-a), 0 0.5rem 2rem var(--theme-shadow-b);
   }
 
-  @media only screen and (min-width: 728px) {
-    .container {
-      width: 42.5rem;
-    }
-
-    section .container {
-      margin: 1.5rem;
-      border-radius: 1.5rem;
-      box-shadow: 0 0.5rem 0.75rem var(--theme-shadow-a), 0 0.5rem 2rem var(--theme-shadow-b);
-    }
-
-    #header-text-links {
-      display: flex;
-    }
-  }
-
-  @media only screen and (min-width: 952px) {
-    .container {
-      width: 56.5rem;
-    }
-  }
-  
-  @media only screen and (min-width: 1201px) {
-    .container {
-      width: 72rem;
-    }
+  #header-text-links {
+    display: flex;
   }
 
   h1,
@@ -261,7 +233,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .container {
-      box-sizing: border-box;
       padding: 0 1.5rem;
     }
   }
@@ -292,7 +263,6 @@ const GlobalStyle = createGlobalStyle`
     scroll-margin-top: 3rem;
 
     .container {
-      box-sizing: border-box;
       padding: 1.5rem 1.5rem 2.25rem 1.5rem;
       background: var(--theme-surface);
     }
@@ -301,14 +271,16 @@ const GlobalStyle = createGlobalStyle`
   .cta-links {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem 2rem;
     margin: 1.25rem 0;
     
     &--group {
       display: flex;
       flex-direction: row;
-      gap: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
     }
   }
 
@@ -360,7 +332,6 @@ const GlobalStyle = createGlobalStyle`
         }
         
         input, textarea {
-          box-sizing: border-box;
           width: 100%;
           min-height: 1.5rem;
           padding: 0.25rem;

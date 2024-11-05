@@ -52,18 +52,20 @@ const StyledHeader = styled.header`
   justify-content: center;
   width: 100%;
   min-height: 3rem;
-  background: var(--theme-primary);
   z-index: 200;
 
-  h1 {
-    font-size: 1.5em;
-    line-height: 2.25rem;
-    margin: 0.25rem 1.5rem 0 0;
+  @media only screen and (max-width: 727px) {
+    ul#header-text-links {
+      display: none;
+    }
   }
 
   .container {
     display: flex;
     flex-direction: row;
+    background: var(--theme-primary);
+    box-shadow: 0 0.5rem 0.75rem var(--theme-shadow-a),
+      0 0.5rem 2rem var(--theme-shadow-b);
 
     nav {
       display: flex;
@@ -77,12 +79,21 @@ const StyledHeader = styled.header`
         &text-items {
           display: flex;
           flex-direction: row;
-          align-items: baseline;
+          gap: 1.25rem;
+          align-items: center;
           flex-shrink: 0;
+
+          h1 {
+            font-size: 1.5em;
+            line-height: 2.25rem;
+            margin: 0.25rem 0;
+          }
         }
+
         &icons {
           display: flex;
           flex-direction: row;
+          align-items: center;
           gap: 1rem;
           flex-shrink: 0;
 
