@@ -93,7 +93,6 @@ const StyledCarousel = styled.div`
     overflow: hidden;
     -ms-overflow-style: none; // hide scrollbars in IE, Edge
     scrollbar-width: none; // hide scrollbars in Firefox
-    background: var(--theme-surface-variant);
   }
 
   .carousel::-webkit-scrollbar {
