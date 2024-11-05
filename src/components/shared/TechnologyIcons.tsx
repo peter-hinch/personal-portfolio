@@ -26,6 +26,8 @@ interface TechnologuIconProps {
 }
 
 const StyledTechnologyIcons = styled.ul<TechnologuIconProps>`
+  padding: 0;
+
   &.technology-icons {
     display: flex;
     flex-direction: row;
