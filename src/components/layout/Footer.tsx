@@ -28,7 +28,11 @@ const StyledFooter = styled.footer`
   width: 100%;
 
   .container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     box-shadow: none;
+    }
   }
 `;
 
