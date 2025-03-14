@@ -67,11 +67,6 @@ const App = () => {
       <PortfolioSection anchor={anchors.portfolio}>
         {renderPortfolioItems}
       </PortfolioSection>
-      <Contact
-        anchor={anchors.contact}
-        contact={contact}
-        socialLinks={socialLinks}
-      />
       <Footer myName={myName} socialLinks={socialLinks} />
     </ThemeContainer>
   );
