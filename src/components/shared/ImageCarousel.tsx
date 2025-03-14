@@ -35,9 +35,9 @@ const ImageCarousel: React.FC<{
   };
 
   const renderImages = images?.map((image, index) => (
-    <StyledImage imageIndex={imageIndex}>
+    <StyledImage key={`img-wrapper-${title}-${index}`} $imageIndex={imageIndex}>
       <Image
-        key={`${title}-${index}`}
+        key={`img-${title}-${index}`}
         path={image.file}
         alt={title}
         linkUrl={image.linkUrl}
@@ -137,12 +137,12 @@ const StyledCarousel = styled.div`
 `;
 
 interface ImageProps {
-  imageIndex: number;
+  $imageIndex: number;
 }
 
 const StyledImage = styled.div<ImageProps>`
   min-width: 100%;
-  ${(props) => `translate: ${props?.imageIndex * -100}% 0;`}
+  ${(props) => `translate: ${props?.$imageIndex * -100}% 0;`}
   transition: all 0.5s ease-in-out;
 `;
 
