@@ -20,7 +20,7 @@ const AboutMe: React.FC<{
       className="cta-link"
       href={link.url}
     >
-      {link.platform.fullname} profile
+      {link.platform.fullname}
     </a>
   ));
 
