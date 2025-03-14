@@ -244,13 +244,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     list-style-type: none;
     gap: 1rem;
-
-    a:has(img.social-link) {
-      display: flex;
-      img {
-        height: 1.5rem;
-      }
-    }
   }
 
   section {
