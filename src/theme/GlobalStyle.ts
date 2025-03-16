@@ -159,10 +159,6 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: 0 0.5rem 0.75rem var(--theme-shadow-a), 0 0.5rem 2rem var(--theme-shadow-b);
   }
 
-  #header-text-links {
-    display: flex;
-  }
-
   h1,
   h2,
   h3,
@@ -222,29 +218,25 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  header, footer {
+  nav {
     a {
-      color: var(--color-black);
+        color: var(--color-black);
 
-      &:hover {
-        text-decoration: none;
-        color: var(--theme-primary-container);
+        &:hover {
+          text-decoration: none;
+          color: var(--theme-primary-container);
+        }
       }
-    }
 
-    .container {
-      padding: 0 1.5rem;
-    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      gap: 1rem;
   }
-
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    gap: 1rem;
-  }
+}
 
   section {
     display: flex;

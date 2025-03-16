@@ -1,18 +1,13 @@
 import Container from './layout/Container';
-import NextLink from './shared/NextLink';
 
 const Projects: React.FC<{
-  anchor: PortfolioData.Anchor;
+  id: string;
   children: any;
-}> = ({ anchor, children }) => {
+}> = ({ id, children }) => {
   return (
-    <Container id="projects">
+    <Container id={id}>
       <h2>Projects</h2>
       {children}
-      <div className="cta-links">
-        <div className="cta-links--group"></div>
-        <NextLink anchor={anchor} />
-      </div>
     </Container>
   );
 };

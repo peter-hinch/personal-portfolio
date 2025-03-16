@@ -4,15 +4,14 @@ import Container from './layout/Container';
 import ParagraphArray from './shared/ParagraphArray';
 import TagsList from './shared/TagsList';
 import TechnologyIcons from './shared/TechnologyIcons';
-import NextLink from './shared/NextLink';
 
 const Technologies: React.FC<{
-  anchor: PortfolioData.Anchor;
+  id: string;
   preferredTechnologies: PortfolioData.PreferredTechnologies;
   otherTechnologies: PortfolioData.OtherTechnologies;
-}> = ({ anchor, preferredTechnologies, otherTechnologies }) => (
+}> = ({ id, preferredTechnologies, otherTechnologies }) => (
   <StyledTechnologies>
-    <Container id="technologies">
+    <Container id={id}>
       <h2>Technologies</h2>
       <h3>{preferredTechnologies.heading}</h3>
       <ParagraphArray textArray={preferredTechnologies.description} />
@@ -26,10 +25,6 @@ const Technologies: React.FC<{
       <ParagraphArray textArray={otherTechnologies.description} />
       <div className="breakout-info">
         <TagsList tags={otherTechnologies.tags} />
-      </div>
-      <div className="cta-links">
-        <div className="cta-links--group"></div>
-        <NextLink anchor={anchor} />
       </div>
     </Container>
   </StyledTechnologies>

@@ -111,7 +111,7 @@ const StyledCarousel = styled.div`
     cursor: pointer;
     opacity: 1;
     transition: all 0.5s ease-in-out;
-    z-index: 100;
+    z-index: 3;
 
     &-prev {
       left: 1rem;

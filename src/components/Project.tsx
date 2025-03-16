@@ -1,7 +1,7 @@
 import TechnologyIcons from './shared/TechnologyIcons';
 import TagsList from './shared/TagsList';
 import ImageCarousel from './shared/ImageCarousel';
-import NextLink from './shared/NextLink';
+// import MiniNav from './layout/MiniNav';
 
 const Project: React.FC<{ item: PortfolioData.Project.Item }> = ({ item }) => {
   const renderLinks = (
@@ -35,7 +35,7 @@ const Project: React.FC<{ item: PortfolioData.Project.Item }> = ({ item }) => {
       </div>
       <div className="cta-links">
         <div className="cta-links--group">{renderLinks}</div>
-        <NextLink project={item} />
+        {/* <MiniNav project={item} /> */}
       </div>
     </div>
   );

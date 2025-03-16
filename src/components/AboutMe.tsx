@@ -3,17 +3,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Container from './layout/Container';
-import NextLink from './shared/NextLink';
 import ParagraphArray from './shared/ParagraphArray';
 
 const AboutMe: React.FC<{
-  anchor: PortfolioData.Anchor;
+  id: string;
   myName: string;
   myRole: string;
   location: PortfolioData.Location;
   aboutMe: string[];
   socialLinks: PortfolioData.SocialLink[];
-}> = ({ anchor, myName, myRole, location, aboutMe, socialLinks }) => {
+}> = ({ id, myName, myRole, location, aboutMe, socialLinks }) => {
   const renderProfileLinks = socialLinks.map((link) => (
     <a
       key={`profile-link-${link.platform.simplename}`}
@@ -25,7 +24,7 @@ const AboutMe: React.FC<{
   ));
 
   return (
-    <Container id={anchor.id}>
+    <Container id={id}>
       <StyledHeading>
         <span>Welcome.</span>
         <span>My name is {myName},</span>
@@ -37,7 +36,6 @@ const AboutMe: React.FC<{
       <ParagraphArray textArray={aboutMe} />
       <div className="cta-links">
         <div className="cta-links--group">{renderProfileLinks}</div>
-        <NextLink anchor={anchor} />
       </div>
     </Container>
   );

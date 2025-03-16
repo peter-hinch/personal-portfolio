@@ -1,5 +1,6 @@
 import 'normalize.css';
 
+import { useState } from 'react';
 import { useLocalStorage } from './hooks/useLocalStorage';
 
 import ThemeContainer from './components/layout/ThemeContainer.tsx';
@@ -20,35 +21,34 @@ import {
   projects,
   socialLinks
 } from './portfolioData.ts';
+import MiniNav from './components/layout/MiniNav.tsx';
 
 const App = () => {
+  const [anchor, setAnchor] = useState();
+
   const [isDarkTheme, setIsDarkTheme] = useLocalStorage('isDarkTheme', false);
 
-  const renderPortfolioItems = projects
+  const renderProjects = projects
     ?.filter((item) => item.isActive === true)
     ?.map((item) => <Project key={`project-${item.title}`} item={item} />);
 
   const toggleDarkTheme = (value) => {
-    if (value !== undefined) {
-      setIsDarkTheme(value);
-    } else {
-      // Allow to function as a toggle
-      setIsDarkTheme(!isDarkTheme);
-    }
+    setIsDarkTheme(value !== undefined ? value : !isDarkTheme);
   };
 
   return (
     <ThemeContainer isDarkTheme={isDarkTheme}>
       <Header
-        anchor={anchors.header}
+        id={anchors.header.id}
         myName={myName}
-        location={location}
+        anchors={anchors}
         socialLinks={socialLinks}
         isDarkTheme={isDarkTheme}
+        handleAnchorChange={setAnchor}
         toggleDarkTheme={toggleDarkTheme}
       />
       <AboutMe
-        anchor={anchors.aboutMe}
+        id={anchors.aboutMe.id}
         myName={myName}
         myRole={myRole}
         location={location}
@@ -56,11 +56,17 @@ const App = () => {
         socialLinks={socialLinks}
       />
       <Technologies
-        anchor={anchors.technologies}
+        id={anchors.technologies.id}
         preferredTechnologies={preferredTechnologies}
         otherTechnologies={otherTechnologies}
       />
-      <Projects anchor={anchors.projects}>{renderPortfolioItems}</Projects>
+      <Projects id={anchors.projects.id}>{renderProjects}</Projects>
+      <MiniNav
+        anchors={anchors}
+        projects={projects}
+        anchor={anchor}
+        handleAnchorChange={setAnchor}
+      />
       <Footer myName={myName} socialLinks={socialLinks} />
     </ThemeContainer>
   );

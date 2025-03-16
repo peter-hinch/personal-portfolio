@@ -3,32 +3,46 @@ import styled from 'styled-components';
 import SocialLinks from '../shared/SocialLinks';
 import ThemeSelector from './ThemeSelector';
 
-import { getSortedAnchorsArray } from '../../utils/utils';
-
-const anchors = getSortedAnchorsArray();
-
-const renderHeaderLinks = anchors
-  .filter((anchor) => anchor.showInHeader)
-  .map((anchor) => (
-    <li key={`header-link-${anchor.id}`}>
-      <a href={`#${anchor.id}`}>{anchor.title}</a>
-    </li>
-  ));
-
 const Header: React.FC<{
-  anchor: PortfolioData.Anchor;
+  id: string;
   myName: string;
+  anchors: PortfolioData.Anchor[];
   socialLinks: PortfolioData.SocialLink[];
   isDarkTheme: boolean;
+  handleAnchorChange: Function;
   toggleDarkTheme: Function;
-}> = ({ anchor, myName, socialLinks, isDarkTheme, toggleDarkTheme }) => {
+}> = ({
+  id,
+  myName,
+  anchors,
+  socialLinks,
+  isDarkTheme,
+  handleAnchorChange,
+  toggleDarkTheme
+}) => {
+  const sortedAnchors = Object.values(anchors)?.sort(
+    (a, b) => a.sequence - b.sequence
+  );
+
+  const renderHeaderLinks = sortedAnchors
+    .filter((anchor) => anchor.showInHeader)
+    .map((anchor) => (
+      <li key={`header-link-${anchor.id}`}>
+        <a href={`#${anchor.id}`} onClick={() => handleAnchorChange(anchor.id)}>
+          {anchor.title}
+        </a>
+      </li>
+    ));
+
   return (
     <StyledHeader>
       <div className="container">
         <nav>
           <div id="header-text-items">
             <h1>
-              <a href={`#${anchor.id}`}>{myName}</a>
+              <a href={`#${id}`} onClick={() => handleAnchorChange(id)}>
+                {myName}
+              </a>
             </h1>
             <ul id="header-text-links">{renderHeaderLinks}</ul>
           </div>
@@ -51,8 +65,7 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 5.75;
-  z-index: 200;
+  z-index: 4;
 
   @media only screen and (max-width: 727px) {
     ul#header-text-links {
@@ -63,6 +76,7 @@ const StyledHeader = styled.header`
   .container {
     display: flex;
     flex-direction: row;
+    padding: 0 1.5rem;
     background: var(--theme-primary);
     box-shadow: 0 0.5rem 0.75rem var(--theme-shadow-a),
       0 0.5rem 2rem var(--theme-shadow-b);
@@ -90,6 +104,9 @@ const StyledHeader = styled.header`
           }
         }
 
+        &text-links {
+          display: flex;
+        }
         &icons {
           display: flex;
           flex-direction: row;

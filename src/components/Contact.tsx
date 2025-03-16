@@ -1,13 +1,12 @@
 import Container from './layout/Container';
 import ContactForm from './layout/ContactForm';
 import ParagraphArray from './shared/ParagraphArray';
-import NextLink from './shared/NextLink';
 
 const Contact: React.FC<{
-  anchor: PortfolioData.Anchor;
+  id: string;
   contact: string[];
   socialLinks: PortfolioData.SocialLink[];
-}> = ({ anchor, contact, socialLinks }) => {
+}> = ({ id, contact, socialLinks }) => {
   const renderProfileLinks = socialLinks.map((link) => (
     <a
       key={`profile-link-${link.platform.simplename}`}
@@ -19,7 +18,7 @@ const Contact: React.FC<{
   ));
 
   return (
-    <Container id="contact">
+    <Container id={id}>
       <h2>Contact</h2>
       <ParagraphArray textArray={contact} />
       <div className="breakout-info">
@@ -27,7 +26,6 @@ const Contact: React.FC<{
       </div>
       <div className="cta-links">
         <div className="cta-links--group">{renderProfileLinks}</div>
-        <NextLink anchor={anchor} />
       </div>
     </Container>
   );
