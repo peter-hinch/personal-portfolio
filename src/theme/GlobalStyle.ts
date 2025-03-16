@@ -289,7 +289,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .portfolio-item {
+  .project {
     margin-bottom: 8rem;
     scroll-margin-top: 4rem;
 

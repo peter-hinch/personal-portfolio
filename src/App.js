@@ -7,30 +7,26 @@ import Header from './components/layout/Header.tsx';
 import Footer from './components/layout/Footer.tsx';
 import AboutMe from './components/AboutMe.tsx';
 import Technologies from './components/Technologies.tsx';
-import PortfolioSection from './components/PortfolioSection.tsx';
-import PortfolioItem from './components/PortfolioItem.tsx';
-import Contact from './components/Contact.tsx';
+import Projects from './components/Projects.tsx';
+import Project from './components/Project.tsx';
 import {
   myName,
   myRole,
   location,
   anchors,
   aboutMe,
-  contact,
   preferredTechnologies,
   otherTechnologies,
-  portfolioItems,
+  projects,
   socialLinks
 } from './portfolioData.ts';
 
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useLocalStorage('isDarkTheme', false);
 
-  const renderPortfolioItems = portfolioItems
+  const renderPortfolioItems = projects
     ?.filter((item) => item.isActive === true)
-    ?.map((item) => (
-      <PortfolioItem key={`portfolio-item-${item.title}`} item={item} />
-    ));
+    ?.map((item) => <Project key={`project-${item.title}`} item={item} />);
 
   const toggleDarkTheme = (value) => {
     if (value !== undefined) {
@@ -64,9 +60,7 @@ const App = () => {
         preferredTechnologies={preferredTechnologies}
         otherTechnologies={otherTechnologies}
       />
-      <PortfolioSection anchor={anchors.portfolio}>
-        {renderPortfolioItems}
-      </PortfolioSection>
+      <Projects anchor={anchors.projects}>{renderPortfolioItems}</Projects>
       <Footer myName={myName} socialLinks={socialLinks} />
     </ThemeContainer>
   );

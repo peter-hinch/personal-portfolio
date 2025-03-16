@@ -3,9 +3,7 @@ import TagsList from './shared/TagsList';
 import ImageCarousel from './shared/ImageCarousel';
 import NextLink from './shared/NextLink';
 
-const PortfolioItem: React.FC<{ item: PortfolioData.PortfolioItem.Item }> = ({
-  item
-}) => {
+const Project: React.FC<{ item: PortfolioData.Project.Item }> = ({ item }) => {
   const renderLinks = (
     <>
       {item.liveUrl !== undefined && (
@@ -26,7 +24,7 @@ const PortfolioItem: React.FC<{ item: PortfolioData.PortfolioItem.Item }> = ({
   );
 
   return (
-    <div id={item.id ?? 'portfolio-item'} className="portfolio-item">
+    <div id={item.id ?? 'project'} className="project">
       <h3>{item.title}</h3>
       <h4>{item.subtitle}</h4>
       <ImageCarousel title={item.title} images={item.images} />
@@ -37,10 +35,10 @@ const PortfolioItem: React.FC<{ item: PortfolioData.PortfolioItem.Item }> = ({
       </div>
       <div className="cta-links">
         <div className="cta-links--group">{renderLinks}</div>
-        <NextLink portfolioItem={item} />
+        <NextLink project={item} />
       </div>
     </div>
   );
 };
 
-export default PortfolioItem;
+export default Project;

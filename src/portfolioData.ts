@@ -27,7 +27,7 @@ declare global {
       description: string[];
       tags: string[];
     }
-    namespace PortfolioItem {
+    namespace Project {
       interface Image {
         file: string;
         linkUrl: string;
@@ -82,17 +82,16 @@ export const anchors = {
     title: 'Technologies',
     showInHeader: true
   },
-  portfolio: {
+  projects: {
     sequence: 3,
-    id: 'portfolio',
-    title: 'Portfolio',
+    id: 'projects',
+    title: 'Projects',
     showInHeader: true
-  },
-  contact: { sequence: 4, id: 'contact', title: 'Contact', showInHeader: true }
+  }
 };
 
 export const aboutMe: string[] = [
-  'My primary focus is on JavaScript / TypeScript and React. Please check out my GitHub profile and portfolio below to see examples of my work and personal projects.'
+  'My primary focus is on JavaScript / TypeScript and React. Please check out my GitHub profile and projects below.'
 ];
 
 export const contact: string[] = [
@@ -151,7 +150,7 @@ export const otherTechnologies: PortfolioData.OtherTechnologies = {
   ]
 };
 
-export const portfolioItems: PortfolioData.PortfolioItem.Item[] = [
+export const projects: PortfolioData.Project.Item[] = [
   {
     id: 'type3-configurator',
     isActive: true,

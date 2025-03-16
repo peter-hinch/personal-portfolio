@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-import { portfolioItems } from '../../portfolioData';
+import { projects } from '../../portfolioData';
 import { getSortedAnchorsArray } from '../../utils/utils';
 
 // @ts-ignore
 import imgCaret from './../../assets/images/caret.svg';
 
-const activePortfolioItems = portfolioItems?.filter((item) => item.isActive);
+const visibleProjects = projects?.filter((item) => item.isActive);
 
 const getNextItemIndex: Function = (
   currentItem: PortfolioData.Anchor,
@@ -18,37 +18,35 @@ const getNextItemIndex: Function = (
   return itemIndex < array.length - 1 ? itemIndex + 1 : 0;
 };
 
-const getNextLinkItem: Function = (anchor = null, portfolioItem = null) => {
+const getNextLinkItem: Function = (anchor = null, project = null) => {
   if (anchor !== null) {
     const anchorsArray = getSortedAnchorsArray();
     const nexItemIndex = getNextItemIndex(anchor, anchorsArray);
     return anchorsArray[nexItemIndex];
-  } else if (portfolioItem !== null) {
-    const nexItemIndex = getNextItemIndex(portfolioItem, activePortfolioItems);
-    return activePortfolioItems[nexItemIndex];
+  } else if (project !== null) {
+    const nexItemIndex = getNextItemIndex(project, visibleProjects);
+    return visibleProjects[nexItemIndex];
   }
 };
 
 const determineLastItem: Function = (
   anchor?: PortfolioData.Anchor,
-  portfolioItem?: PortfolioData.PortfolioItem.Item
+  project?: PortfolioData.Project.Item
 ) => {
   if (anchor !== null) {
     const anchorsArray = getSortedAnchorsArray();
     return getNextItemIndex(anchor, anchorsArray) === 0 ? true : false;
-  } else if (portfolioItem !== null) {
-    return getNextItemIndex(portfolioItem, activePortfolioItems) === 0
-      ? true
-      : false;
+  } else if (project !== null) {
+    return getNextItemIndex(project, visibleProjects) === 0 ? true : false;
   }
 };
 
 const NextLink: React.FC<{
   anchor?: PortfolioData.Anchor;
-  portfolioItem?: PortfolioData.PortfolioItem.Item;
-}> = ({ anchor = null, portfolioItem = null }) => {
-  const nextLinkItem = getNextLinkItem(anchor, portfolioItem);
-  const isLastastItem = determineLastItem(anchor, portfolioItem);
+  project?: PortfolioData.Project.Item;
+}> = ({ anchor = null, project = null }) => {
+  const nextLinkItem = getNextLinkItem(anchor, project);
+  const isLastastItem = determineLastItem(anchor, project);
 
   return (
     <StyledNextLink>

@@ -9,7 +9,7 @@ import Image from './Image';
 
 const ImageCarousel: React.FC<{
   title: string;
-  images: PortfolioData.PortfolioItem.Image[] | undefined;
+  images: PortfolioData.Project.Image[] | undefined;
 }> = ({ title, images }) => {
   const [imageIndex, setImageIndex] = useState(0);
   const [nextDisabled, setNextDisabled] = useState(false);

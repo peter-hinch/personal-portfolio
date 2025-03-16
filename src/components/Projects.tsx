@@ -1,13 +1,13 @@
 import Container from './layout/Container';
 import NextLink from './shared/NextLink';
 
-const PortfolioSection: React.FC<{
+const Projects: React.FC<{
   anchor: PortfolioData.Anchor;
   children: any;
 }> = ({ anchor, children }) => {
   return (
-    <Container id="portfolio">
-      <h2>Portfolio</h2>
+    <Container id="projects">
+      <h2>Projects</h2>
       {children}
       <div className="cta-links">
         <div className="cta-links--group"></div>
@@ -17,4 +17,4 @@ const PortfolioSection: React.FC<{
   );
 };
 
-export default PortfolioSection;
+export default Projects;
