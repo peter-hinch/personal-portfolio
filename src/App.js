@@ -1,6 +1,6 @@
 import 'normalize.css';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLocalStorage } from './hooks/useLocalStorage';
 
 import ThemeContainer from './components/layout/ThemeContainer.tsx';
@@ -26,15 +26,46 @@ import MiniNav from './components/layout/MiniNav.tsx';
 const App = () => {
   const [anchor, setAnchor] = useState();
 
+  const sectionRefs = useRef([]);
+
   const [isDarkTheme, setIsDarkTheme] = useLocalStorage('isDarkTheme', false);
 
   const renderProjects = projects
-    ?.filter((item) => item.isActive === true)
+    ?.filter((item) => item.isVisible === true)
     ?.map((item) => <Project key={`project-${item.title}`} item={item} />);
 
   const toggleDarkTheme = (value) => {
     setIsDarkTheme(value !== undefined ? value : !isDarkTheme);
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = `#${entry.target.id}`;
+            if (window.location.hash !== sectionId)
+              window.history.pushState(null, '', sectionId);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      }
+    );
+
+    sectionRefs.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      sectionRefs.current.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, []);
 
   return (
     <ThemeContainer isDarkTheme={isDarkTheme}>
@@ -47,20 +78,27 @@ const App = () => {
         handleAnchorChange={setAnchor}
         toggleDarkTheme={toggleDarkTheme}
       />
-      <AboutMe
-        id={anchors.aboutMe.id}
-        myName={myName}
-        myRole={myRole}
-        location={location}
-        aboutMe={aboutMe}
-        socialLinks={socialLinks}
-      />
-      <Technologies
+      <div id={anchors.aboutMe.id} ref={(el) => (sectionRefs.current[0] = el)}>
+        <AboutMe
+          myName={myName}
+          myRole={myRole}
+          location={location}
+          aboutMe={aboutMe}
+          socialLinks={socialLinks}
+        />
+      </div>
+      <div
         id={anchors.technologies.id}
-        preferredTechnologies={preferredTechnologies}
-        otherTechnologies={otherTechnologies}
-      />
-      <Projects id={anchors.projects.id}>{renderProjects}</Projects>
+        ref={(el) => (sectionRefs.current[1] = el)}
+      >
+        <Technologies
+          preferredTechnologies={preferredTechnologies}
+          otherTechnologies={otherTechnologies}
+        />
+      </div>
+      <div id={anchors.projects.id} ref={(el) => (sectionRefs.current[2] = el)}>
+        <Projects>{renderProjects}</Projects>
+      </div>
       <MiniNav
         anchors={anchors}
         projects={projects}
