@@ -21,7 +21,6 @@ import {
   projects,
   socialLinks
 } from './portfolioData.ts';
-import MiniNav from './components/layout/MiniNav.tsx';
 
 const App = () => {
   const [anchor, setAnchor] = useState();
@@ -37,35 +36,6 @@ const App = () => {
   const toggleDarkTheme = (value) => {
     setIsDarkTheme(value !== undefined ? value : !isDarkTheme);
   };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const sectionId = `#${entry.target.id}`;
-            if (window.location.hash !== sectionId)
-              window.history.pushState(null, '', sectionId);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-      }
-    );
-
-    sectionRefs.current.forEach((section) => {
-      if (section) observer.observe(section);
-    });
-
-    return () => {
-      sectionRefs.current.forEach((section) => {
-        if (section) observer.unobserve(section);
-      });
-    };
-  }, []);
 
   return (
     <ThemeContainer isDarkTheme={isDarkTheme}>
@@ -99,12 +69,6 @@ const App = () => {
       <div id={anchors.projects.id} ref={(el) => (sectionRefs.current[2] = el)}>
         <Projects>{renderProjects}</Projects>
       </div>
-      <MiniNav
-        anchors={anchors}
-        projects={projects}
-        anchor={anchor}
-        handleAnchorChange={setAnchor}
-      />
       <Footer myName={myName} socialLinks={socialLinks} />
     </ThemeContainer>
   );

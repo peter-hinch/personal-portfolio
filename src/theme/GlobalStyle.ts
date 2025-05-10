@@ -244,7 +244,7 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: calc(100vh - 5.75rem);
+    min-height: 100vh;
     scroll-margin-top: 5.75rem;
 
     .container {

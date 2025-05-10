@@ -16,6 +16,7 @@ declare global {
       id: string;
       title: string;
       showInHeader: boolean;
+      children: string[];
     }
     interface PreferredTechnologies {
       heading: string;
@@ -34,7 +35,7 @@ declare global {
       }
       interface Item {
         id: string;
-        isActive: boolean;
+        isVisible: boolean;
         title: string;
         subtitle: string;
         images?: Image[];
@@ -67,28 +68,6 @@ export const socialLinks: PortfolioData.SocialLink[] = [
     url: 'https://www.linkedin.com/in/peter-hinch-dev/'
   }
 ];
-
-export const anchors = {
-  header: { sequence: 0, id: 'top', title: 'Home', showInHeader: false },
-  aboutMe: {
-    sequence: 1,
-    id: 'about-me',
-    title: 'About Me',
-    showInHeader: true
-  },
-  technologies: {
-    sequence: 2,
-    id: 'technologies',
-    title: 'Technologies',
-    showInHeader: true
-  },
-  projects: {
-    sequence: 3,
-    id: 'projects',
-    title: 'Projects',
-    showInHeader: true
-  }
-};
 
 export const aboutMe: string[] = [
   'My primary focus is on JavaScript / TypeScript and React. Please check out my GitHub profile and projects below.'
@@ -153,7 +132,7 @@ export const otherTechnologies: PortfolioData.OtherTechnologies = {
 export const projects: PortfolioData.Project.Item[] = [
   {
     id: 'type3-configurator',
-    isActive: true,
+    isVisible: true,
     title: 'Type 3 Configurator',
     subtitle: 'Product configurator using React Three Fiber',
     images: [
@@ -179,7 +158,7 @@ export const projects: PortfolioData.Project.Item[] = [
   },
   {
     id: 'advent-of-css-js',
-    isActive: true,
+    isVisible: true,
     title: 'Advent of CSS / Advent of JS',
     subtitle: 'Participation in CSS and JS challenges',
     images: [
@@ -267,7 +246,7 @@ export const projects: PortfolioData.Project.Item[] = [
   },
   {
     id: 'remotespot',
-    isActive: true,
+    isVisible: true,
     title: 'RemoteSpot',
     subtitle: 'Ratings application in React',
     images: [
@@ -310,7 +289,7 @@ export const projects: PortfolioData.Project.Item[] = [
   },
   {
     id: 'todo-list',
-    isActive: false,
+    isVisible: false,
     title: 'Todo List',
     subtitle: 'Note taking application in React',
     images: [{ file: 'portfolio/todo-list-01.png', linkUrl: '' }],
@@ -329,7 +308,7 @@ export const projects: PortfolioData.Project.Item[] = [
   },
   {
     id: 'piano',
-    isActive: false,
+    isVisible: false,
     title: 'Piano',
     subtitle: 'An exercise in using the Web Audio API',
     images: [{ file: 'portfolio/piano-01.png', linkUrl: '' }],
@@ -346,7 +325,7 @@ export const projects: PortfolioData.Project.Item[] = [
   },
   {
     id: 'sd-perfumery',
-    isActive: false,
+    isVisible: false,
     title: 'SD Perfumery',
     subtitle: 'Storefront developed using .NET MVC',
     description:
@@ -364,3 +343,26 @@ export const projects: PortfolioData.Project.Item[] = [
     sourceUrl: 'https://github.com/SD-Perfumery-DevTeam/SDP_MVC'
   }
 ];
+
+export const anchors = {
+  header: { sequence: 0, id: 'top', title: 'Home', showInHeader: false },
+  aboutMe: {
+    sequence: 1,
+    id: 'about-me',
+    title: 'About Me',
+    showInHeader: true
+  },
+  technologies: {
+    sequence: 2,
+    id: 'technologies',
+    title: 'Technologies',
+    showInHeader: true
+  },
+  projects: {
+    sequence: 3,
+    id: 'projects',
+    title: 'Projects',
+    showInHeader: true,
+    children: projects.filter((p) => p.isVisible)?.map((p) => p.id)
+  }
+};
