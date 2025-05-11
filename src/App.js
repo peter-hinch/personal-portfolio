@@ -33,22 +33,30 @@ const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useLocalStorage('isDarkTheme', false);
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const [highlights, setHighlights] = useState();
+  const [highlight, setHighlight] = useState([]);
 
   useEffect(() => {
     try {
-      const highlights = JSON.parse(
-        decodeURIComponent(searchParams.get('highlight'))
+      const queryObject = JSON.parse(
+        decodeURIComponent(searchParams?.get('q'))
       );
-      console.log('highlight', highlights);
+      if (queryObject && queryObject?.highlight) {
+        setHighlight(queryObject.highlight);
+      }
     } catch (err) {
-      console.log('unable to parse search params', err);
+      // console.log('unable to parse search params', err);
     }
   }, [searchParams]);
 
   const renderProjects = projects
     ?.filter((item) => item.isVisible === true)
-    ?.map((item) => <Project key={`project-${item.title}`} item={item} />);
+    ?.map((item) => (
+      <Project
+        key={`project-${item.title}`}
+        item={item}
+        highlight={highlight}
+      />
+    ));
 
   const toggleDarkTheme = (value) => {
     setIsDarkTheme(value !== undefined ? value : !isDarkTheme);
@@ -81,6 +89,7 @@ const App = () => {
         <Technologies
           preferredTechnologies={preferredTechnologies}
           otherTechnologies={otherTechnologies}
+          highlight={highlight}
         />
       </div>
       <div id={anchors.projects.id} ref={(el) => (sectionRefs.current[2] = el)}>

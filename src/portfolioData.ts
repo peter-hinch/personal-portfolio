@@ -83,8 +83,8 @@ export const preferredTechnologies: PortfolioData.PreferredTechnologies = {
     'Node.js, React, JavaScript, TypeScript. I am passionate about creating performant frontend applications that match your business requirements while looking great across all browsers and devices.'
   ],
   technologies: [
-    Technologies.REACT,
     Technologies.NODEJS,
+    Technologies.REACT,
     Technologies.JAVASCRIPT,
     Technologies.TYPESCRIPT,
     Technologies.SASS,
@@ -142,7 +142,7 @@ export const projects: PortfolioData.Project.Item[] = [
       }
     ],
     description:
-      'The Volkswagen Type 3 is a vehicle that is near to my heart. As a personal project and a fun way to learn some more about Three JS, I have been building this product configurator.',
+      'The Volkswagen Type 3 is a vehicle that is near to my heart. As a personal project and a fun way to learn some more about Three JS, I have been building a product configurator with dealer options and colours that were available at the time of production.',
     technologies: [
       Technologies.REACT,
       Technologies.NODEJS,

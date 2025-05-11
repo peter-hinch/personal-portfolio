@@ -9,7 +9,8 @@ const Technologies: React.FC<{
   id: string;
   preferredTechnologies: PortfolioData.PreferredTechnologies;
   otherTechnologies: PortfolioData.OtherTechnologies;
-}> = ({ id, preferredTechnologies, otherTechnologies }) => (
+  highlight?: string[];
+}> = ({ id, preferredTechnologies, otherTechnologies, highlight = [] }) => (
   <StyledTechnologies>
     <Container id={id}>
       <h2>Technologies</h2>
@@ -19,12 +20,13 @@ const Technologies: React.FC<{
         <TechnologyIcons
           technologies={preferredTechnologies.technologies}
           size={5}
+          highlight={highlight}
         />
       </div>
       <h3>{otherTechnologies.heading}</h3>
       <ParagraphArray textArray={otherTechnologies.description} />
       <div className="breakout-info">
-        <TagsList tags={otherTechnologies.tags} />
+        <TagsList tags={otherTechnologies.tags} highlight={highlight} />
       </div>
     </Container>
   </StyledTechnologies>

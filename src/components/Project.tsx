@@ -2,7 +2,10 @@ import TechnologyIcons from './shared/TechnologyIcons';
 import TagsList from './shared/TagsList';
 import ImageCarousel from './shared/ImageCarousel';
 
-const Project: React.FC<{ item: PortfolioData.Project.Item }> = ({ item }) => {
+const Project: React.FC<{
+  item: PortfolioData.Project.Item;
+  highlight?: string[];
+}> = ({ item, highlight = [] }) => {
   const renderLinks = (
     <>
       {item.liveUrl !== undefined && (
@@ -29,8 +32,12 @@ const Project: React.FC<{ item: PortfolioData.Project.Item }> = ({ item }) => {
       <ImageCarousel title={item.title} images={item.images} />
       <p>{item.description}</p>
       <div className="breakout-info">
-        <TechnologyIcons technologies={item.technologies} size={3.5} />
-        <TagsList tags={item.tags} />
+        <TechnologyIcons
+          technologies={item.technologies}
+          size={3.5}
+          highlight={highlight}
+        />
+        <TagsList tags={item.tags} highlight={highlight} />
       </div>
       <div className="cta-links">
         <div className="cta-links--group">{renderLinks}</div>

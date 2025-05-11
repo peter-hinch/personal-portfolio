@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import styled from 'styled-components';
 
+import { showHighlightsFirst } from '../../utils/utils';
+
 const TagsList: React.FC<{
   tags: string[];
   qty?: number;
@@ -9,11 +11,8 @@ const TagsList: React.FC<{
 }> = ({ tags, qty = 5, highlight = [] }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const orderedTags = [
-    ...highlight,
-    ...tags.filter((t) => !highlight.includes(t))
-  ];
-  const remainingTags = orderedTags.slice(qty, tags.length - 1);
+  const orderedTags = showHighlightsFirst(tags, highlight || []);
+  const remainingTags = orderedTags?.slice(qty, tags.length - 1);
 
   const renderTag = (tag: string) => (
     <li key={`tag-${tag}`} className="tag">
@@ -29,7 +28,7 @@ const TagsList: React.FC<{
           {isExpanded && remainingTags.map((tag) => renderTag(tag))}
           <li key={`tags-expand`} className="tag">
             <button onClick={() => setIsExpanded(!isExpanded)}>
-              {!isExpanded ? `+${remainingTags.length} more` : 'show less'}
+              {!isExpanded ? `+${remainingTags.length} more` : 'show fewer'}
             </button>
           </li>
         </>
