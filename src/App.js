@@ -1,7 +1,9 @@
-import 'normalize.css';
-
 import { useState, useEffect, useRef } from 'react';
+import { useSearchParams } from 'react-router-dom';
+
 import { useLocalStorage } from './hooks/useLocalStorage';
+
+import 'normalize.css';
 
 import ThemeContainer from './components/layout/ThemeContainer.tsx';
 import Header from './components/layout/Header.tsx';
@@ -22,12 +24,27 @@ import {
   socialLinks
 } from './portfolioData.ts';
 
+const generateSearchParams = (queryObject: any, key: string) =>
+  `${key}=${encodeURIComponent(JSON.stringify(queryObject))}`;
+
 const App = () => {
   const [anchor, setAnchor] = useState();
-
   const sectionRefs = useRef([]);
-
   const [isDarkTheme, setIsDarkTheme] = useLocalStorage('isDarkTheme', false);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [highlights, setHighlights] = useState();
+
+  useEffect(() => {
+    try {
+      const highlights = JSON.parse(
+        decodeURIComponent(searchParams.get('highlight'))
+      );
+      console.log('highlight', highlights);
+    } catch (err) {
+      console.log('unable to parse search params', err);
+    }
+  }, [searchParams]);
 
   const renderProjects = projects
     ?.filter((item) => item.isVisible === true)
