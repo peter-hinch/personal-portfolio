@@ -24,8 +24,7 @@ import {
   socialLinks
 } from './portfolioData.ts';
 
-const generateSearchParams = (queryObject: any, key: string) =>
-  `${key}=${encodeURIComponent(JSON.stringify(queryObject))}`;
+import { generateSearchParams } from './utils/utils.ts';
 
 const App = () => {
   const [anchor, setAnchor] = useState();
@@ -34,6 +33,9 @@ const App = () => {
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [highlight, setHighlight] = useState([]);
+
+  // Append the string builder to the window object to aid building of strings
+  window.generateSearchParams = generateSearchParams;
 
   useEffect(() => {
     try {
