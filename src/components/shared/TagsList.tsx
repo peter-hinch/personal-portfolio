@@ -15,7 +15,10 @@ const TagsList: React.FC<{
   const remainingTags = orderedTags?.slice(qty, tags.length - 1);
 
   const renderTag = (tag: string) => (
-    <li key={`tag-${tag}`} className="tag">
+    <li
+      key={`tag-${tag}`}
+      className={`tag ${highlight?.includes(tag) ? 'highlight' : ''}`}
+    >
       <div>{tag}</div>
     </li>
   );
@@ -54,6 +57,10 @@ const StyledTagsList = styled.ul`
       background: var(--theme-secondary);
       border-radius: 0.5rem;
       user-select: none;
+
+      &.highlight {
+        background: var(--theme-primary);
+      }
 
       div,
       button {

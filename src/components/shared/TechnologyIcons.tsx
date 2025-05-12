@@ -18,7 +18,9 @@ const TechnologyIcons: React.FC<{
       {orderedTechnologies?.map((technology, index) => (
         <li key={`technology-icon-${index}-${technology.simplename}`}>
           <img
-            className="technology-icon"
+            className={`technology-icon ${
+              highlight?.includes(technology.fullname) ? 'highlight' : ''
+            }`}
             key={technology.simplename}
             src={`${devIconsCdnUrl}${technology.simplename}/${technology.simplename}${technology.iconSuffix}.svg`}
             alt={technology.simplename}
@@ -51,6 +53,9 @@ const StyledTechnologyIcons = styled.ul<TechnologuIconProps>`
         width: ${(props) => `${props?.size || 3.5}rem`};
         height: auto;
         transition: 0.3s;
+
+        &.highlight {
+        }
 
         &:hover {
           transform: scale(1.1);
