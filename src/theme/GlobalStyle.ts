@@ -123,8 +123,8 @@ const GlobalStyle = createGlobalStyle`
     --theme-surface-variant: var(--color-neutral-variant-30);
     --theme-on-surface-variant: var(--color-neutral-variant-80);
     --theme-outline: rgba(145, 153, 156, 0.5); // neutral variant 60
-    --theme-shadow-a: rgba(145, 153, 156, 0.25); // neutral variant 60
-    --theme-shadow-b: rgba(145, 153, 156, 0.30); // neutral variant 60
+    --theme-shadow-a: rgba(0, 0, 0, 0.25); // neutral variant 60
+    --theme-shadow-b: rgba(0, 0, 0, 0.3); // neutral variant 60
   }
 
   html {
